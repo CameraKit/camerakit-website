@@ -15,6 +15,7 @@ import webpack from 'webpack';
 // We'll use `webpack-config` to create a 'base' config that can be
 // merged/extended from for further configs
 import WebpackConfig from 'webpack-config';
+import path from 'path';
 
 /* Local */
 
@@ -65,12 +66,25 @@ export default new WebpackConfig().merge({
           name: 'assets/fonts/[name].[hash].[ext]',
         },
       },
-
+      // Inject svg as react component if loaded from src/ otherwise load statically
+      {
+        test: /\.svg$/,
+        include: path.resolve('src'),
+        use: [
+          {
+            loader: 'svg-react-loader',
+            query: {
+              // presets: ['react']
+            },
+          },
+        ],
+      },
       // Images.  By default, we'll just use the file loader.  In production,
       // we'll also crunch the images first -- so let's set up `loaders` to
       // be an array to make extending this easier
       {
         test: regex.images,
+        include: path.resolve('static'),
         use: [
           {
             loader: 'file-loader',

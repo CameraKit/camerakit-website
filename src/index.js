@@ -8,9 +8,7 @@ import Helmet from 'react-helmet';
 
 import Public from './layouts/public';
 
-import Home from './pages/public/Home';
-
-// ----------------------
+import Home from './pages/public/home';
 
 export default () => (
   <div>

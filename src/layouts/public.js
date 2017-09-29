@@ -1,12 +1,14 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 
+import Nav from '../components/public/nav';
+
 const Public = ({ component: Component, ...rest }) => (
   <Route
     {...rest}
     render={matchProps => (
       <div className="public">
-        <div className="Header">Header</div>
+        <Nav />
         <Component {...matchProps} />
         <div className="Footer">Footer</div>
       </div>

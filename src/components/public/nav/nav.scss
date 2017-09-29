@@ -1,0 +1,42 @@
+.nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding-top: 1rem;
+}
+
+.links {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.link {
+  font-weight: 400;
+  color: #fff;
+  text-decoration: underline;
+  text-transform: uppercase;
+
+  &:hover, &:active, &:focus {
+    opacity: 0.6;
+  }
+}
+
+@media (min-width: 34em) {
+
+  .nav {
+    position: fixed;
+    padding-top: 3rem;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .links {
+    text-align: right;
+    margin-top: 0;
+  }
+
+
+} 
