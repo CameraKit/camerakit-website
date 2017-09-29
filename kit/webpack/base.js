@@ -51,6 +51,12 @@ export default new WebpackConfig().merge({
       PATHS.root,
       'node_modules',
     ],
+    alias: {
+      app: 'src/',
+      styles: 'src/styles',
+      components: 'src/components',
+      elements: 'src/elements',
+    },
   },
 
   // File type config and the loaders that will handle them.  This makes it
