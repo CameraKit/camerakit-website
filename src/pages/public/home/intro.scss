@@ -2,38 +2,46 @@
 
 .intro {
   padding-top: 12rem;
-  min-height: 55rem;
-  height: 90vh;
+  padding-bottom: 3rem;
   background-color: #37474F;
 }
 
 .preamble {
-  max-width: 90%;
   margin: 0 auto 2.5rem;
   color: #fff;
   text-align: center;
 }
 
-.container {
-  &::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    // background-image: url('static/il-phone.svg');
-  }
+.phoneWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.phoneHorizontal {
+  display: none;
+}
+
+.phoneVertical {
+  display: block;
+  width: 100%;
+  max-width: 20rem;
+  margin: 0 auto;
 }
 
 .content {
-  position: relative;
-  z-index: 1;
+  position: absolute;
+  left: 50%;
+  width: 90%;
+  max-width: 20rem;
+  top: 5rem;
+  padding: 5% 5%;
+  text-align: center;
+  transform: translate3d(-50%, 0, 0);
 }
 
 .heading {
   color: #fff;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 
 .text {
@@ -43,11 +51,48 @@
 @media (min-width: 48em) {
 
   .intro {
-    min-height: none;
+    padding-bottom: 0;
   }
 
-  .phone {
+  .container {
+    display: flex;
+  }
+
+  .preamble {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 0;
+    margin-right: 3rem;
+  }
+
+  .phoneVertical {
+    display: none;
+  }
+
+  .phoneHorizontal {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .content {
+    top: 5%;
+    left: 15%;
     transform: none;
+    text-align: left;
+    max-width: 45%;
   }
 
+}
+
+@media (min-width: 62em) {
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .content {
+    top: 10%;
+  }
 }

@@ -1,58 +1,51 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="960" height="480" viewBox="0 0 960 480">
   <defs>
-    <rect id="il-phone-roundedcorners-a" width="960" height="480" rx="32"/>
-    <filter id="il-phone-roundedcorners-b" width="100.2%" height="100.4%" x="-.1%" y="-.2%" filterUnits="objectBoundingBox">
-      <feOffset dy="2" in="SourceAlpha" result="shadowOffsetInner1"/>
-      <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
-      <feColorMatrix in="shadowInnerInner1" result="shadowMatrixInner1" values="0 0 0 0 0.470588235   0 0 0 0 0.564705882   0 0 0 0 0.611764706  0 0 0 0.4 0"/>
-      <feOffset dy="-2" in="SourceAlpha" result="shadowOffsetInner2"/>
-      <feComposite in="shadowOffsetInner2" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner2"/>
-      <feColorMatrix in="shadowInnerInner2" result="shadowMatrixInner2" values="0 0 0 0 0.470588235   0 0 0 0 0.564705882   0 0 0 0 0.611764706  0 0 0 0.4 0"/>
-      <feMerge>
-        <feMergeNode in="shadowMatrixInner1"/>
-        <feMergeNode in="shadowMatrixInner2"/>
-      </feMerge>
-    </filter>
-    <rect id="il-phone-roundedcorners-d" width="208" height="480" x="72"/>
-    <filter id="il-phone-roundedcorners-e" width="101%" height="100.4%" x="-.5%" y="-.2%" filterUnits="objectBoundingBox">
+    <path id="il-phone-a" d="M32,0 L928,0 L928,0 C945.673112,-6.60340047e-14 960,14.326888 960,32 L960,480 L0,480 L0,32 L0,32 C-2.164332e-15,14.326888 14.326888,3.24649801e-15 32,0 Z"/>
+    <filter id="il-phone-b" width="100.2%" height="100.4%" x="-.1%" y="-.2%" filterUnits="objectBoundingBox">
       <feOffset dy="2" in="SourceAlpha" result="shadowOffsetInner1"/>
       <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
       <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 0.470588235   0 0 0 0 0.564705882   0 0 0 0 0.611764706  0 0 0 0.4 0"/>
     </filter>
-    <circle id="il-phone-roundedcorners-f" cx="176" cy="240" r="40"/>
-    <rect id="il-phone-roundedcorners-g" width="72" height="480"/>
-    <filter id="il-phone-roundedcorners-h" width="102.8%" height="100.4%" x="-1.4%" y="-.2%" filterUnits="objectBoundingBox">
+    <rect id="il-phone-d" width="208" height="480" x="72"/>
+    <filter id="il-phone-e" width="101%" height="100.4%" x="-.5%" y="-.2%" filterUnits="objectBoundingBox">
+      <feOffset dy="2" in="SourceAlpha" result="shadowOffsetInner1"/>
+      <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+      <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 0.470588235   0 0 0 0 0.564705882   0 0 0 0 0.611764706  0 0 0 0.4 0"/>
+    </filter>
+    <circle id="il-phone-f" cx="176" cy="240" r="40"/>
+    <rect id="il-phone-g" width="72" height="480"/>
+    <filter id="il-phone-h" width="102.8%" height="100.4%" x="-1.4%" y="-.2%" filterUnits="objectBoundingBox">
       <feOffset dy="2" in="SourceAlpha" result="shadowOffsetInner1"/>
       <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
       <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 0.470588235   0 0 0 0 0.564705882   0 0 0 0 0.611764706  0 0 0 0.4 0"/>
     </filter>
   </defs>
   <g fill="none" fill-rule="evenodd">
-    <mask id="il-phone-roundedcorners-c" fill="#fff">
-      <use xlink:href="#il-phone-roundedcorners-a"/>
+    <mask id="il-phone-c" fill="#fff">
+      <use xlink:href="#il-phone-a"/>
     </mask>
-    <use fill="#455A64" xlink:href="#il-phone-roundedcorners-a"/>
-    <use fill="#000" filter="url(#il-phone-roundedcorners-b)" xlink:href="#il-phone-roundedcorners-a"/>
-    <rect width="10" height="80" x="40" y="200" fill="#37474F" mask="url(#il-phone-roundedcorners-c)" rx="5"/>
-    <g mask="url(#il-phone-roundedcorners-c)">
+    <use fill="#455A64" xlink:href="#il-phone-a"/>
+    <use fill="#000" filter="url(#il-phone-b)" xlink:href="#il-phone-a"/>
+    <rect width="10" height="80" x="40" y="200" fill="#37474F" mask="url(#il-phone-c)" rx="5"/>
+    <g mask="url(#il-phone-c)">
       <g transform="translate(680)">
         <g>
-          <use fill="#263238" xlink:href="#il-phone-roundedcorners-d"/>
-          <use fill="#000" filter="url(#il-phone-roundedcorners-e)" xlink:href="#il-phone-roundedcorners-d"/>
+          <use fill="#263238" xlink:href="#il-phone-d"/>
+          <use fill="#000" filter="url(#il-phone-e)" xlink:href="#il-phone-d"/>
         </g>
         <g transform="translate(154 380)">
           <path fill="#FFF" fill-rule="nonzero" d="M39.2381413,35.6705737 C35.2080184,40.7456138 28.9840605,44 22,44 C10.0485608,44 0.322975451,34.4699864 0.00787948821,22.5945946 L2.38721538,22.5945946 C2.70155561,33.1562488 11.3621809,41.6216216 22,41.6216216 C28.3277056,41.6216216 33.9558324,38.6263693 37.5439065,33.9763389 L34.4864865,30.9189189 L42.8108108,30.9189189 L42.8108108,39.2432432 L39.2381413,35.6705737 Z M5.02791507,8.00088804 C9.06307541,3.11436399 15.1678384,0 22,0 C33.9514392,0 43.6770245,9.5300136 43.9921205,21.4054054 L41.6127846,21.4054054 C41.2984444,10.8437512 32.6378191,2.37837838 22,2.37837838 C15.8243695,2.37837838 10.3150955,5.2313897 6.71830869,9.69128166 L10.1081081,13.0810811 L1.78378378,13.0810811 L1.78378378,4.75675676 L5.02791507,8.00088804 Z"/>
           <path fill="#FFF" d="M19.1459459,13.6756757 L24.8540541,13.6756757 L26.5664865,15.5255255 L29.6108108,15.5255255 C30.6572973,15.5255255 31.5135135,16.357958 31.5135135,17.3753754 L31.5135135,28.4744745 C31.5135135,29.4918919 30.6572973,30.3243243 29.6108108,30.3243243 L14.3891892,30.3243243 C13.3427027,30.3243243 12.4864865,29.4918919 12.4864865,28.4744745 L12.4864865,17.3753754 C12.4864865,16.357958 13.3427027,15.5255255 14.3891892,15.5255255 L17.4335135,15.5255255 L19.1459459,13.6756757 Z M22.1902703,26.0696697 C23.8716042,26.0696697 25.2345946,24.7445401 25.2345946,23.1099099 C25.2345946,21.4752797 23.8716042,20.1501502 22.1902703,20.1501502 C20.5089364,20.1501502 19.1459459,21.4752797 19.1459459,23.1099099 C19.1459459,24.7445401 20.5089364,26.0696697 22.1902703,26.0696697 Z"/>
         </g>
         <g>
-          <use fill="#455A64" xlink:href="#il-phone-roundedcorners-f"/>
+          <use fill="#455A64" xlink:href="#il-phone-f"/>
           <circle cx="176" cy="240" r="34" stroke="#FFF" stroke-width="12"/>
         </g>
         <circle cx="176" cy="84" r="28" fill="#455A64"/>
         <path fill="#FFF" d="M24,21.3333333 L24,2.66666667 C24,1.2 22.8,0 21.3333333,0 L2.66666667,0 C1.2,0 0,1.2 0,2.66666667 L0,21.3333333 C0,22.8 1.2,24 2.66666667,24 L21.3333333,24 C22.8,24 24,22.8 24,21.3333333 L24,21.3333333 Z M7.33333333,14 L10.6666667,18 L15.3333333,12 L21.3333333,20 L2.66666667,20 L7.33333333,14 L7.33333333,14 Z" transform="translate(164 72)"/>
         <g>
-          <use fill="#263238" fill-opacity=".5" xlink:href="#il-phone-roundedcorners-g"/>
-          <use fill="#000" filter="url(#il-phone-roundedcorners-h)" xlink:href="#il-phone-roundedcorners-g"/>
+          <use fill="#263238" fill-opacity=".5" xlink:href="#il-phone-g"/>
+          <use fill="#000" filter="url(#il-phone-h)" xlink:href="#il-phone-g"/>
         </g>
         <path fill="#FFF" d="M20.3131621,13.037037 C20.3131621,12.6814815 20.4316806,12.3259259 20.4316806,11.8518519 C20.4316806,11.3777778 20.4316806,11.0222222 20.3131621,10.6666667 L22.8020509,8.65185185 C23.039088,8.41481481 23.039088,8.17777778 22.9205695,7.94074074 L20.5501991,3.79259259 C20.4316806,3.67407407 20.1946435,3.55555556 19.839088,3.67407407 L16.876125,4.85925926 C16.2835324,4.38518519 15.5724213,4.02962963 14.8613102,3.67407407 L14.3872361,0.592592593 C14.5057546,0.237037037 14.1501991,0 13.9131621,0 L9.17242132,0 C8.93538428,0 8.57982872,0.237037037 8.57982872,0.474074074 L8.10575465,3.67407407 C7.39464354,3.91111111 6.80205094,4.38518519 6.09093983,4.85925926 L3.24649539,3.67407407 C2.89093983,3.55555556 2.6539028,3.67407407 2.41686576,3.91111111 L0.0464953891,8.05925926 C-0.0720231294,8.17777778 0.0464953891,8.53333333 0.283532426,8.77037037 L2.77242132,10.6666667 C2.77242132,11.0222222 2.6539028,11.3777778 2.6539028,11.8518519 C2.6539028,12.3259259 2.6539028,12.6814815 2.77242132,13.037037 L0.283532426,15.0518519 C0.0464953891,15.2888889 0.0464953891,15.5259259 0.165013908,15.762963 L2.53538428,19.9111111 C2.6539028,20.0296296 2.89093983,20.1481481 3.24649539,20.0296296 L6.20945835,18.8444444 C6.80205094,19.3185185 7.51316206,19.6740741 8.22427317,20.0296296 L8.69834724,23.1111111 C8.69834724,23.3481481 8.93538428,23.5851852 9.29093983,23.5851852 L14.0316806,23.5851852 C14.2687176,23.5851852 14.6242732,23.3481481 14.6242732,23.1111111 L15.0983472,20.0296296 C15.8094584,19.6740741 16.5205695,19.3185185 17.1131621,18.8444444 L20.076125,20.0296296 C20.3131621,20.1481481 20.6687176,20.0296296 20.7872361,19.7925926 L23.1576065,15.6444444 C23.276125,15.4074074 23.276125,15.0518519 23.039088,14.9333333 L20.3131621,13.037037 L20.3131621,13.037037 Z M11.5427917,16 C9.29093983,16 7.39464354,14.1037037 7.39464354,11.8518519 C7.39464354,9.6 9.29093983,7.7037037 11.5427917,7.7037037 C13.7946435,7.7037037 15.6909398,9.6 15.6909398,11.8518519 C15.6909398,14.1037037 13.7946435,16 11.5427917,16 L11.5427917,16 Z" transform="translate(23.704 417.778)"/>
         <path fill="#FFF" d="M8.77037037,10.0740741 L14.4592593,0.237037037 C13.6296296,0.118518519 12.6814815,0 11.8518519,0 C9.00740741,0 6.4,0.948148148 4.38518519,2.72592593 L8.77037037,10.1925926 L8.77037037,10.0740741 L8.77037037,10.0740741 Z M23.1111111,8.2962963 C22.0444444,4.85925926 19.437037,2.01481481 16,0.82962963 L11.7333333,8.2962963 L23.1111111,8.2962963 L23.1111111,8.2962963 Z M23.4666667,9.48148148 L14.5777778,9.48148148 L14.9333333,10.0740741 L20.6222222,19.9111111 C22.5185185,17.7777778 23.7037037,14.9333333 23.7037037,11.8518519 C23.7037037,11.0222222 23.5851852,10.1925926 23.4666667,9.48148148 L23.4666667,9.48148148 Z M7.7037037,11.8518519 L3.08148148,3.79259259 C1.18518519,5.92592593 0,8.77037037 0,11.8518519 C0,12.6814815 0.118518519,13.5111111 0.237037037,14.2222222 L9.12592593,14.2222222 L7.7037037,11.8518519 L7.7037037,11.8518519 Z M0.592592593,15.4074074 C1.65925926,18.8444444 4.26666667,21.6888889 7.7037037,22.8740741 L12.0888889,15.4074074 L0.592592593,15.4074074 L0.592592593,15.4074074 Z M13.8666667,15.4074074 L9.24444444,23.4666667 C10.0740741,23.7037037 10.9037037,23.7037037 11.8518519,23.7037037 C14.6962963,23.7037037 17.3037037,22.7555556 19.3185185,20.9777778 L14.9333333,13.5111111 L13.8666667,15.4074074 L13.8666667,15.4074074 Z" transform="translate(23.704 341.926)"/>

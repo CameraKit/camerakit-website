@@ -1,6 +1,9 @@
 import React from 'react';
 
-import features from './features.js';
+import phoneHorizontal from 'static/il-phone.svg';
+import phoneVertical from 'static/il-phone-vertical.svg';
+
+import features from './features';
 
 import styles from './home.scss';
 import intro from './intro.scss';
@@ -9,15 +12,19 @@ import intro from './intro.scss';
 const Home = props => (
   <div>
     <section className={intro.intro}>
-      <p className={intro.preamble}>
-        Wonderkiln presents
-      </p>
       <div className={`container ${intro.container}`}>
-        <div className={intro.content}>
-          <h2 className={intro.heading}>An easy to use library for Android</h2>
-          <p className={intro.text}>
-            Praesent vitae nulla aliquam sem tristique venenatis metus ex, pretium vitae mauris in.
-          </p>
+        <p className={intro.preamble}>
+          Wonderkiln presents
+        </p>
+        <div className={intro.phoneWrapper}>
+          <img src={phoneHorizontal} className={intro.phoneHorizontal} alt="" />
+          <img src={phoneVertical} className={intro.phoneVertical} alt="" />
+          <div className={intro.content}>
+            <h2 className={intro.heading}>An easy to use library for Android</h2>
+            <p className={intro.text}>
+              Praesent vitae nulla aliquam sem tristique venenatis metus ex, pretium vitae mauris in.
+            </p>
+          </div>
         </div>
       </div>
     </section>
