@@ -1,53 +1,22 @@
-@import '~styles/variables'; 
+@import '~styles/variables';
 
-.intro {
-  padding-top: 12rem;
-  min-height: 55rem;
-  height: 90vh;
-  background-color: #37474F;
-}
-
-.preamble {
-  max-width: 90%;
-  margin: 0 auto 2.5rem;
-  color: #fff;
-  text-align: center;
-}
-
-.container {
-  &::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    // background-image: url('static/il-phone.svg');
-  }
-}
-
-.content {
-  position: relative;
-  z-index: 1;
+.section {
+  margin: 2.5rem 0;
 }
 
 .heading {
-  color: #fff;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
+  color: $dark-grey;
 }
 
-.text {
-  color: $light-grey;
+.flexWrapper {
+  lost-flex-container: row;
 }
 
-@media (min-width: 48em) {
+@media (min-width: 62em) {
 
-  .intro {
-    min-height: none;
-  }
-
-  .phone {
-    transform: none;
+  .section {
+    margin: 5rem 0;
   }
 
 }

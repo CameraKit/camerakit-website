@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72">
+  <g fill="#F44336" fill-rule="evenodd" transform="translate(-28 -28)">
+    <rect width="32" height="32" x="48" y="48" rx="4"/>
+    <path fill-rule="nonzero" d="M31,44 L28,44 L28,84 L31,84 L31,97 L44,97 L44,100 L84,100 L84,97 L97,97 L97,84 L100,84 L100,44 L97,44 L97,31 L84,31 L84,28 L44,28 L44,31 L31,31 L31,44 Z M28,28 L100,28 L100,100 L28,100 L28,28 Z" opacity=".2"/>
+  </g>
+</svg>

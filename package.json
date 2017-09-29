@@ -53,6 +53,7 @@
     "jest": "^21.0.1",
     "less": "^2.7.2",
     "less-loader": "^4.0.5",
+    "lost": "^8.2.0",
     "node-sass": "^4.5.3",
     "node-zopfli": "^2.0.2",
     "npm-run-all": "^4.1.1",
