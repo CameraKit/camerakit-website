@@ -28,7 +28,7 @@ module.exports = {
     'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
     'react/prefer-stateless-function': [2, { ignorePureComponents: true }],
     'react/no-multi-comp': 0,
-    'react/jsx-closing-bracket-location': [1, 'after-props'],
+    'react/jsx-closing-bracket-location': [1],
     'react/prop-types': [1, {
       ignore: [
         // `dispatch` is typically used by Redux `@connect`
@@ -45,8 +45,12 @@ module.exports = {
       ),
     ],
     'global-require': 0,
-    'import/no-unresolved': [2, { commonjs: true }],
-    'compat/compat': 2
+    'import/no-unresolved': 0,
+    'compat/compat': 2,
+    // Having issues with aliases
+    // https://github.com/benmosher/eslint-plugin-import/issues/496 
+    'import/no-extraneous-dependencies': 0,
+    'import/extensions': 0,
   },
   settings: {
     'import/resolver': {
