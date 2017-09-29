@@ -77,11 +77,12 @@
   }
 
   .content {
-    top: 5%;
-    left: 15%;
+    padding: 0;
+    top: 15%;
+    left: 20%;
     transform: none;
     text-align: left;
-    max-width: 45%;
+    max-width: 40%;
   }
 
 }
@@ -93,6 +94,7 @@
   }
 
   .content {
-    top: 10%;
+    top: 20%;
+    max-width: 35%;
   }
 }
