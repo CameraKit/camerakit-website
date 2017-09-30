@@ -3,6 +3,8 @@ import React from 'react';
 import phoneHorizontal from 'static/il-phone.svg';
 import phoneVertical from 'static/il-phone-vertical.svg';
 
+import Feature from 'components/public/feature';
+
 import features from './features';
 
 import styles from './home.scss';
@@ -33,7 +35,11 @@ const Home = props => (
         <h2 className={styles.heading}>Features</h2>
         <ul className={styles.flexWrapper}>
           {features.map(feature => (
-            <li>{feature.text}</li>
+            <Feature
+              key={feature.text}
+              text={feature.text}
+              icon={feature.icon}
+            />
           ))}
         </ul>
       </div>

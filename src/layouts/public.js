@@ -18,7 +18,10 @@ const Public = ({ component: Component, ...rest }) => (
 );
 
 Public.propTypes = {
-  component: PropTypes.element.isRequired,
+  component: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.function,
+  ]),
 };
 
 export default Public;

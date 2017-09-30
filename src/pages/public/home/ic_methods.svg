@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="48" height="60" viewBox="0 0 48 60">
+<svg class="ic-methods feature-icon" viewBox="-20 -20 88 100">
   <g fill="#F44336" fill-rule="evenodd">
-    <rect width="32" height="44" x="16" opacity=".2" rx="4"/>
-    <rect width="32" height="44" x="8" y="8" opacity=".2" rx="4"/>
-    <rect width="32" height="44" y="16" rx="4"/>
+    <rect class="rectangle-1" width="32" height="44" x="16" opacity=".2" rx="4"/>
+    <rect class="rectangle-2" width="32" height="44" x="8" y="8" opacity=".2" rx="4"/>
+    <rect class="rectangle-3" width="32" height="44" y="16" rx="4"/>
   </g>
 </svg>
