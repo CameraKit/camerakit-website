@@ -3,6 +3,7 @@ import { Route } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import Nav from 'components/public/nav';
+import Footer from 'components/public/footer';
 
 const Public = ({ component: Component, ...rest }) => (
   <Route
@@ -11,7 +12,7 @@ const Public = ({ component: Component, ...rest }) => (
       <div className="public">
         <Nav />
         <Component {...matchProps} />
-        <div className="Footer">Footer</div>
+        <Footer />
       </div>
     )}
   />

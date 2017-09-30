@@ -4,8 +4,10 @@ import phoneHorizontal from 'static/il-phone.svg';
 import phoneVertical from 'static/il-phone-vertical.svg';
 
 import Feature from 'components/public/feature';
+import Sponsor from 'components/public/sponsor';
 
 import features from './features';
+import sponsors from './sponsors';
 
 import styles from './home.scss';
 import intro from './intro.scss';
@@ -33,7 +35,7 @@ const Home = props => (
     <section className={styles.section}>
       <div className="container">
         <h2 className={styles.heading}>Features</h2>
-        <ul className={styles.flexWrapper}>
+        <ul className={`${styles.list} ${styles.flexWrapper}`}>
           {features.map(feature => (
             <Feature
               key={feature.text}
@@ -52,6 +54,22 @@ const Home = props => (
           <p>Nulla malesuada eros eu enim semper auctor. Maecenas congue mauris sit amet tellus venenatis accumsan. In hac habitasse platea dictumst. Donec eros risus, fermentum venenatis purus non, malesuada consequat arcu. Aliquam scelerisque odio mi, fringilla efficitur risus rutrum vitae. Vestibulum mollis vehicula magna, ut mollis sapien consectetur sed.</p>
           <p>Proin blandit id nisl quis interdum. Sed tristique faucibus neque, non porttitor nunc auctor in. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
         </div>
+      </div>
+    </section>
+    <section className={styles.section}>
+      <div className="container">
+        <h2 className={styles.heading}>Sponsors</h2>
+        <ul className={styles.list}>
+          {sponsors.map(sponsor => (
+            <Sponsor
+              key={sponsor.name}
+              logo={sponsor.logo}
+              name={sponsor.name}
+              quote={sponsor.quote}
+              source={sponsor.source}
+            />
+          ))}
+        </ul>
       </div>
     </section>
   </div>

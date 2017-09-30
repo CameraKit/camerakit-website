@@ -1,0 +1,66 @@
+@import '~styles/variables';
+
+.footer {
+  background-color: $offwhite;
+  color: $dark-grey;
+  padding: 1.5rem 0;
+}
+
+.logo {
+  margin-bottom: 1.5rem;
+}
+
+.links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.link {
+  display: inline;
+  color: $dark-grey;
+  font-weight: 400;
+
+  &:hover, &:active, &:focus {
+    opacity: 0.4;
+  }
+}
+
+.copyright {
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 34em) {
+  .logo {
+    margin-bottom: 2.5rem;
+  }
+
+  .listItem {
+    display: inline;
+
+    &:not(:first-child) {
+      margin-left: 1.5rem;
+    }
+  }
+
+  .copyright {
+    margin-top: 2.5rem;
+  }
+}
+
+@media (min-width: 48em) {
+
+  .footer {
+    padding: 3rem 0;
+  }
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .copyright {
+    margin-top: 0;
+  }
+
+}
