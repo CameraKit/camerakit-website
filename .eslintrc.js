@@ -47,6 +47,7 @@ module.exports = {
     'global-require': 0,
     'import/no-unresolved': 0,
     'compat/compat': 2,
+    'max-len': 0,
     // Having issues with aliases
     // https://github.com/benmosher/eslint-plugin-import/issues/496 
     'import/no-extraneous-dependencies': 0,

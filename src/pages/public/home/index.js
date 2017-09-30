@@ -44,6 +44,16 @@ const Home = props => (
         </ul>
       </div>
     </section>
+    <section className={styles.section}>
+      <div className="container">
+        <h2 className={styles.heading}>About Camerakit</h2>
+        <div className="container--medium">
+          <p>In hac habitasse platea dictumst. Nullam mattis orci rhoncus justo maximus, nec viverra risus condimentum. Morbi erat magna, aliquam et risus et, bibendum fringilla dolor.</p>
+          <p>Nulla malesuada eros eu enim semper auctor. Maecenas congue mauris sit amet tellus venenatis accumsan. In hac habitasse platea dictumst. Donec eros risus, fermentum venenatis purus non, malesuada consequat arcu. Aliquam scelerisque odio mi, fringilla efficitur risus rutrum vitae. Vestibulum mollis vehicula magna, ut mollis sapien consectetur sed.</p>
+          <p>Proin blandit id nisl quis interdum. Sed tristique faucibus neque, non porttitor nunc auctor in. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+        </div>
+      </div>
+    </section>
   </div>
 );
 

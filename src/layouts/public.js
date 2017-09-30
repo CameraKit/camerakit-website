@@ -20,7 +20,7 @@ const Public = ({ component: Component, ...rest }) => (
 Public.propTypes = {
   component: PropTypes.oneOfType([
     PropTypes.element,
-    PropTypes.function,
+    PropTypes.func,
   ]),
 };
 
