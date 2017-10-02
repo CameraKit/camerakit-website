@@ -16,7 +16,7 @@
     "start": "run-p browser server-dev",
     "static": "serve -s dist/public",
     "test": "jest",
-    "postinstall": "npm run build"
+    "heroku-postbuild": "npm run build"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
