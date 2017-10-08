@@ -13,10 +13,10 @@ import Home from './pages/public/home';
 export default () => (
   <div>
     <Helmet
-      title="ReactQL application"
+      title="CameraKit"
       meta={[{
         name: 'description',
-        content: 'ReactQL starter kit app',
+        content: 'One of the hardest Android APIs made into a high level and easy to use library that solves all of your problems.',
       }]} />
     <Switch>
       <Public exact path="/" component={Home} />
