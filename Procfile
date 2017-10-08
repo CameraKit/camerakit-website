@@ -1,1 +1,1 @@
-web: npm run server
+web: SERVER_PROD_PORT=$PORT npm run server
