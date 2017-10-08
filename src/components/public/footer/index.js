@@ -6,11 +6,13 @@ import styles from './footer.scss';
 const Footer = () => (
   <footer className={styles.footer}>
     <div className={`container ${styles.container}`}>
-      <img src={logo} className={styles.logo} alt="Wonderkiln Logo" />
+      <a className={styles.link} href="https://www.wonderkiln.com">
+        <img src={logo} className={styles.logo} alt="Wonderkiln Logo" />
+      </a>
       <nav className={styles.nav}>
         <ul className={styles.links}>
           <li className={styles.listItem}>
-            <a className={styles.link} href="/">
+            <a className={styles.link} href="https://www.wonderkiln.com/about">
               About Wonderkiln
             </a>
           </li>
@@ -26,7 +28,7 @@ const Footer = () => (
           </li>
         </ul>
         <div className={styles.copyright}>
-          © 2017 WonderKiln LLC
+          © 2017 WonderKiln, Inc
         </div>
       </nav>
     </div>
