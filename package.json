@@ -1,5 +1,5 @@
 {
-  "version": "2.8.5",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "browser": "cross-env NODE_ENV=development WEBPACK_CONFIG=browser_dev webpack-dev-server --open",
@@ -15,7 +15,8 @@
     "server-dev": "cross-env NODE_ENV=development WEBPACK_CONFIG=server_dev webpack --colors",
     "start": "run-p browser server-dev",
     "static": "serve -s dist/public",
-    "test": "jest"
+    "test": "jest",
+    "postinstall": "npm run build"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",

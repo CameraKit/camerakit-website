@@ -63,7 +63,7 @@ export default new WebpackConfig().extend({
       'process.env': {
         // Point the server host/port to the dev server
         HOST: JSON.stringify(process.env.HOST || 'localhost'),
-        PORT: JSON.stringify(process.env.PORT || '4000'),
+        PORT: process.env.PORT || JSON.stringify(process.env.PORT || '4000'),
         SSL_PORT: process.env.SSL_PORT ? JSON.stringify(process.env.SSL_PORT) : null,
 
         // React constantly checking process.env.NODE_ENV causes massive
