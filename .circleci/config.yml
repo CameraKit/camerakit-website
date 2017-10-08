@@ -32,18 +32,6 @@ jobs:
           prefix: coverage
       - store_test_results:
           path: test-results.xml
-  deploy:
-    machine:
-      enabled: true
-    working_directory: ~/camerakit-website
-    environment:
-      HEROKU_APP: "camerakit-website"
-    steps:
-      - checkout
-      - run:
-        command: |
-          heroku container:login
-          heroku container:push web
 workflows:
   version: 2
   build-test-and-deploy:
