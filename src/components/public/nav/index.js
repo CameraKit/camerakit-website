@@ -6,7 +6,7 @@ import Logo from './brand_camerakit_logo.svg';
 const Nav = () => (
   <nav className={styles.nav}>
     <div className={`container ${styles.container}`}>
-      <div className={styles.brand}>
+      <div className={`animated-logo__wrapper ${styles.brand}`}>
         <Logo />
       </div>
       <div className={styles.links}>
