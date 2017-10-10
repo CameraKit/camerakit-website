@@ -17,7 +17,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 // Browser routing
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-g-analytics';
 
 // Apollo Provider. This HOC will 'wrap' our React component chain
 // and handle injecting data down to any listening component
@@ -68,7 +68,7 @@ const Root = (() => {
   // can respond to route changes
   const Chain = () => (
     <ApolloProvider store={store} client={client}>
-      <BrowserRouter>
+      <BrowserRouter id="UA-107887524-1">
         <App />
       </BrowserRouter>
     </ApolloProvider>
