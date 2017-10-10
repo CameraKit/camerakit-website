@@ -3928,7 +3928,7 @@ hide-powered-by@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/hide-powered-by/-/hide-powered-by-1.0.0.tgz#4a85ad65881f62857fc70af7174a1184dccce32b"
 
-history@^4.7.2:
+history@^4.6.1, history@^4.7.2:
   version "4.7.2"
   resolved "https://registry.yarnpkg.com/history/-/history-4.7.2.tgz#22b5c7f31633c5b8021c7f4a8a954ac139ee8d5b"
   dependencies:
@@ -7454,6 +7454,13 @@ react-dom@^16.0.0-rc.2:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     prop-types "^15.6.0"
+
+react-g-analytics@^0.4.2:
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/react-g-analytics/-/react-g-analytics-0.4.2.tgz#8e0b02d595cf5011dbffd2f697437bebed0972aa"
+  dependencies:
+    history "^4.6.1"
+    prop-types "^15.5.8"
 
 react-helmet@^5.2.0:
   version "5.2.0"
