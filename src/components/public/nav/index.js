@@ -10,7 +10,7 @@ const Nav = () => (
         <Logo />
       </div>
       <div className={styles.links}>
-        <a className={styles.link} href="/">
+        <a className={styles.link} href="https://github.com/wonderkiln/CameraKit-Android">
           View on Github
         </a>
       </div>
