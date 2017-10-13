@@ -17,16 +17,13 @@ const Home = props => (
   <div>
     <section className={intro.intro}>
       <div className={`container ${intro.container}`}>
-        <p className={intro.preamble}>
-          Wonderkiln presents
-        </p>
         <div className={intro.phoneWrapper}>
           <img src={phoneHorizontal} className={intro.phoneHorizontal} alt="" />
           <img src={phoneVertical} className={intro.phoneVertical} alt="" />
           <div className={intro.content}>
-            <h2 className={intro.heading}>An easy to use library for Android</h2>
+            <h2 className={intro.heading}>The Best Camera API</h2>
             <p className={intro.text}>
-              Praesent vitae nulla aliquam sem tristique venenatis metus ex, pretium vitae mauris in.
+              CameraKit is an open-source, easy-to-use library for the Camera API on Android. High-level, simple, and extremely performant.
             </p>
           </div>
         </div>
@@ -48,11 +45,11 @@ const Home = props => (
     </section>
     <section className={styles.section}>
       <div className="container">
-        <h2 className={styles.heading}>About Camerakit</h2>
+        <h2 className={styles.heading}>About CameraKit</h2>
         <div className="container--medium">
-          <p>In hac habitasse platea dictumst. Nullam mattis orci rhoncus justo maximus, nec viverra risus condimentum. Morbi erat magna, aliquam et risus et, bibendum fringilla dolor.</p>
-          <p>Nulla malesuada eros eu enim semper auctor. Maecenas congue mauris sit amet tellus venenatis accumsan. In hac habitasse platea dictumst. Donec eros risus, fermentum venenatis purus non, malesuada consequat arcu. Aliquam scelerisque odio mi, fringilla efficitur risus rutrum vitae. Vestibulum mollis vehicula magna, ut mollis sapien consectetur sed.</p>
-          <p>Proin blandit id nisl quis interdum. Sed tristique faucibus neque, non porttitor nunc auctor in. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+          <p>CameraKit makes sense of one of the hardest Android APIs, the Camera 1 and Camera 2 APIs in the Android SDK. Our goal is to make our open-source library into a layer that makes those difficult APIs readily simple yet significantly more powerful.</p>
+          <p>We are working on making new improvements to the library by expanding into new features and consistent improvements that are more powerful and performance-focused. </p>
+          <p>We continually advance the library and encourage issues to be created, pull requests submitted, and even email requests. We are very active and look forward to collaborating! Be sure to check out our sponsors. If you are a company interested in helping us support the library, reach out to us here: <a href="mailto:contact@camerakit.website">contact@camerakit.website</a></p>
         </div>
       </div>
     </section>

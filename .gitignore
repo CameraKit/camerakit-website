@@ -41,3 +41,6 @@ jspm_packages
 
 # Distribution
 dist
+
+# npm
+package-lock.json
