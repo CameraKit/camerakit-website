@@ -13,7 +13,7 @@ import styles from './home.scss';
 import intro from './intro.scss';
 
 
-const Home = props => (
+const Home = () => (
   <div>
     <section className={intro.intro}>
       <div className={`container ${intro.container}`}>
