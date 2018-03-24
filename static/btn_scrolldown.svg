@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="110" height="110" viewBox="0 0 110 110">
+  <defs>
+    <circle id="button_scrolldown-b" cx="24" cy="24" r="24"/>
+    <filter id="button_scrolldown-a" width="300%" height="300%" x="-100%" y="-83.3%" filterUnits="objectBoundingBox">
+      <feMorphology in="SourceAlpha" operator="dilate" radius="8" result="shadowSpreadOuter1"/>
+      <feOffset dy="8" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+      <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="12"/>
+      <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"/>
+      <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.577825854   0 0 0 0 0.657956081   0 0 0 0 0.701663478  0 0 0 0.149598053 0"/>
+    </filter>
+  </defs>
+  <g fill="none" fill-rule="evenodd" transform="translate(31 23)">
+    <use fill="#000" filter="url(#button_scrolldown-a)" xlink:href="#button_scrolldown-b"/>
+    <use fill="#FFF" xlink:href="#button_scrolldown-b"/>
+    <circle cx="24" cy="24" r="28" stroke="#FFF" stroke-opacity=".389" stroke-width="8"/>
+    <polyline stroke="#3C425B" stroke-width="3" points="20.667 30.667 27.333 24 20.667 17.333" transform="rotate(90 24 24)"/>
+  </g>
+</svg>

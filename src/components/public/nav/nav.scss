@@ -1,43 +1,21 @@
 .nav {
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
   padding-top: 2rem;
   z-index: 5;
 }
 
-.links {
-  margin-top: 1.5rem;
-  text-align: center;
-}
-
-.link {
-  font-weight: 400;
-  color: #fff;
-  text-decoration: underline;
-  text-transform: uppercase;
-
-  &:hover, &:active, &:focus {
-    opacity: 0.6;
-  }
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 @media (min-width: 34em) {
 
   .nav {
-    position: absolute;
     padding-top: 3rem;
   }
 
-  .container {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .links {
-    text-align: right;
-    margin-top: 0;
-  }
-
-
-} 
+}
