@@ -4,6 +4,10 @@
   max-width: 75rem;
   margin: 0 auto;
 
+  &--large {
+  	max-width: 60rem;
+  }
+
   &--medium {
     max-width: 50rem;
   }

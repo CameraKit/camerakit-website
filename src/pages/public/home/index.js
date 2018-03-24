@@ -1,7 +1,6 @@
 import React from 'react';
 
-import phoneHorizontal from 'static/il-phone.svg';
-import phoneVertical from 'static/il-phone-vertical.svg';
+import phone from 'static/il-phone.svg';
 
 import Feature from 'components/public/feature';
 import Sponsor from 'components/public/sponsor';
@@ -16,15 +15,15 @@ import intro from './intro.scss';
 const Home = () => (
   <div>
     <section className={intro.intro}>
-      <div className={`container ${intro.container}`}>
-        <div className={intro.phoneWrapper}>
-          <img src={phoneHorizontal} className={intro.phoneHorizontal} alt="" />
-          <img src={phoneVertical} className={intro.phoneVertical} alt="" />
-          <div className={intro.content}>
-            <h2 className={intro.heading}>The Best Camera API</h2>
-            <p className={intro.text}>
-              CameraKit is an open-source, easy-to-use library for the Camera API on Android. High-level, simple, and extremely performant.
-            </p>
+      <div className='container container--large'>
+        <div className={intro.content}>
+          <div className={intro.phone}>
+            <img src={phone} className={intro.phoneImage} alt="" />
+            <h1 className={`heading--large ${intro.heading}`}>The Best Camera API on Android</h1>
+          </div>
+          <div className={intro.hidden}>
+            <h2 className={intro.subheading}>Completely <br />Open Source</h2>
+            <p>Proudly made by people just like you. Who really like cats. Austin don't forget to change this text.</p>
           </div>
         </div>
       </div>
