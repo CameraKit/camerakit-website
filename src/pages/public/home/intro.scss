@@ -56,6 +56,14 @@
   transform: translateX(-50%);
 }
 
+.button {
+  position: absolute;
+  left: 50%;
+  margin-left: -3.438em;
+  bottom: 10%;
+  z-index: 1;
+}
+
 @media (min-width: 48em) {
 
   .intro {
@@ -110,6 +118,10 @@
 
   .phoneImage {
     margin: 0;
+  }
+
+  .button {
+    bottom: 20%;
   }
 }
 

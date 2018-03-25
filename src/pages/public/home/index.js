@@ -1,7 +1,10 @@
 import React from 'react';
 
+import jump from 'jump.js'
+
 import phone from 'static/il-phone.svg';
 import phoneTilted from 'static/il_phone_tilted.svg';
+import button from 'static/btn_scrolldown.svg';
 
 import FloatingFooter from 'components/public/floating-footer';
 import Feature from 'components/public/feature';
@@ -13,7 +16,9 @@ import sponsors from './sponsors';
 import styles from './home.scss';
 import intro from './intro.scss';
 
-
+function scrollDown () {
+  jump('#features');
+}
 
 const Home = () => (
   <div>
@@ -31,9 +36,10 @@ const Home = () => (
           </div>
         </div>
       </div>
+      <img role="button" src={button} className={`scroll-button ${intro.button}`} onClick={scrollDown} alt="Scroll Down" />
       <img src={phoneTilted} className={intro.phoneTilted} />
     </section>
-    <section className={styles.section}>
+    <section id="features" className={styles.section}>
       <div className="container">
         <h2 className={styles.heading}>Features</h2>
         <ul className={`${styles.list} ${styles.flexWrapper}`}>

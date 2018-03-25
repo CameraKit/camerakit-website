@@ -86,6 +86,7 @@
     "graphql": "^0.11.3",
     "ip": "^1.1.5",
     "isomorphic-fetch": "^2.2.1",
+    "jump.js": "^1.0.2",
     "kcors": "^2.2.1",
     "koa": "^2.3.0",
     "koa-bodyparser": "^4.2.0",
