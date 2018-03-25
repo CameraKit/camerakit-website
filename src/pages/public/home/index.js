@@ -3,6 +3,7 @@ import React from 'react';
 import phone from 'static/il-phone.svg';
 import phoneTilted from 'static/il_phone_tilted.svg';
 
+import FloatingFooter from 'components/public/floating-footer';
 import Feature from 'components/public/feature';
 import Sponsor from 'components/public/sponsor';
 
@@ -13,8 +14,10 @@ import styles from './home.scss';
 import intro from './intro.scss';
 
 
+
 const Home = () => (
   <div>
+    <FloatingFooter />
     <section className={intro.intro}>
       <div className='container container--large'>
         <div className={intro.content}>

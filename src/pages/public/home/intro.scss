@@ -1,6 +1,8 @@
 @import '~styles/variables';
 
 .intro {
+  display: flex;
+  align-items: center;
   position: relative;
   min-height: 100vh;
   padding-top: 5rem;
@@ -29,6 +31,7 @@
 }
 
 .subheading {
+  color: $dark-grey;
   // font-size: 1rem;
   // color: $primary;
   // text-transform: uppercase;
@@ -56,8 +59,6 @@
 @media (min-width: 48em) {
 
   .intro {
-    display: flex;
-    align-items: center;
     padding: 15rem 0;
   }
 
@@ -87,7 +88,6 @@
 
   .subheading {
     margin: 0 0 1rem;
-    color: $dark-grey;
     line-height: 1.2;
     font-size: 3rem;
     font-weight: 100;
