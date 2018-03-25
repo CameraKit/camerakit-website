@@ -1,6 +1,7 @@
 import React from 'react';
 
 import phone from 'static/il-phone.svg';
+import phoneTilted from 'static/il_phone_tilted.svg';
 
 import Feature from 'components/public/feature';
 import Sponsor from 'components/public/sponsor';
@@ -18,15 +19,16 @@ const Home = () => (
       <div className='container container--large'>
         <div className={intro.content}>
           <div className={intro.phone}>
-            <img src={phone} className={intro.phoneImage} alt="" />
-            <h1 className={`heading--large ${intro.heading}`}>The Best Camera API on Android</h1>
+            {/*<img src={phone} className={intro.phoneImage} alt="" />
+            <h1 className={`heading--large ${intro.heading}`}>The Best Camera API on Android</h1>*/}
           </div>
           <div className={intro.hidden}>
-            <h2 className={intro.subheading}>Completely <br />Open Source</h2>
+            <h2 className={`heading--large ${intro.subheading}`}>Completely <br />Open Source</h2>
             <p>Proudly made by people just like you. Who really like cats. Austin don't forget to change this text.</p>
           </div>
         </div>
       </div>
+      <img src={phoneTilted} className={intro.phoneTilted} />
     </section>
     <section className={styles.section}>
       <div className="container">

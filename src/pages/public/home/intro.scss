@@ -1,9 +1,10 @@
 @import '~styles/variables';
 
 .intro {
+  position: relative;
   min-height: 100vh;
-  padding-top: 12rem;
-  padding-bottom: 6rem;
+  padding-top: 5rem;
+  padding-bottom: 12rem;
   background: linear-gradient(to bottom, #CBCee9, #DDE1E9);
   text-align: center;
 }
@@ -28,9 +29,9 @@
 }
 
 .subheading {
-  font-size: 1rem;
-  color: $primary;
-  text-transform: uppercase;
+  // font-size: 1rem;
+  // color: $primary;
+  // text-transform: uppercase;
 
   br {
     display: none;
@@ -45,6 +46,13 @@
   margin-bottom: 3rem;
 }
 
+.phoneTilted {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 @media (min-width: 48em) {
 
   .intro {
@@ -56,7 +64,7 @@
   .content {
     margin: 0 auto;
     // NOTE: Get aspect ratio of final asset
-    padding-top: 50%;
+    //padding-top: 50%;
     perspective: 1000px;
   }
 
@@ -78,8 +86,9 @@
   }
 
   .subheading {
-    margin: 0;
+    margin: 0 0 1rem;
     color: $dark-grey;
+    line-height: 1.2;
     font-size: 3rem;
     font-weight: 100;
     text-transform: none;
@@ -102,6 +111,11 @@
   .phoneImage {
     margin: 0;
   }
+}
 
 
+@media (min-width: 90em) {
+  .intro {
+    padding: 25rem 0;
+  }
 }
