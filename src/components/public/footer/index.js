@@ -1,11 +1,14 @@
 import React from 'react';
-import logo from 'static/brand_wonderkiln_logo.svg';
 
+import Subscribe from '../subscribe';
+import logo from 'static/brand_wonderkiln_logo.svg';
+import footer from 'static/il_footer.png';
 import styles from './footer.scss';
 
 const Footer = () => (
-  <footer className={styles.footer}>
+  <footer className={styles.footer} style={{backgroundImage: `url('${footer}')`}}>
     <div className={`container ${styles.container}`}>
+      <Subscribe />
       <a className={styles.link} href="https://www.wonderkiln.com">
         <img src={logo} className={styles.logo} alt="Wonderkiln Logo" />
       </a>
