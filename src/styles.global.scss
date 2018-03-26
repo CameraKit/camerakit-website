@@ -51,6 +51,7 @@ a {
 }
 
 .heading--large {
+  color: $dark-grey;
   font-size: 2rem;
   font-weight: 100;
   line-height: 1.2;
@@ -58,4 +59,11 @@ a {
   @media (min-width: 48em) {
     font-size: 3rem;
   }
+}
+
+.heading--small {
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
 }

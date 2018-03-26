@@ -14,6 +14,7 @@ import features from './features';
 import sponsors from './sponsors';
 
 import styles from './home.scss';
+import featureStyles from './features.scss';
 import intro from './intro.scss';
 
 function scrollDown () {
@@ -41,16 +42,22 @@ const Home = () => (
     </section>
     <section id="features" className={styles.section}>
       <div className="container">
-        <h2 className={styles.heading}>Features</h2>
-        <ul className={`${styles.list} ${styles.flexWrapper}`}>
-          {features.map(feature => (
-            <Feature
-              key={feature.text}
-              text={feature.text}
-              icon={feature.icon}
-            />
-          ))}
-        </ul>
+        <div className={featureStyles.main}>
+          <h2 className='heading--small'>Features</h2>
+          <div className={styles.flexWrapper}>
+            <p className={`heading--large ${featureStyles.heading}`}>High-level, simple, and extremely performant</p>
+            <ul className={`${styles.list} ${styles.flexWrapper} ${featureStyles.list}`}>
+              {features.map(feature => (
+                <Feature
+                  key={feature.text}
+                  text={feature.text}
+                  description={feature.description}
+                  icon={feature.icon}
+                />
+              ))}
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
     <section className={styles.section}>

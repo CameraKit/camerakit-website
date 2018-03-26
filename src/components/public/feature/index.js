@@ -8,7 +8,10 @@ const Feature = props => (
     <div className={styles.iconWrapper}>
       {props.icon}
     </div>
-    <p className={styles.text}>{props.text}</p>
+    <div className={styles.textWrapper}>
+    <h3 className={styles.text}>{props.text}</h3>
+    <p className={styles.description}>{props.description}</p>
+    </div>
   </li>
 );
 
