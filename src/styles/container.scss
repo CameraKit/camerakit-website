@@ -4,6 +4,10 @@
   max-width: 75rem;
   margin: 0 auto;
 
+  &--full {
+    max-width: 100%;
+  }
+
   &--large {
   	max-width: 60rem;
   }

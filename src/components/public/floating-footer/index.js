@@ -5,7 +5,7 @@ import Github from 'static/ic_github.svg';
 
 const FloatingFooter = () => (
   <div className={styles.footer}>
-    <div className={`container ${styles.container}`}>
+    <div className={`container container--full ${styles.container}`}>
       <a className={styles.wonderkiln} target="_blank" href="https://wonderkiln.com">
       	A Wonderkiln Project
       </a>
