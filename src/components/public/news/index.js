@@ -18,7 +18,6 @@ class News extends React.Component {
   componentDidMount () {
     Feed.load('https://cors-anywhere.herokuapp.com/https://medium.com/feed/@camerakit', (err, rss) => {
       if (err) return console.log(err);
-      console.log(rss.items);
       this.setState({ items: rss.items });
     });
   }

@@ -62,10 +62,10 @@ const Home = () => (
       </div>
     </section>
     <News />
-    <section className={styles.section}>
+    <section className={`${styles.section} ${styles.sponsors}`}>
       <div className="container">
-        <h2 className={styles.heading}>Sponsors</h2>
-        <ul className={styles.list}>
+        <h2 className='heading--small'>Sponsors</h2>
+        <ul className={`${styles.list} ${styles.sponsorsList}`}>
           {sponsors.map(sponsor => (
             <Sponsor
               key={sponsor.name}
