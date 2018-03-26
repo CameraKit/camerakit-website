@@ -8,6 +8,7 @@ import button from 'static/btn_scrolldown.svg';
 
 import FloatingFooter from 'components/public/floating-footer';
 import Feature from 'components/public/feature';
+import News from 'components/public/news';
 import Sponsor from 'components/public/sponsor';
 
 import features from './features';
@@ -60,16 +61,7 @@ const Home = () => (
         </div>
       </div>
     </section>
-    <section className={styles.section}>
-      <div className="container">
-        <h2 className={styles.heading}>About CameraKit</h2>
-        <div className="container--medium">
-          <p>CameraKit makes sense of one of the hardest Android APIs, the Camera 1 and Camera 2 APIs in the Android SDK. Our goal is to make our open-source library into a layer that makes those difficult APIs readily simple yet significantly more powerful.</p>
-          <p>We are working on making new improvements to the library by expanding into new features and consistent improvements that are more powerful and performance-focused. </p>
-          <p>We continually advance the library and encourage issues to be created, pull requests submitted, and even email requests. We are very active and look forward to collaborating! Be sure to check out our sponsors. If you are a company interested in helping us support the library, reach out to us here: <a href="mailto:contact@camerakit.website">contact@camerakit.website</a></p>
-        </div>
-      </div>
-    </section>
+    <News />
     <section className={styles.section}>
       <div className="container">
         <h2 className={styles.heading}>Sponsors</h2>
