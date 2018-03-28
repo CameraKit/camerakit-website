@@ -10,7 +10,9 @@ const Nav = () => (
     <div className={`container container--full ${styles.container}`}>
       <Logo />
       <LogoType />
-      <Menu />
+      <div>
+      	{/*<Menu />*/}
+      </div>
     </div>
   </nav>
 );
