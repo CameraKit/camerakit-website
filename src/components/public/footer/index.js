@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Subscribe from '../subscribe';
 import logo from 'static/brand_wonderkiln_logo.svg';
 import footer from 'static/il_footer.png';

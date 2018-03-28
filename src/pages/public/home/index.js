@@ -71,8 +71,7 @@ const Home = () => (
               key={sponsor.name}
               logo={sponsor.logo}
               name={sponsor.name}
-              quote={sponsor.quote}
-              source={sponsor.source}
+              link={sponsor.link}
             />
           ))}
         </ul>

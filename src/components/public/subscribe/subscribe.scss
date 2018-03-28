@@ -48,3 +48,9 @@
 		background-color: transparentize($primary, 0.8);
 	}
 }
+
+.message {
+	margin-top: 0.5rem;
+	font-weight: 500;
+	color: $primary;
+}
