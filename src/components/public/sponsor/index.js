@@ -5,19 +5,16 @@ import styles from './sponsor.scss';
 
 const Sponsor = props => (
   <li className={styles.sponsor}>
-    <img className={styles.logo} src={props.logo} alt={props.name} />
-    <blockquote className={styles.quote}>
-      {props.quote}
-      <footer className={styles.source}>{props.source}</footer>
-    </blockquote>
+    <a className={styles.link} href={props.link}>
+      <img className={styles.logo} src={props.logo} alt={props.name} />
+    </a>
   </li>
 );
 
 Sponsor.propTypes = {
   logo: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  quote: PropTypes.string.isRequired,
-  source: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
 };
 
 export default Sponsor;

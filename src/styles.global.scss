@@ -1,13 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,500');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,400,500');
 
 @import '/styles/normalize';
 @import '/styles/variables';
 
 @import '/styles/container';
 
-//svgs 
+//svgs
 @import '/styles/feature-icon';
 @import '/styles/logo-animation';
+@import '/styles/bounce-animation';
 
 
 * {
@@ -44,7 +45,25 @@ p + p {
 }
 
 a {
-  font-weight: 500; 
+  font-weight: 500;
   text-decoration: none;
   transition: all 0.3s ease-out;
+}
+
+.heading--large {
+  color: $dark-grey;
+  font-size: 2rem;
+  font-weight: 100;
+  line-height: 1.2;
+
+  @media (min-width: 48em) {
+    font-size: 3rem;
+  }
+}
+
+.heading--small {
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
 }

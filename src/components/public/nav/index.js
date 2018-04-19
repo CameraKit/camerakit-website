@@ -1,18 +1,17 @@
 import React from 'react';
 import styles from './nav.scss';
 
-import Logo from './brand_camerakit_logo.svg';
+import Logo from './ic_logo.svg';
+import LogoType from './ic_logotype.svg';
+import Menu from './ic_menu.svg';
 
 const Nav = () => (
   <nav className={styles.nav}>
-    <div className={`container ${styles.container}`}>
-      <div className={`animated-logo__wrapper ${styles.brand}`}>
-        <Logo />
-      </div>
-      <div className={styles.links}>
-        <a className={styles.link} href="https://github.com/wonderkiln/CameraKit-Android">
-          View on Github
-        </a>
+    <div className={`container container--full ${styles.container}`}>
+      <Logo />
+      <LogoType />
+      <div>
+      	{/*<Menu />*/}
       </div>
     </div>
   </nav>

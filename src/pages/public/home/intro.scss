@@ -1,100 +1,133 @@
-@import '~styles/variables'; 
+@import '~styles/variables';
 
 .intro {
-  padding-top: 12rem;
-  padding-bottom: 3rem;
-  background-color: #37474F;
-}
-
-.preamble {
-  margin: 0 auto 2.5rem;
-  color: #fff;
+  display: flex;
+  align-items: center;
+  position: relative;
+  min-height: 100vh;
+  padding-top: 5rem;
+  padding-bottom: 12rem;
+  background: linear-gradient(to bottom, #CBCee9, #DDE1E9);
   text-align: center;
 }
 
-.phoneWrapper {
+.container {
+  max-width: 60rem;
+}
+
+.content {
   position: relative;
   width: 100%;
 }
 
-.phoneHorizontal {
-  display: none;
+.heading {
+  margin: 0;
+  color: $dark-grey;
 }
 
-.phoneVertical {
-  display: block;
-  width: 100%;
-  max-width: 20rem;
+.hidden {
   margin: 0 auto;
+  max-width: 30rem;
 }
 
-.content {
+.subheading {
+  color: $dark-grey;
+  // font-size: 1rem;
+  // color: $primary;
+  // text-transform: uppercase;
+
+  br {
+    display: none;
+  }
+}
+
+.phone {
+  margin: 3rem auto 0;
+}
+
+.phoneImage {
+  margin-bottom: 3rem;
+}
+
+.phoneTilted {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.button {
   position: absolute;
   left: 50%;
-  width: 90%;
-  max-width: 20rem;
-  top: 5rem;
-  padding: 5% 5%;
-  text-align: center;
-  transform: translate3d(-50%, 0, 0);
-}
-
-.heading {
-  color: #fff;
-  font-size: 1.5rem;
-}
-
-.text {
-  color: $light-grey;
+  margin-left: -3.438em;
+  bottom: 10%;
+  z-index: 1;
 }
 
 @media (min-width: 48em) {
 
   .intro {
-    padding-bottom: 0;
-  }
-
-  .container {
-    display: flex;
-  }
-
-  .preamble {
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: 0;
-    margin-right: 3rem;
-  }
-
-  .phoneVertical {
-    display: none;
-  }
-
-  .phoneHorizontal {
-    display: block;
-    margin: 0 auto;
+    padding: 15rem 0;
   }
 
   .content {
-    padding: 0;
-    top: 15%;
-    left: 20%;
-    transform: none;
-    text-align: left;
-    max-width: 40%;
+    margin: 0 auto;
+    // NOTE: Get aspect ratio of final asset
+    //padding-top: 50%;
+    perspective: 1000px;
   }
-
-}
-
-@media (min-width: 62em) {
 
   .heading {
-    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    width: 40%;
+    color: #fff;
+    text-align: left;
+    transform: translateY(-50%);
   }
 
-  .content {
-    top: 20%;
-    max-width: 35%;
+  .hidden {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .subheading {
+    margin: 0 0 1rem;
+    line-height: 1.2;
+    font-size: 3rem;
+    font-weight: 100;
+    text-transform: none;
+
+    br {
+      display: block;
+    }
+  }
+
+  .phone {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    z-index: 1;
+  }
+
+  .phoneImage {
+    margin: 0;
+  }
+
+  .button {
+    bottom: 20%;
+  }
+}
+
+
+@media (min-width: 90em) {
+  .intro {
+    padding: 25rem 0;
   }
 }

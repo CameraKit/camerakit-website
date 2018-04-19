@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Routing via React Router
-import { Switch } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 
 // <Helmet> component for setting the page title/meta tags
 import Helmet from 'react-helmet';
@@ -20,6 +20,7 @@ export default () => (
       }]} />
     <Switch>
       <Public exact path="/" component={Home} />
+      <Route path='/jpegkit' component={() => window.location = 'https://github.com/CameraKit/jpegkit-android'}/>
     </Switch>
   </div>
 );

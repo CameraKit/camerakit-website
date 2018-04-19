@@ -5,31 +5,18 @@
 
 .logo {
   display: block;
-  margin-bottom: 2rem;;
+  margin: 0 auto 2rem;
   max-width: 20rem;
 }
 
-.quote {
-  margin: 0;
-}
-
-.source {
-  margin-top: 1rem;
-  text-align: right;
+.link {
+  display: flex;
 }
 
 @media (min-width: 62em) {
-
   .sponsor {
-    display: flex;
-  }
-
-  .logo {
-    flex: 1 1 15rem;
-    margin-right: 4rem;
-  }
-
-  .quote {
-    flex: 0 1 37.5rem;
+    &:not(:first-child) {
+      margin-left: 3rem;
+    }
   }
 }

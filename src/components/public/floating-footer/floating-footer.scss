@@ -1,0 +1,33 @@
+@import '~styles/variables';
+
+.footer {
+	position: fixed;
+	bottom: 3rem;
+	left: 0;
+	right: 0;
+	z-index: 10;
+
+	a {
+		color: $mid-grey;
+		font-weight: 400;
+	}
+}
+
+.container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.icon {
+	margin-right: 0.5rem;
+	vertical-align: middle;
+}
+
+.github {
+	vertical-align: middle;
+}
+
+.wonderkiln {
+	transform: rotate(-90deg) translateY(100%);
+	transform-origin: bottom left;
+}
