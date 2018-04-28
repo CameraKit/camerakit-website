@@ -15,14 +15,14 @@ class News extends React.Component {
     };
   }
 
-  componentDidMount () {
+  componentDidMount() {
     Feed.load('https://cors-anywhere.herokuapp.com/https://medium.com/feed/@camerakit', (err, rss) => {
       if (err) return console.log(err);
       this.setState({ items: rss.items });
     });
   }
 
-  render () {
+  render() {
     return (
       <section className={styles.news}>
         <div className='container'>

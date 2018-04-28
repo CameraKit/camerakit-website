@@ -1,7 +1,6 @@
 import React from 'react';
-import styles from './floating-footer.scss';
-
 import Github from 'static/ic_github.svg';
+import styles from './floating-footer.scss';
 
 const FloatingFooter = () => (
   <div className={styles.footer}>
