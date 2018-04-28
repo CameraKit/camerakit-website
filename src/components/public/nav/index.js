@@ -15,7 +15,7 @@ const Nav = () => (
         <LogoType />
       </div>
       <div className={styles.Menu}>
-        <Menu />
+        { /* <Menu /> */ }
       </div>
     </div>
   </nav>
