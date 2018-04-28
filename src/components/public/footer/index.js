@@ -1,7 +1,7 @@
 import React from 'react';
-import Subscribe from '../subscribe';
 import logo from 'static/brand_wonderkiln_logo.svg';
 import footer from 'static/il_footer.png';
+import Subscribe from '../subscribe';
 import styles from './footer.scss';
 
 const Footer = () => (
@@ -19,18 +19,13 @@ const Footer = () => (
             </a>
           </li>
           <li className={styles.listItem}>
-            <a className={styles.link} href="/">
-              Terms of Use
-            </a>
-          </li>
-          <li className={styles.listItem}>
-            <a className={styles.link} href="/">
+            <a className={styles.link} href="https://github.com/CameraKit/camerakit-android/blob/master/LICENSE">
               License
             </a>
           </li>
         </ul>
         <div className={styles.copyright}>
-          © 2017 WonderKiln, Inc
+          © 2018 WonderKiln, Inc
         </div>
       </nav>
     </div>

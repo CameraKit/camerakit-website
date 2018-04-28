@@ -8,10 +8,14 @@ import Menu from './ic_menu.svg';
 const Nav = () => (
   <nav className={styles.nav}>
     <div className={`container container--full ${styles.container}`}>
-      <Logo />
-      <LogoType />
-      <div>
-      	{/*<Menu />*/}
+      <div className={styles.Logo}>
+        <Logo />
+      </div>
+      <div className={styles.Brand}>
+        <LogoType />
+      </div>
+      <div className={styles.Menu}>
+        { /* <Menu /> */ }
       </div>
     </div>
   </nav>
