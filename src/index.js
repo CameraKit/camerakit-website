@@ -16,11 +16,11 @@ export default () => (
       title="CameraKit"
       meta={[{
         name: 'description',
-        content: 'One of the hardest Android APIs made into a high level and easy to use library that solves all of your problems.',
+        content: 'CameraKit is an open-source library to support the Android Camera 1 and 2 APIs. Massively increase stability and reliability of photo and video capture on all Android devices.',
       }]} />
     <Switch>
       <Public exact path="/" component={Home} />
-      <Route path='/jpegkit' component={() => window.location = 'https://github.com/CameraKit/jpegkit-android'}/>
+      <Route path="/jpegkit" component={() => window.location = 'https://github.com/CameraKit/jpegkit-android'}/>
     </Switch>
   </div>
 );

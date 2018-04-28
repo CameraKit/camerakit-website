@@ -8,22 +8,22 @@ import IconVR from './ic_vr_addons.svg';
 export default [
   {
     icon: <IconSimple />,
-    text: 'Easy to implement',
-    description: 'Some text goes here. Some text goes here. Some text goes here.'
+    text: 'Easy Implementation',
+    description: 'CameraKit fits into your existing stack and can be run up almost immediately. Implement the library and start improving reliability immediately.'
   },
   {
     icon: <IconTested />,
     text: 'Extensively Tested',
-    description: 'Some text goes here.'
+    description: 'CameraKit has been tested across thousands of Android devices, major Android OS versions, and is ready for upcoming flagship Android device releases.'
   },
   {
     icon: <IconDualCam />,
     text: 'All Camera Features',
-    description: 'Some text goes here.'
+    description: 'CameraKit supports all camera features, including seamless photo and video capture, auto permission handling, continuous and tap focus, scaling, and more.'
   },
   {
     icon: <IconVR />,
-    text: 'Addons Support',
-    description: 'Some text goes here.'
+    text: 'Camera 1 and 2',
+    description: 'CameraKit supports and improves, hooking in the library in minutes, Camera 1 and 2 APIs while drastically improving stability and reliability for your app.'
   },
 ];

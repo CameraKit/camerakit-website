@@ -3,7 +3,7 @@ import logoExpensify from 'static/sp_expensify.svg';
 
 export default [
   {
-    name: 'Buddy',
+    name: 'Buddy.Works',
     logo: logoBuddy,
     link: 'https://buddy.works/',
   },

@@ -28,18 +28,15 @@ const Home = () => (
     <section className={intro.intro}>
       <div className='container container--large'>
         <div className={intro.content}>
-          <div className={intro.phone}>
-            {/*<img src={phone} className={intro.phoneImage} alt="" />
-            <h1 className={`heading--large ${intro.heading}`}>The Best Camera API on Android</h1>*/}
-          </div>
+          <div className={intro.phone} />
           <div className={intro.hidden}>
-            <h2 className={`heading--large ${intro.subheading}`}>Completely <br />Open Source</h2>
-            <p>Proudly made by people just like you. Who really like cats. Austin don't forget to change this text.</p>
+            <h2 className={`heading--large ${intro.subheading}`}>Complete <br />Camera Library</h2>
+            <p>CameraKit is an open-source library to support the Android Camera 1 and 2 APIs. Massively increase stability and reliability of photo and video capture on all Android devices.</p>
           </div>
         </div>
       </div>
       <img role="button" src={button} className={`scroll-button ${intro.button}`} onClick={scrollDown} alt="Scroll Down" />
-      <img src={phoneTilted} className={intro.phoneTilted} />
+      <img src={phoneTilted} className={intro.phoneTilted} alt="preview-mockup" />
     </section>
     <section id="features" className={styles.section}>
       <div className="container">
@@ -64,7 +61,7 @@ const Home = () => (
     <News />
     <section className={`${styles.section} ${styles.sponsors}`}>
       <div className="container">
-        <h2 className='heading--small'>Sponsors</h2>
+        <h2 className="heading--small">Support</h2>
         <ul className={`${styles.list} ${styles.sponsorsList}`}>
           {sponsors.map(sponsor => (
             <Sponsor
