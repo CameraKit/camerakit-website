@@ -19,7 +19,7 @@ const Footer = () => (
             </a>
           </li>
           <li className={styles.listItem}>
-            <a className={styles.link} href="/https://www.github.com/CameraKit/CameraKit-Android/LICENSE">
+            <a className={styles.link} href="https://github.com/CameraKit/camerakit-android/blob/master/LICENSE">
               License
             </a>
           </li>
