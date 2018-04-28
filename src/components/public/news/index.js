@@ -40,8 +40,8 @@ class News extends React.Component {
                 />
               ))}
             </ul>
-          :
-            <p>No recent news.</p>
+            :
+            <p>Hmm... nothing to show just yet! News coming soon!</p>
           }
         </div>
       </section>
