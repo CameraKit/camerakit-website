@@ -18,7 +18,7 @@ import styles from './home.scss';
 import featureStyles from './features.scss';
 import intro from './intro.scss';
 
-function scrollDown () {
+function scrollDown() {
   jump('#features');
 }
 
@@ -26,7 +26,7 @@ const Home = () => (
   <div>
     <FloatingFooter />
     <section className={intro.intro}>
-      <div className='container container--large'>
+      <div className="container container--large">
         <div className={intro.content}>
           <div className={intro.phone} />
           <div className={intro.hidden}>

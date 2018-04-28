@@ -10,6 +10,21 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  .Logo {
+    flex-basis: 30%;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .Brand {
+    flex-basis: 30%;
+    display: flex;
+    justify-content: center;
+  }
+  .Menu {
+    flex-basis: 30%;
+    display: flex;
+    justify-content: flex-end;
+  }
 }
 
 @media (min-width: 34em) {
