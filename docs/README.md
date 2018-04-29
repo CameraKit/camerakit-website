@@ -63,17 +63,12 @@ protected void onPause() {
 To capture an image just call `CameraView.captureImage()`. Make sure you setup a `CameraListener` to handle the image callback.
 
 ```java
-camera.setCameraListener(new CameraListener() {
+cameraView.captureImage(new CameraKitView.ImageCallback() {
     @Override
-    public void onPictureTaken(byte[] picture) {
-        super.onPictureTaken(picture);
-
-        // Create a bitmap
-        Bitmap result = BitmapFactory.decodeByteArray(picture, 0, picture.length);
+    public void onImage(CameraKitView view, byte[] jpeg) {
+        
     }
 });
-
-camera.captureImage();
 ```
 
 ### Capturing Video
@@ -81,21 +76,17 @@ camera.captureImage();
 To capture video just call `CameraView.startRecordingVideo()` to start, and `CameraView.stopRecordingVideo()` to finish. Make sure you setup a `CameraListener` to handle the video callback.
 
 ```java
-camera.setCameraListener(new CameraListener() {
+cameraView.startRecording();
+
+// captureVideo can be called multiple times between startRecording and stopRecording.
+cameraView.captureVideo(new CameraKitView.VideoCallback() {
     @Override
-    public void onVideoTaken(File video) {
-        super.onVideoTaken(video);
-        // The File parameter is an MP4 file.
+    public void onVideo(CameraKitView view, Object video) {
+    
     }
 });
 
-camera.startRecordingVideo();
-camera.postDelayed(new Runnable() {
-    @Override
-    public void run() {
-        camera.stopRecordingVideo();
-    }
-}, 2500);
+cameraView.stopRecording();
 ```
 
 ## Extra Attributes
