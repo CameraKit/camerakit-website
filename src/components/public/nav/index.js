@@ -32,7 +32,7 @@ class Nav extends React.Component {
             <LogoType />
           </div>
           <div className={styles.menu}>
-            <Menu active={this.state.active} />
+            <Menu active={this.state.active} toggle={this.toggleActive} />
             <button className={styles.toggle}  onClick={this.toggleActive} title="Toggle menu">
               <MenuIcon/>
             </button>
