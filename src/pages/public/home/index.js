@@ -6,7 +6,6 @@ import phone from 'static/il-phone.svg';
 import phoneTilted from 'static/il_phone_tilted.svg';
 import button from 'static/btn_scrolldown.svg';
 
-import FloatingFooter from 'components/public/floating-footer';
 import Feature from 'components/public/feature';
 import News from 'components/public/news';
 import Sponsor from 'components/public/sponsor';
@@ -24,7 +23,6 @@ function scrollDown() {
 
 const Home = () => (
   <div>
-    <FloatingFooter />
     <section className={intro.intro}>
       <div className="container container--large">
         <div className={intro.content}>
