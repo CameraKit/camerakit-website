@@ -1,3 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-  <path fill="currentColor" fill-rule="evenodd" d="M0,0 L16,0 L16,3 L0,3 L0,0 Z M0,6.5 L16,6.5 L16,9.5 L0,9.5 L0,6.5 Z M0,13 L16,13 L16,16 L0,16 L0,13 Z"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="-1 -1 17 17">
+  <g fill="currentColor" fill-rule="evenodd">
+    <rect width="16" height="3"/>
+    <rect width="16" height="3" y="6.5"/>
+    <rect width="16" height="3" y="13"/>
+  </g>
 </svg>

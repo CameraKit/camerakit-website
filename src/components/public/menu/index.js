@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './menu.scss';
 
 const Menu = props => (
-  <div className={props.active ? styles.active : ''}>
+  <div id="menu" className={props.active ? styles.active : ''}>
     <div className={styles.overlay} onClick={props.toggle}></div>
     <div className={styles.menu}>
       <div className={styles.background}></div>

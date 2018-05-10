@@ -45,6 +45,31 @@
     outline: none;
     color: $primary;
   }
+
+  svg, rect {
+    transform-origin: center;
+    transition: all 0.3s ease;
+  }
+
+  &.active {
+    rect:first-child {
+      transform-origin: top left;
+      transform: rotate(45deg) translateX(1.5px);
+    }
+
+    rect:nth-child(2) {
+      opacity: 0;
+    }
+
+    rect:nth-child(3) {
+      transform-origin: bottom left;
+      transform: rotate(-45deg) translateX(2.5px);
+    }
+
+    svg {
+      transform: rotate(90deg);
+    }
+  }
 }
 
 @media (min-width: 34em) {
