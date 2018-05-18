@@ -17,7 +17,7 @@ const Menu = props => (
           </li>
         </ul>
         <span><span role="img" aria-label="American Flag">🇺🇸</span> Made in America</span>
-        <span>Made with ❤ by <a className={styles.credit} href="https://www.wonderkiln.com/">Wonderkiln</a></span>
+        <span>Made with ❤ by <a className={styles.credit} href="https://www.wonderkiln.com/">WonderKiln</a></span>
       </div>
     </div>
   </div>
