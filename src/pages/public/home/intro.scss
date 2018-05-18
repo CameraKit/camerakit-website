@@ -32,6 +32,7 @@
 
 .subheading {
   color: $dark-grey;
+  margin-bottom: 10px;
   // font-size: 1rem;
   // color: $primary;
   // text-transform: uppercase;
@@ -62,6 +63,10 @@
   margin-left: -3.438em;
   bottom: 10%;
   z-index: 1;
+}
+
+.madeInAmerica {
+  margin-top: 15px;
 }
 
 @media (min-width: 48em) {

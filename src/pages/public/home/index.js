@@ -30,9 +30,10 @@ const Home = () => (
           <div className={intro.hidden}>
             <h2 className={`heading--large ${intro.subheading}`}>Complete <br />Camera Library</h2>
             <p>CameraKit is an open-source library to support the Android Camera 1 and 2 APIs. Massively increase stability and reliability of photo and video capture on all Android devices.</p>
+            <div className={intro.madeInAmerica}><span role="img" aria-label="American Flag">🇺🇸</span> Proudly made in America</div>
           </div>
         </div>
-      </div>
+      </div>å
       <img role="button" src={button} className={`scroll-button ${intro.button}`} onClick={scrollDown} alt="Scroll Down" />
       <img src={phoneTilted} className={intro.phoneTilted} alt="preview-mockup" />
     </section>
