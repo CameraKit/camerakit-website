@@ -1,8 +1,7 @@
 import React from 'react';
 
-import jump from 'jump.js'
+import jump from 'jump.js';
 
-import phone from 'static/il-phone.svg';
 import phoneTilted from 'static/il_phone_tilted.svg';
 import button from 'static/btn_scrolldown.svg';
 
@@ -30,7 +29,7 @@ const Home = () => (
           <div className={intro.hidden}>
             <h2 className={`heading--large ${intro.subheading}`}>Complete <br />Camera Library</h2>
             <p>CameraKit is an open-source library to support the Android Camera 1 and 2 APIs. Massively increase stability and reliability of photo and video capture on all Android devices.</p>
-            <div className={intro.madeInAmerica}><span role="img" aria-label="American Flag">🇺🇸</span> Proudly made in America</div>
+            <div className={intro.madeInAmerica}><span role="img" aria-label="American Flag">🇺🇸</span> Built and Managed in the USA</div>
           </div>
         </div>
       </div>å
@@ -40,7 +39,7 @@ const Home = () => (
     <section id="features" className={styles.section}>
       <div className="container">
         <div className={featureStyles.main}>
-          <h2 className='heading--small'>Features</h2>
+          <h2 className="heading--small">Features</h2>
           <div className={styles.flexWrapper}>
             <p className={`heading--large ${featureStyles.heading}`}>High-level, simple, and extremely performant</p>
             <ul className={`${styles.list} ${styles.flexWrapper} ${featureStyles.list}`}>

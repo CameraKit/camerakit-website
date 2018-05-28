@@ -16,7 +16,7 @@ const Menu = props => (
             <a className={`heading--large ${styles.link}`} href="https://github.com/CameraKit/camerakit-android">Github</a>
           </li>
         </ul>
-        <span><span role="img" aria-label="American Flag">🇺🇸</span> Made in America</span>
+        <span><span role="img" aria-label="American Flag">🇺🇸</span> Built and Managed in the USA</span>
         <span>Made with ❤ by <a className={styles.credit} href="https://www.wonderkiln.com/">WonderKiln</a></span>
       </div>
     </div>
