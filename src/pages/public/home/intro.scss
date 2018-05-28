@@ -63,6 +63,9 @@
   margin-left: -3.438em;
   bottom: 10%;
   z-index: 1;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .madeInAmerica {

@@ -7,7 +7,7 @@ import LogoType from './ic_logotype.svg';
 import MenuIcon from './ic_menu.svg';
 
 class Nav extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
 
     this.state = {
@@ -38,7 +38,7 @@ class Nav extends React.Component {
               aria-expanded={this.state.active}
               title="Toggle menu"
               aria-controls="menu">
-              <MenuIcon/>
+              <MenuIcon />
             </button>
             <Menu active={this.state.active} toggle={this.toggleActive} />
           </div>
