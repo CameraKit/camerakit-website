@@ -14,13 +14,8 @@ const Footer = () => (
       <nav className={styles.nav}>
         <ul className={styles.links}>
           <li className={styles.listItem}>
-            <a className={styles.link} href="https://www.wonderkiln.com/about">
-              About Wonderkiln
-            </a>
-          </li>
-          <li className={styles.listItem}>
             <a className={styles.link} href="https://github.com/CameraKit/camerakit-android/blob/master/LICENSE">
-              License
+              License Information
             </a>
           </li>
         </ul>
