@@ -25,8 +25,8 @@ class News extends React.Component {
   render() {
     return (
       <section className={styles.news}>
-        <div className='container'>
-          <h2 className='heading--small'>
+        <div className="container">
+          <h2 className="heading--small">
             Recent News
           </h2>
           {this.state.items.length > 0 ?
