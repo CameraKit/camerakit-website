@@ -283,6 +283,11 @@ const app = new Koa()
     const total = end.microseconds + (end.milliseconds * 1e3) + (end.seconds * 1e6);
     ctx.set('Response-Time', `${total / 1e3}ms`);
   })
+  
+  .use(async (ctx, next) => {
+    await next();
+    ctx.set('Access-Control-Allow-Origin', '*');
+  })
 
   // Create a new Apollo client and Redux store per request.  This will be
   // stored on the `ctx` object, making it available for the React handler or
