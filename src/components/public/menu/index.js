@@ -13,6 +13,9 @@ const Menu = props => (
             <a className={`heading--large ${styles.link}`} href="http://docs.camerakit.website/#/">Documentation</a>
           </li>
           <li className={styles.item}>
+            <a className={`heading--large ${styles.link}`} href="https://github.com/CameraKit/jpegkit-android">JPEGKit</a>
+          </li>
+          <li className={styles.item}>
             <a className={`heading--large ${styles.link}`} href="https://github.com/CameraKit/camerakit-android">Github</a>
           </li>
         </ul>
