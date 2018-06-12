@@ -4,7 +4,7 @@ import moment from 'moment';
 
 import styles from './news-item.scss';
 
-function formatDate(date){
+function formatDate(date) {
   return moment(Number(date)).format('MMMM D YYYY');
 }
 
