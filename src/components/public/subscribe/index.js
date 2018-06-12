@@ -5,7 +5,7 @@ import styles from './subscribe.scss';
 const url = 'https://wonderkiln.us12.list-manage.com/subscribe/post?u=45b5c2055f100d913f074055b&amp;id=ec9df2ad9a';
 
 class Subscribe extends React.Component {
-  render () {
+  render() {
     return (
       <MailchimpSubscribe
         url={url}
@@ -13,18 +13,19 @@ class Subscribe extends React.Component {
           <div className={styles.subscribe}>
             <h2 className="heading--small">Stay Up To Date</h2>
             <p className={styles.paragraph}>We sometimes send out important updates concerning CameraKit. Provide your email if you are interested in receiving emails from us.</p>
-            <form className={styles.form} 
+            <form
+              className={styles.form}
               onSubmit={(event, data) => {
                 event.preventDefault()
-                subscribe({ email: this.email.value });
+                subscribe({ EMAIL: this.email.value });
               }}>
               <div className={styles.inputWrapper}>
-                <input ref={node => (this.email = node)} name="email" className={styles.input} type="email" required />
+                <input ref={input => this.email = input} name="email" className={styles.input} type="email" required />
                 <button className={styles.submit} type="submit">
                   {status === 'sending' ? 'Sending...' : 'Subscribe'}
                 </button>
               </div>
-              {(status == 'error' || status == 'success') && <p className={styles.message}>{message}</p>}
+              {(status === 'error' || status === 'success') && <p className={styles.message}>{message}</p>}
             </form>
           </div>
         )}
