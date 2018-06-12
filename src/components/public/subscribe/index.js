@@ -5,17 +5,7 @@ import styles from './subscribe.scss';
 const url = 'https://wonderkiln.us12.list-manage.com/subscribe/post?u=45b5c2055f100d913f074055b&amp;id=ec9df2ad9a';
 
 class Subscribe extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.textInput = null;
-
-    this.setTextInputRef = element => {
-      this.textInput = element;
-    };
-  }
-
-  render () {
+  render() {
     return (
       <MailchimpSubscribe
         url={url}
