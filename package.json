@@ -16,7 +16,7 @@
     "start": "run-p browser server-dev",
     "static": "serve -s dist/public",
     "test": "jest",
-    "postinstall": ""
+    "postinstall": "yarn run build"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -96,7 +96,7 @@
     "koa-sslify": "^2.1.2",
     "microseconds": "^0.1.0",
     "moment": "^2.21.0",
-    "prop-types": "^15.5.10",
+    "prop-types": "^15.6.0",
     "react": "^16.0.0-rc.2",
     "react-apollo": "^1.4.15",
     "react-dom": "^16.0.0-rc.2",

@@ -10,3 +10,7 @@ run.config:
 
 web.config:
   start: yarn build-run
+  writable_dirs:
+    - /app/dist
+    - /dist
+    - dist
