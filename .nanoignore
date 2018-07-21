@@ -2,6 +2,4 @@
 .git/
 .gitignore
 /application/logs/
-/dist/
 /node_modules/
-dist
