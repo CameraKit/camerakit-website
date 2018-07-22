@@ -67,7 +67,7 @@
     "resolve-url-loader": "^2.1.0",
     "rimraf": "^2.6.1",
     "sass-loader": "^6.0.6",
-    "serve": "^6.0.6",
+    "serve": "^7.0.0",
     "style-loader": "^0.18.2",
     "svg-react-loader": "^0.4.5",
     "webpack": "^3.5.6",
