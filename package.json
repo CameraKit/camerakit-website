@@ -6,6 +6,7 @@
     "build": "cross-env NODE_ENV=production WEBPACK_CONFIG=browser_prod,server_prod webpack --colors",
     "build-analyze": "cross-env BUNDLE_ANALYZER=1 NODE_ENV=production WEBPACK_CONFIG=browser_prod,server_prod webpack --colors",
     "build-browser": "cross-env NODE_ENV=production WEBPACK_CONFIG=browser_prod webpack --colors",
+    "install-build-run": "yarn install && yarn run build && yarn run server",
     "build-run": "yarn run build && yarn run server",
     "build-static": "cross-env NODE_ENV=production WEBPACK_CONFIG=static webpack --colors",
     "build-static-run": "yarn run build-static && yarn run static",
@@ -13,7 +14,7 @@
     "lint": "eslint .",
     "server": "node dist/server",
     "server-dev": "cross-env NODE_ENV=development WEBPACK_CONFIG=server_dev webpack --colors",
-    "start": "run-p browser server-dev",
+    "start": "yarn install-build-run",
     "static": "serve -s dist/public",
     "test": "jest",
     "postinstall": ""
