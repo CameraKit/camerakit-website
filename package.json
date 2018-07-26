@@ -6,7 +6,6 @@
     "build": "cross-env NODE_ENV=production WEBPACK_CONFIG=browser_prod,server_prod webpack --colors",
     "build-analyze": "cross-env BUNDLE_ANALYZER=1 NODE_ENV=production WEBPACK_CONFIG=browser_prod,server_prod webpack --colors",
     "build-browser": "cross-env NODE_ENV=production WEBPACK_CONFIG=browser_prod webpack --colors",
-    "install-build-run": "yarn install && yarn run build && yarn run server",
     "build-run": "yarn run build && yarn run server",
     "build-static": "cross-env NODE_ENV=production WEBPACK_CONFIG=static webpack --colors",
     "build-static-run": "yarn run build-static && yarn run static",
@@ -14,10 +13,9 @@
     "lint": "eslint .",
     "server": "node dist/server",
     "server-dev": "cross-env NODE_ENV=development WEBPACK_CONFIG=server_dev webpack --colors",
-    "start": "yarn install-build-run",
+    "start": "yarn build-run",
     "static": "serve -s dist/public",
-    "test": "jest",
-    "postinstall": ""
+    "test": "jest"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -67,7 +65,7 @@
     "resolve-url-loader": "^2.1.0",
     "rimraf": "^2.6.1",
     "sass-loader": "^6.0.6",
-    "serve": "^6.0.6",
+    "serve": "^7.0.0",
     "style-loader": "^0.18.2",
     "svg-react-loader": "^0.4.5",
     "webpack": "^3.5.6",
@@ -116,6 +114,7 @@
   },
   "engines": {
     "node": "8.x",
-    "npm": ">=4"
+    "npm": ">=5",
+    "yarn": ">=1.0.0 <2.0.0"
   }
 }
