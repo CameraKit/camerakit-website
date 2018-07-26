@@ -15,8 +15,7 @@
     "server-dev": "cross-env NODE_ENV=development WEBPACK_CONFIG=server_dev webpack --colors",
     "start": "yarn build-run",
     "static": "serve -s dist/public",
-    "test": "jest",
-    "postinstall": ""
+    "test": "jest"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
