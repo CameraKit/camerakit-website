@@ -27,12 +27,12 @@ RUN apt-get update \
 # Add the remaining project files
 ADD . .
 
-# Build distribution
-RUN npm run build
-
 # Set the default host/port
 ENV HOST 0.0.0.0
-ENV PORT 4000
+ENV PORT 8080
+
+# Build distribution
+RUN npm run build
 
 # Start the server by default
 CMD npm run server
