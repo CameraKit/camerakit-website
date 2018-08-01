@@ -5,9 +5,9 @@ import jump from 'jump.js';
 import phoneTilted from 'static/il_phone_tilted.svg';
 import button from 'static/btn_scrolldown.svg';
 
-import Feature from 'components/public/feature';
-import News from 'components/public/news';
-import Sponsor from 'components/public/sponsor';
+import Feature from '../components/public/feature';
+import News from '../components/public/news';
+import Sponsor from '../components/public/sponsor';
 
 import features from './features';
 import sponsors from './sponsors';
@@ -32,7 +32,7 @@ const Home = () => (
             <div className={intro.madeInAmerica}><span role="img" aria-label="American Flag">🇺🇸</span> Built and Managed in the USA</div>
           </div>
         </div>
-      </div>å
+      </div>
       <img role="button" src={button} className={`scroll-button ${intro.button}`} onClick={scrollDown} alt="Scroll Down" />
       <img src={phoneTilted} className={intro.phoneTilted} alt="preview-mockup" />
     </section>
