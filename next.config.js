@@ -6,25 +6,25 @@ const postcss = require('postcss-loader');
 const nextConfig = {
   distDir: 'build',
   webpack: (config, options) => {
-      config.node = {
-          fs: 'empty',
-          net: 'empty',
-          tls: 'empty'
-      }
-      config.module.rules.push(
-        {
-          test: /\.css$/,
-          loader: "emit-file-loader",
-          options: {
-            name: "dist/[path][name].[ext].js"
-          }
-        },
-        {
-          test: /\.css$/,
-          use: ["raw-loader", "postcss-loader"]
+    config.node = {
+      fs: 'empty',
+      net: 'empty',
+      tls: 'empty'
+    }
+    config.module.rules.push(
+      {
+        test: /\.css$/,
+        loader: "emit-file-loader",
+        options: {
+          name: "dist/[path][name].[ext].js"
         }
-      );
-      return config;
+      },
+      {
+        test: /\.css$/,
+        use: ["raw-loader", "postcss-loader"]
+      }
+    );
+    return config;
   }
 };
 
