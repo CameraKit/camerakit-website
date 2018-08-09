@@ -14,14 +14,14 @@ const nextConfig = {
     config.module.rules.push(
       {
         test: /\.css$/,
-        loader: "emit-file-loader",
+        loader: 'emit-file-loader',
         options: {
-          name: "dist/[path][name].[ext].js"
+          name: 'dist/[path][name].[ext].js'
         }
       },
       {
         test: /\.css$/,
-        use: ["raw-loader", "postcss-loader"]
+        use: ['raw-loader', 'postcss-loader']
       }
     );
     return config;
