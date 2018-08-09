@@ -1,9 +1,14 @@
 {
-  "presets": [
-    ["env", {
-      "targets": {
-        "node": true
-      }
-    }]
-  ]
-}
+    "presets": ["next/babel"],
+    "plugins": [
+      [
+        "module-resolver",
+        {
+          "root": ["./"],
+          "alias": {
+            "components": "./components"
+          }
+        }
+      ]
+    ]
+  }
