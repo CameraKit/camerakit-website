@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 
 import styles from './sponsor.scss';
 
-const Sponsor = props => (
+const Sponsor = ({ link, logo, name }) => (
   <li className={styles.sponsor}>
-    <a className={styles.link} href={props.link}>
-      <img className={styles.logo} src={props.logo} alt={props.name} />
+    <a className={styles.link} href={link}>
+      <img className={styles.logo} src={logo} alt={name} />
     </a>
   </li>
 );

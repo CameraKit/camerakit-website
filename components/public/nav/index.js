@@ -20,29 +20,31 @@ class Nav extends React.Component {
   }
 
   toggleActive() {
-    this.setState({ active: !this.state.active });
+    this.setState(prevState => ({ active: !prevState.active }));
   }
 
   render() {
+    const { active } = this.state;
     return (
       <nav className={styles.nav}>
         <div className={`${global.container} ${global['container--full']} ${styles.container}`}>
           <div className={styles.logo}>
-            <img src={Logo} />
+            <img alt="CameraKit logo" src={Logo} />
           </div>
           <div className={styles.brand}>
-            <img src={LogoType} />
+            <img alt="CameraKit" src={LogoType} />
           </div>
           <div className={styles.menu}>
             <button
-              className={`${styles.toggle} ${this.state.active ? styles.active : ''}`}
+              className={`${styles.toggle} ${active ? styles.active : ''}`}
               onClick={this.toggleActive}
-              aria-expanded={this.state.active}
+              aria-expanded={active}
               title="Toggle menu"
-              aria-controls="menu">
-              <img src={MenuIcon} />
+              aria-controls="menu"
+              type="button">
+              <img alt="Toggle menu" src={MenuIcon} />
             </button>
-            <Menu active={this.state.active} toggle={this.toggleActive} />
+            <Menu active={active} toggle={this.toggleActive} />
           </div>
         </div>
       </nav>

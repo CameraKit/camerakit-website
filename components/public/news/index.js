@@ -11,42 +11,47 @@ class News extends React.Component {
     super(props);
 
     this.state = {
-      items: []
+      items: [],
     };
   }
 
   componentDidMount() {
     Feed.load('https://cors-anywhere.herokuapp.com/https://medium.com/feed/camerakit', (err, rss) => {
-      if (err) return console.log(err);
+      if (err) return;
       this.setState({ items: rss.items });
     });
   }
 
   render() {
+    const { items } = this.state;
     return (
       <section className={styles.news}>
         <div className={global.container}>
           <h2 className={global['heading--small']}>
-            Recent News
+            {'Recent News'}
           </h2>
-          {this.state.items.length > 0 ?
-            <ul className={styles.newsItems}>
-              {this.state.items.slice(0, 4).map(item => (
-                <NewsItem
-                  key={item.title}
-                  title={item.title}
-                  date={item.created.toString()}
-                  link={item.link}
-                />
-              ))}
-            </ul>
-            :
-            <p>Hmm... nothing to show just yet! News coming soon!</p>
+          {items.length > 0
+            ? (
+              <ul className={styles.newsItems}>
+                {items.slice(0, 4).map(item => (
+                  <NewsItem
+                    key={item.title}
+                    title={item.title}
+                    date={item.created.toString()}
+                    link={item.link}
+                  />
+                ))}
+              </ul>
+            ) : (
+              <p>
+                {'Hmm... nothing to show just yet! News coming soon!'}
+              </p>
+            )
           }
         </div>
       </section>
     );
   }
-};
+}
 
 export default News;

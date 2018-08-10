@@ -7,7 +7,7 @@ import styles from './footer.scss';
 import global from '../../../styles/styles.global.scss';
 
 const Footer = () => (
-  <footer className={styles.footer} style={{backgroundImage: `url('${footer}')`}}>
+  <footer className={styles.footer} style={{ backgroundImage: `url('${footer}')` }}>
     <div className={`${global.container} ${styles.container}`}>
       <Subscribe />
       <a className={styles.link} href="https://www.wonderkiln.com">
@@ -17,12 +17,12 @@ const Footer = () => (
         <ul className={styles.links}>
           <li className={styles.listItem}>
             <a className={styles.link} href="https://github.com/CameraKit/camerakit-android/blob/master/LICENSE">
-              License Information
+              {'License Information'}
             </a>
           </li>
         </ul>
         <div className={styles.copyright}>
-          © 2018 WonderKiln, Inc
+          {'© 2018 WonderKiln, Inc'}
         </div>
       </nav>
     </div>

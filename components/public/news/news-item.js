@@ -8,11 +8,17 @@ function formatDate(date) {
   return moment(Number(date)).format('MMMM D YYYY');
 }
 
-const NewsItem = props => (
+const NewsItem = ({ date, link, title }) => (
   <li className={styles.item}>
-    <span className={styles.date}>{formatDate(props.date)}</span>
-    <h3 className={styles.title}>{props.title}</h3>
-    <a className={styles.link} href={props.link} target="_blank">Read</a>
+    <span className={styles.date}>
+      {formatDate(date)}
+    </span>
+    <h3 className={styles.title}>
+      {title}
+    </h3>
+    <a className={styles.link} href={link} target="_blank" rel="noopener noreferrer">
+      {'Read'}
+    </a>
   </li>
 );
 

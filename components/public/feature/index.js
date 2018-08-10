@@ -3,14 +3,18 @@ import PropTypes from 'prop-types';
 
 import styles from './feature.scss';
 
-const Feature = props => (
+const Feature = ({ icon, text, description }) => (
   <li className={styles.feature}>
     <div className={styles.iconWrapper}>
-      {props.icon}
+      {icon}
     </div>
     <div className={styles.textWrapper}>
-    <h3 className={styles.text}>{props.text}</h3>
-    <p className={styles.description}>{props.description}</p>
+      <h3 className={styles.text}>
+        {text}
+      </h3>
+      <p className={styles.description}>
+        {description}
+      </p>
     </div>
   </li>
 );
@@ -18,6 +22,7 @@ const Feature = props => (
 Feature.propTypes = {
   icon: PropTypes.element.isRequired,
   text: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
 };
 
 export default Feature;

@@ -13,27 +13,36 @@ class Subscribe extends React.Component {
         url={url}
         render={({ subscribe, status, message }) => (
           <div className={styles.subscribe}>
-            <h2 className={global['heading--small']}>Stay Up To Date</h2>
-            <p className={styles.paragraph}>We sometimes send out important updates concerning CameraKit. Provide your email if you are interested in receiving emails from us.</p>
+            <h2 className={global['heading--small']}>
+              {'Stay Up To Date'}
+            </h2>
+            <p className={styles.paragraph}>
+              {'We sometimes send out important updates concerning CameraKit. Provide your email if you are interested in receiving emails from us.'}
+            </p>
             <form
               className={styles.form}
-              onSubmit={(event, data) => {
-                event.preventDefault()
+              onSubmit={event => {
+                event.preventDefault();
                 subscribe({ EMAIL: this.email.value });
-              }}>
+              }}
+            >
               <div className={styles.inputWrapper}>
-                <input ref={input => this.email = input} name="email" className={styles.input} type="email" required />
+                <input ref={input => { this.email = input; }} name="email" className={styles.input} type="email" required />
                 <button className={styles.submit} type="submit">
                   {status === 'sending' ? 'Sending...' : 'Subscribe'}
                 </button>
               </div>
-              {(status === 'error' || status === 'success') && <p className={styles.message}>{message}</p>}
+              {(status === 'error' || status === 'success') && (
+                <p className={styles.message}>
+                  {message}
+                </p>
+              )}
             </form>
           </div>
         )}
       />
     );
   }
-};
+}
 
 export default Subscribe;
