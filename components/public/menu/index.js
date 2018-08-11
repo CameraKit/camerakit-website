@@ -27,18 +27,18 @@ const Menu = ({ active, toggle }) => (
             </a>
           </li>
         </ul>
-        <span>
-          <span role="img" aria-label="American Flag">
-            {'🇺🇸'}
+        <div>
+          <span>
+            <span role="img" aria-label="American Flag">
+              {'🇺🇸'}
+            </span>
+            {' Built and Managed in the USA'}
           </span>
-          {' Built and Managed in the USA'}
-        </span>
-        <span>
-          {'Made with ❤ by '}
-          <a className={styles.credit} href="https://www.wonderkiln.com/">
-            {'WonderKiln'}
-          </a>
-        </span>
+          <br />
+          <span>
+            {'Made with ❤ by the CameraKit Team'}
+          </span>
+        </div>
       </div>
     </div>
   </div>
