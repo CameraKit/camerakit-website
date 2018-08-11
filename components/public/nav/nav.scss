@@ -4,8 +4,22 @@
   position: fixed;
   top: 0;
   width: 100%;
-  padding-top: 2rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   z-index: 11;
+  transition: all 1s;
+}
+
+.nav__scrolled {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  z-index: 11;
+  background: white;
+  box-shadow: 0px 2px 10px rgba(0,0,0,0.2);
+  transition: all 1s;
 }
 
 .container {
@@ -77,6 +91,7 @@
 
   .nav {
     padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 
 }

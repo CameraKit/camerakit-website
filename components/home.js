@@ -8,13 +8,15 @@ import button from '../static/btn_scrolldown.svg';
 import Feature from './public/feature';
 import News from './public/news';
 import Sponsor from './public/sponsor';
+import Client from './public/client';
 
 import features from '../static/features';
 import sponsors from '../static/sponsors';
+import clients from '../static/clients';
 
-import styles from '../static/home.scss';
-import featureStyles from '../static/features.scss';
-import intro from '../static/intro.scss';
+import styles from '../styles/home.scss';
+import featureStyles from '../styles/features.scss';
+import intro from '../styles/intro.scss';
 
 import global from '../styles/styles.global.scss';
 import animation from '../styles/bounce-animation.scss';
@@ -52,6 +54,23 @@ const Home = () => (
       </div>
       <img src={phoneTilted} className={intro.phoneTilted} alt="preview-mockup" />
     </section>
+    <section id="trusted-by" className={`${styles.section} ${styles.clients}`}>
+      <div className={global.container}>
+        <h2 className={global['heading--small']}>
+          {'Trusted By'}
+        </h2>
+        <ul className={`${styles.list} ${styles.clientsList}`}>
+          {clients.map(client => (
+            <Client
+              key={client.name}
+              logo={client.logo}
+              name={client.name}
+              link={client.link}
+            />
+          ))}
+        </ul>
+      </div>
+    </section>
     <section id="features" className={styles.section}>
       <div className={global.container}>
         <div className={featureStyles.main}>
@@ -76,8 +95,10 @@ const Home = () => (
         </div>
       </div>
     </section>
-    <News />
-    <section className={`${styles.section} ${styles.sponsors}`}>
+    <section id="news" className={styles.section}>
+      <News />
+    </section>
+    <section id="sponsored-by" className={`${styles.section} ${styles.sponsors}`}>
       <div className={global.container}>
         <h2 className={global['heading--small']}>
           {'Support'}

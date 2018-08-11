@@ -1,4 +1,4 @@
-.sponsor {
+.client {
   display: block;
 }
 
@@ -13,7 +13,7 @@
 }
 
 @media (min-width: 62em) {
-  .sponsor {
+  .client {
     &:not(:first-child) {
       margin-left: 3rem;
     }

@@ -18,6 +18,10 @@
   text-align: center;
 }
 
+.clients {
+  text-align: center;
+}
+
 @media (min-width: 62em) {
 
   .section {
@@ -25,6 +29,13 @@
   }
 
   .sponsorsList {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .clientsList {
     display: flex;
     flex-wrap: wrap;
     align-items: center;

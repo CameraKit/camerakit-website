@@ -14,9 +14,24 @@ class Nav extends React.Component {
 
     this.state = {
       active: false,
+      isTop: true,
     };
 
     this.toggleActive = this.toggleActive.bind(this);
+    this.onScroll = this.onScroll.bind(this);
+  }
+  
+  componentDidMount() {
+    document.addEventListener('scroll', () => {
+      const isTop = window.scrollY < 100;
+      if (isTop !== this.state.isTop) {
+        this.onScroll( isTop );
+      }
+    });
+  }
+
+  onScroll(isTop) {
+    this.setState({ isTop });
   }
 
   toggleActive() {
@@ -26,7 +41,7 @@ class Nav extends React.Component {
   render() {
     const { active } = this.state;
     return (
-      <nav className={styles.nav}>
+      <nav className={this.state.isTop ? styles.nav : styles.nav__scrolled}>
         <div className={`${global.container} ${global['container--full']} ${styles.container}`}>
           <div className={styles.logo}>
             <img alt="CameraKit logo" src={Logo} />
