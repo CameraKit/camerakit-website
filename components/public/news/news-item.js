@@ -5,7 +5,7 @@ import moment from 'moment';
 import styles from './news-item.scss';
 
 function formatDate(date) {
-  return moment(Number(date)).format('MMMM D YYYY');
+  return moment(Number(date)).format('MMMM Do, YYYY');
 }
 
 const NewsItem = ({ date, link, title }) => (

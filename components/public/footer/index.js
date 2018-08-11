@@ -10,8 +10,8 @@ const Footer = () => (
   <footer className={styles.footer} style={{ backgroundImage: `url('${footer}')` }}>
     <div className={`${global.container} ${styles.container}`}>
       <Subscribe />
-      <a className={styles.link} href="https://www.wonderkiln.com">
-        <img src={logo} className={styles.logo} alt="Wonderkiln Logo" />
+      <a className={styles.link} href="https://www.camerakit.website">
+        <img src={logo} className={styles.logo} alt="CameraKit Logo" />
       </a>
       <nav className={styles.nav}>
         <ul className={styles.links}>
@@ -22,7 +22,7 @@ const Footer = () => (
           </li>
         </ul>
         <div className={styles.copyright}>
-          {'© 2018 WonderKiln, Inc'}
+          {'© 2018 Alterac, Inc'}
         </div>
       </nav>
     </div>
