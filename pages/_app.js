@@ -1,20 +1,34 @@
 import App, { Container } from 'next/app';
 import React from 'react';
-import { ApolloProvider } from 'react-apollo';
-import withApolloClient from '../lib/with-apollo-client';
+import { Provider } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import withRedux from 'next-redux-wrapper';
+
+import { initStore, addCount } from '../lib/store';
+import withApollo from '../lib/with-apollo-client';
 
 
 class CameraKitWebsite extends App {
+  static async getInitialProps({ Component, ctx }) {
+    ctx.store.dispatch(addCount());
+
+    const pageProps = Component.getInitialProps ? await Component.getInitialProps(ctx) : {};
+
+    return { pageProps };
+  }
+
   render() {
-    const { Component, pageProps, apolloClient } = this.props;
+    const { Component, pageProps, store } = this.props;
     return (
       <Container>
-        <ApolloProvider client={apolloClient}>
+        <Provider store={store}>
           <Component {...pageProps} />
-        </ApolloProvider>
+        </Provider>
       </Container>
     );
   }
 }
 
-export default withApolloClient(CameraKitWebsite);
+const mapDispatchToProps = dispatch => ({ addCount: bindActionCreators(addCount, dispatch) });
+
+export default withApollo(withRedux(initStore, null, mapDispatchToProps)(CameraKitWebsite));
