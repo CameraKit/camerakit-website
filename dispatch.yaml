@@ -6,3 +6,7 @@ dispatch:
   # Default service serves simple hostname request.
   - url: "*.camerakit.website"
     service: website
+
+  # Slackin service serves join-slack subdomain
+  - url: "join-slack.camerakit.website"
+    service: slackin
