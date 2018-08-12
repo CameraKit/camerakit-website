@@ -11,19 +11,7 @@ const nextConfig = {
       net: 'empty',
       tls: 'empty',
     };
-    newConfig.module.rules.push(
-      {
-        test: /\.css$/,
-        loader: 'emit-file-loader',
-        options: {
-          name: 'dist/[path][name].[ext].js',
-        },
-      },
-      {
-        test: /\.css$/,
-        use: ['raw-loader', 'postcss-loader'],
-      },
-    );
+
     return newConfig;
   },
 };
@@ -33,7 +21,7 @@ module.exports = withPlugins([
     cssModules: true,
     cssLoaderOptions: {
       importLoaders: 1,
-      localIdentName: '[local]___[hash:base64:5]',
+      localIdentName: '[local]_[hash:base64:3]',
     },
   }],
   images,
