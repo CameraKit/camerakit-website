@@ -11,5 +11,9 @@ RUN yarn install
 # Bundle app source
 COPY . /usr/src/app
 RUN yarn run build
-EXPOSE 3000
+
+# Set the default host/port
+ENV HOST 0.0.0.0
+ENV PORT 8080
+
 CMD [ "yarn", "start" ]

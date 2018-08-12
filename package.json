@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "next build",
-    "start": "next start",
-    "dev": "set NODE_ENV=production && next"
+    "start": "next start -p $PORT",
+    "dev": "next"
   },
   "keywords": [],
   "author": "",
