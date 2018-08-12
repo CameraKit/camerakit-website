@@ -6,7 +6,7 @@
 
 <p align="center">
     <a href="https://play.google.com/store/apps/details?id=com.camerakit.demo&hl=en" target="_blank">
-        <img alt='CameraKit Header' height="42px" src='.repo/gh-readme-app.svg'/>
+        <img alt='CameraKit Demo App' height="42px" src='.repo/gh-readme-app.svg'/>
     </a>
     <a href="https://buddy.works" target="_blank">
         <img alt='BuddyWorks' height="42px" src='https://assets.buddy.works/automated-dark.svg'/>
