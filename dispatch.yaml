@@ -1,12 +1,6 @@
 dispatch:
-  # Default service serves the typical web resources and all static resources.
   - url: "camerakit.website"
     service: website
 
-  # Default service serves simple hostname request.
-  - url: "*.camerakit.website"
-    service: website
-
-  # Slackin service serves join-slack subdomain
   - url: "join-slack.camerakit.website"
     service: slackin
