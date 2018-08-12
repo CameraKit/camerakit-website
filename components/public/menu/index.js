@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
+import globalstylesheet from 'styles/styles.global.scss';
 import styles from './menu.scss';
 
-import global from '../../../styles/styles.global.scss';
 
 const Menu = ({ active, toggle }) => (
   <div id="menu" className={active ? styles.active : ''}>
@@ -12,17 +13,17 @@ const Menu = ({ active, toggle }) => (
       <div className={styles.content}>
         <ul className={styles.links}>
           <li className={styles.item}>
-            <a className={`${global['heading--large']} ${styles.link}`} href="http://docs.camerakit.website/#/">
+            <a className={`${globalstylesheet['heading--large']} ${styles.link}`} href="http://docs.camerakit.website/#/">
               {'Documentation'}
             </a>
           </li>
           <li className={styles.item}>
-            <a className={`${global['heading--large']} ${styles.link}`} href="https://github.com/CameraKit/jpegkit-android">
+            <a className={`${globalstylesheet['heading--large']} ${styles.link}`} href="https://github.com/CameraKit/jpegkit-android">
               {'JPEGKit'}
             </a>
           </li>
           <li className={styles.item}>
-            <a className={`${global['heading--large']} ${styles.link}`} href="https://github.com/CameraKit/camerakit-android">
+            <a className={`${globalstylesheet['heading--large']} ${styles.link}`} href="https://github.com/CameraKit/camerakit-android">
               {'Github'}
             </a>
           </li>

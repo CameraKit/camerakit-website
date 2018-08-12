@@ -1,8 +1,9 @@
 import React from 'react';
 import MailchimpSubscribe from 'react-mailchimp-subscribe';
+
+import globalStylesheet from 'styles/styles.global.scss';
 import styles from './subscribe.scss';
 
-import global from '../../../styles/styles.global.scss';
 
 const url = 'https://wonderkiln.us12.list-manage.com/subscribe/post?u=45b5c2055f100d913f074055b&amp;id=ec9df2ad9a';
 
@@ -13,7 +14,7 @@ class Subscribe extends React.Component {
         url={url}
         render={({ subscribe, status, message }) => (
           <div className={styles.subscribe}>
-            <h2 className={global['heading--small']}>
+            <h2 className={globalStylesheet['heading--small']}>
               {'Stay Up To Date'}
             </h2>
             <p className={styles.paragraph}>

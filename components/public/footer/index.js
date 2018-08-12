@@ -1,13 +1,15 @@
 import React from 'react';
-import footer from '../../../static/il_footer.png';
-import Subscribe from '../subscribe';
+import footer from 'static/il_footer.png';
+import Subscribe from 'components/public/subscribe';
+
+import globalStylesheet from 'styles/styles.global.scss';
+
 import styles from './footer.scss';
 
-import global from '../../../styles/styles.global.scss';
 
 const Footer = () => (
   <footer className={styles.footer} style={{ backgroundImage: `url('${footer}')` }}>
-    <div className={`${global.container} ${styles.container}`}>
+    <div className={`${globalStylesheet.container} ${styles.container}`}>
       <Subscribe />
       <nav className={styles.nav}>
         <ul className={styles.links}>
