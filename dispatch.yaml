@@ -1,5 +1,0 @@
-dispatch:
-  - url: "join-slack.camerakit.website"
-    service: slackin
-  - url: "camerakit.website"
-    service: website
