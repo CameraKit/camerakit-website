@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import Link from 'next/link';
 import styles from './menu.scss';
 
+import usaFlag from '../../../static/ic_usa.svg';
+
 import global from '../../../styles/styles.global.scss';
 
 const Menu = ({ active, toggle }) => (
@@ -13,22 +15,24 @@ const Menu = ({ active, toggle }) => (
       <div className={styles.content}>
         <ul className={styles.links}>
          <li className={styles.item}>
-            <Link className={`${global['heading--large']} ${styles.link}`} href="http://docs.camerakit.website'">
-              <a href="http://docs.camerakit.website/">
+            <Link href="http://docs.camerakit.website'">
+              <a href="http://docs.camerakit.website/" className={`${global['heading--large']} ${styles.link}`}>
                 {'Docs'}
               </a>
             </Link>
           </li>
           <li className={styles.item}>
-            <Link className={`${global['heading--large']} ${styles.link}`} href="https://github.com/CameraKit/camerakit-android">
-              {'Github'}
+            <Link href="https://github.com/CameraKit/camerakit-android">
+              <a href="https://github.com/CameraKit/camerakit-android" className={`${global['heading--large']} ${styles.link}`}>
+                {'Github'}
+              </a>
             </Link>
           </li>
         </ul>
         <div>
           <span>
             <span role="img" aria-label="American Flag">
-              {'🇺🇸'}
+              <img src={usaFlag} className={styles.flag__usa} alt="American Flag" />
             </span>
             {' Built and Managed in the USA'}
           </span>
