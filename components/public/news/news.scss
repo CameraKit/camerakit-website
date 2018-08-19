@@ -1,0 +1,15 @@
+.news {
+	margin: 3rem 0;
+}
+
+.newsItems {
+	margin: 3rem 0;
+	margin-top: 0;
+	padding: 0;
+	list-style: none;
+
+	@media (min-width: 48em) {
+		lost-flex-container: row;
+	}
+}
+

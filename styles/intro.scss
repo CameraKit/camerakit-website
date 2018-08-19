@@ -1,0 +1,148 @@
+@import '../styles/variables';
+
+.intro {
+  display: flex;
+  align-items: center;
+  position: relative;
+  min-height: 100vh;
+  padding-top: 5rem;
+  padding-bottom: 12rem;
+  background: linear-gradient(to bottom, #CBCee9, #DDE1E9);
+  text-align: center;
+}
+
+.container {
+  max-width: 60rem;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+}
+
+.heading {
+  margin: 0;
+  color: $dark-grey;
+}
+
+.hidden {
+  margin: 0 auto;
+  max-width: 30rem;
+}
+
+.subheading {
+  color: $dark-grey;
+  margin-bottom: 10px;
+  // font-size: 1rem;
+  // color: $primary;
+  // text-transform: uppercase;
+
+  br {
+    display: none;
+  }
+}
+
+.phone {
+  margin: 3rem auto 0;
+}
+
+.phoneImage {
+  margin-bottom: 3rem;
+}
+
+.phoneTilted {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.flag__usa {
+  height: 16px;
+  width: auto;
+  border-radius: 3px;
+  margin-bottom: -1px;
+}
+
+.button {
+  position: absolute;
+  left: 50%;
+  margin-left: -3.438em;
+  bottom: 10%;
+  z-index: 1;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.madeInAmerica {
+  margin-top: 15px;
+}
+
+@media (min-width: 48em) {
+
+  .intro {
+    padding: 15rem 0;
+  }
+
+  .content {
+    margin: 0 auto;
+    // NOTE: Get aspect ratio of final asset
+    //padding-top: 50%;
+    perspective: 1000px;
+  }
+
+  .heading {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    width: 40%;
+    color: #fff;
+    text-align: left;
+    transform: translateY(-50%);
+  }
+
+  .hidden {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .subheading {
+    margin: 0 0 1rem;
+    line-height: 1.2;
+    font-size: 3rem;
+    font-weight: 100;
+    text-transform: none;
+
+    br {
+      display: block;
+    }
+  }
+
+  .phone {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    z-index: 1;
+  }
+
+  .phoneImage {
+    margin: 0;
+  }
+
+  .button {
+    bottom: 20%;
+  }
+}
+
+
+@media (min-width: 90em) {
+  .intro {
+    padding: 25rem 0;
+  }
+}

@@ -1,0 +1,9 @@
+.scroll-button {
+  animation: bounce 1s ease-in infinite alternate;
+}
+
+@keyframes bounce {
+  0% { transform: none }
+
+  100% { transform: translateY(1rem) };
+}

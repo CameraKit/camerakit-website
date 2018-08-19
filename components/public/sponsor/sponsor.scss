@@ -1,0 +1,21 @@
+.sponsor {
+  display: block;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto 2rem;
+  max-width: 20rem;
+}
+
+.link {
+  display: flex;
+}
+
+@media (min-width: 62em) {
+  .sponsor {
+    &:not(:first-child) {
+      margin-left: 3rem;
+    }
+  }
+}
