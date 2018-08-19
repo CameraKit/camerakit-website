@@ -20,11 +20,6 @@ const Menu = ({ active, toggle }) => (
             </Link>
           </li>
           <li className={styles.item}>
-            <Link className={`${global['heading--large']} ${styles.link}`} href="/resources">
-              {'Learn'}
-            </Link>
-          </li>
-          <li className={styles.item}>
             <Link className={`${global['heading--large']} ${styles.link}`} href="https://github.com/CameraKit/camerakit-android">
               {'Github'}
             </Link>
