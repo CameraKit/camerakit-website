@@ -1,4 +1,6 @@
 import React from 'react';
+import isomorphicFetch from 'isomorphic-unfetch';
+import cookie from 'js-cookie';
 
 import globalStylesheet from 'styles/styles.global.scss';
 import styles from './login.scss';
@@ -13,41 +15,41 @@ class Login extends React.Component {
   }
 
   login() {
-    fetch('http://localhost:3001/auth/login', {
+    isomorphicFetch('http://localhost:3001/auth/login', {
       method: 'POST',
       headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
       },
-        body: JSON.stringify({ email: this.email.value, password: this.password.value }),
+      body: JSON.stringify({ email: this.email.value, password: this.password.value }),
     }).then(response => {
-        response.json().then(json => {
-            if(json.message) {
-              this.setState({ status: json.message });
-            } else {
-              this.setState({ status: "Logged in! Token: " + json.accessToken });
-            }
-
-        });
+      response.json().then(json => {
+        if (json.message) {
+          this.setState({ status: json.message });
+        } else {
+          cookie.set('token', json.accessToken);
+          this.setState({ status: `Logged in! Token: ${json.accessToken}` });
+        }
+      });
     });
   }
 
   register() {
-    fetch('http://localhost:3001/auth/register', {
+    isomorphicFetch('http://localhost:3001/auth/register', {
       method: 'POST',
       headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
       },
-        body: JSON.stringify({ email: this.email.value, password: this.password.value }),
+      body: JSON.stringify({ email: this.email.value, password: this.password.value }),
     }).then(response => {
-        response.json().then(json => {
-            if(json.message) {
-                this.setState({ status: json.message });
-              } else {
-                this.setState({ status: "Registered as" + json.email + "!" });
-              }
-        });
+      response.json().then(json => {
+        if (json.message) {
+          this.setState({ status: json.message });
+        } else {
+          this.setState({ status: `Registered as ${json.email}!` });
+        }
+      });
     });
   }
 
