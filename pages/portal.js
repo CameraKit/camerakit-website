@@ -17,7 +17,7 @@ class Portal extends React.Component {
     return (
       <div className="portal">
         <Nav />
-        <StripeProvider apiKey={process.env.STRIPE_PUBLISHABLE_API_KEY}>
+        <StripeProvider apiKey={process.env.STRIPE_PUBLISHABLE_API_KEY || 'stripe'}>
           <Elements>
             <CheckoutForm />
           </Elements>

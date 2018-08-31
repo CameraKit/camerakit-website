@@ -38,19 +38,23 @@ class CheckoutForm extends Component {
     const { stripe } = this.props;
     const { error, token } = await stripe.createToken({ name: 'Name' });
     if (error) {
-      console.log(error);
+      this.setState({ error: error.message || 'Sorry! We could not process your payment.' });
     } else {
       const response = await Auth.callApi('http://localhost:3001/users/sponsor', {
         method: 'POST',
         body: JSON.stringify({ token: token.id }),
       });
 
-      if (response.ok) this.setState({ complete: true });
+      if (response.ok) {
+        this.setState({ complete: true, error: '' });
+      } else {
+        this.setState({ error: 'Sorry! We could not process your payment.' });
+      }
     }
   }
 
   render() {
-    const { complete } = this.state;
+    const { complete, error } = this.state;
     if (complete) {
       return (
         <h1>
@@ -58,21 +62,37 @@ class CheckoutForm extends Component {
         </h1>
       );
     }
+    console.log(error);
     return (
       <section className={styles.payment}>
         <div className={globalStylesheet.container}>
           <div className={styles.container}>
             <div className="checkout">
-              <p>
+              <h2>
                 {'Sponsor CameraKit!'}
-              </p>
+              </h2>
               <CardElement
                 className={styles.StripeElement}
                 {...createOptions('1em', '5px')}
               />
-              <button type="submit" onClick={this.submit}>
-                {'Sponsor'}
-              </button>
+              <div className={styles.submit}>
+                <span className={styles.amount}>
+                  {'Amount'}
+                </span>
+                <span className={styles.usd}>
+                  <input className={styles.label} />
+                </span>
+                {error && (
+                  <span className={styles.error}>
+                    {error}
+                  </span>
+                )}
+                <button className={styles.sponsor} onClick={this.submit} type="submit">
+                  <span>
+                    {'Sponsor'}
+                  </span>
+                </button>
+              </div>
             </div>
           </div>
         </div>
