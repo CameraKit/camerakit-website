@@ -75,7 +75,7 @@ export default class AuthService {
   }
 
   logout() {
-    removeCookie('nest_auth_cookie');
+    removeCookie('token');
     localStorage.removeItem('profile');
   }
 
