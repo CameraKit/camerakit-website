@@ -1,61 +1,34 @@
 import React, { Component } from 'react';
 import Router from 'next/router';
-import cookie from 'js-cookie';
+import ReactLoading from 'react-loading';
 
-import { getCookie, setCookie } from './Cookies';
+import AuthService from './auth';
 
 export default function withAuth(AuthComponent) {
+  const Auth = new AuthService();
   return class Authenticated extends Component {
     constructor(props) {
       super(props);
-
-      const { isLoading, seshToken } = props;
       this.state = {
-        isLoading,
-        token: seshToken,
+        isLoading: true,
       };
     }
 
     componentDidMount() {
-      if (!this.state.token) {
-        Router.push('/');
+      if (!Auth.loggedIn()) {
+        Router.push('/login');
       }
       this.setState({ isLoading: false });
     }
 
-    static async getInitialProps(ctx) {
-      const isServer = !!ctx.req;
-      let token;
-      if (!isServer) {
-        token = cookie.get('token');
-      } else {
-        token = getCookie('token', ctx.req);
-      }
-      let isLoading = true;
-      if (!token) {
-        console.log('no token');
-      } else {
-        setCookie('token', token);
-        isLoading = false;
-      }
-      const pageProps = AuthComponent.getInitialProps && await AuthComponent.getInitialProps(ctx);
-      return {
-        ...pageProps,
-        isLoading,
-        token,
-      };
-    }
-
     render() {
-      const { isLoading, token } = this.state;
+      const { isLoading } = this.state;
       return (
         <div>
-          { isLoading ? (
-            <div>
-              { 'LOADING.... '}
-            </div>
+          {isLoading ? (
+            <ReactLoading />
           ) : (
-            <AuthComponent {...this.props} token={token} />
+            <AuthComponent {...this.props} auth={Auth} />
           )}
         </div>
       );
