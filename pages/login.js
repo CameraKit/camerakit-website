@@ -4,8 +4,6 @@ import { connect } from 'react-redux';
 import Nav from 'components/public/nav';
 import LoginForm from 'components/public/login';
 
-import withAuth from '../utils/withAuth';
-
 class Login extends React.Component {
   constructor(props) {
     super(props);
@@ -22,4 +20,4 @@ class Login extends React.Component {
   }
 }
 
-export default connect()(withAuth(Login));
+export default connect()(Login);
