@@ -1,12 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Elements, StripeProvider } from 'react-stripe-elements';
+import CheckoutForm from 'components/public/payment/CheckoutForm';
 
 import Nav from 'components/public/nav';
-import Login from 'components/public/login';
 
 import withAuth from '../utils/withAuth';
 
-class Public extends React.Component {
+class Portal extends React.Component {
   constructor(props) {
     super(props);
     console.log(props.token);
@@ -14,12 +15,16 @@ class Public extends React.Component {
 
   render() {
     return (
-      <div className="public">
+      <div className="portal">
         <Nav />
-        <Login />
+        <StripeProvider apiKey={process.env.STRIPE_PUBLISHABLE_API_KEY}>
+          <Elements>
+            <CheckoutForm />
+          </Elements>
+        </StripeProvider>
       </div>
     );
   }
 }
 
-export default connect()(withAuth(Public));
+export default connect()(withAuth(Portal));

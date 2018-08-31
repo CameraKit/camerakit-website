@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Router from 'next/router';
 
+import AuthService from 'utils/auth';
 import globalstylesheet from 'styles/styles.global.scss';
 import styles from './menu.scss';
 
-
+const Auth = new AuthService();
 const Menu = ({ active, toggle }) => (
   <div id="menu" className={active ? styles.active : ''}>
     <div className={styles.overlay} onClick={toggle} onKeyDown={toggle} role="link" tabIndex={0} />
@@ -32,6 +34,15 @@ const Menu = ({ active, toggle }) => (
               {'Github'}
             </a>
           </li>
+          {Auth.loggedIn()
+            && (
+              <li className={styles.item}>
+                <a className={`${globalstylesheet['heading--large']} ${styles.link}`} onClick={()=> {Auth.logout();Router.push('/');}}>
+                  {'Logout'}
+                </a>
+              </li>
+            )
+          }
         </ul>
         <div>
           <span>

@@ -46,6 +46,7 @@ class MyDocument extends Document {
               + 'minimum-scale=1, width=device-width, height=device-height'
             }
           />
+          <script src="https://js.stripe.com/v3/" />
         </Head>
         <body {...this.helmetBodyAttrComponents}>
           <Main />
