@@ -37,9 +37,9 @@ const Menu = ({ active, toggle }) => (
           {Auth.loggedIn()
             && (
               <li className={styles.item}>
-                <a className={`${globalstylesheet['heading--large']} ${styles.link}`} onClick={()=> {Auth.logout();Router.push('/');}}>
+                <div className={`${globalstylesheet['heading--large']} ${styles.link}`} onClick={()=> {Auth.logout();Router.push('/');}}>
                   {'Logout'}
-                </a>
+                </div>
               </li>
             )
           }
