@@ -1,0 +1,78 @@
+@import '../styles/variables';
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 100vh;
+  padding-top: 6rem;
+  background: linear-gradient(to bottom, #CBCee9, #DDE1E9);
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 25rem;
+}
+
+.flexWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.contactWrapper {
+  background-color: #fff;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+	border-radius: 0.25rem;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 70%;
+  max-width: 500px;
+}
+
+.textAreaWrapper {
+  height: 7rem; 
+}
+
+.input {
+  min-width: 0;
+  width: 100%;
+	padding: 0.75rem;
+	border: none;
+	&:active, &:focus {
+		outline: none;
+	}
+}
+
+.textArea {
+  height: 100%;
+  resize: none;
+}
+
+.submitButton {
+  background-color: #fff;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  border-radius: 0.25rem;
+  margin: 0 auto;
+  width: 150px;
+  height: 40px; 
+  font-weight: 500;
+  color: #6b60e9;
+  text-transform: uppercase;
+  transition: all .3s ease;
+
+  &:hover, &:active, &:focus {
+    outline: none;
+    background-color: transparentize($primary, 0.8);
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 48em) {
+  .intro {
+    padding: 8rem 0;
+  }
+}
