@@ -45,3 +45,6 @@ build
 
 # npm
 package-lock.json
+
+# dotenv environment variables file
+.env
