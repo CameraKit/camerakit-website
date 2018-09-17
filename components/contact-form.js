@@ -1,4 +1,5 @@
 import React from 'react';
+import isomorphicFetch from 'isomorphic-unfetch';
 
 import styles from '../styles/contact-form.scss';
 import intro from '../styles/intro.scss';
@@ -7,11 +8,36 @@ import global from '../styles/styles.global.scss';
 class ContactForm extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state = { 
+      complete: false,
+      message: '',
+    }
   }
 
   handleSubmit(event) {
     event.preventDefault();
-    // Send contact email
+
+    isomorphicFetch(`${process.env.API_URL}/contact`, {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name: this.name.value,
+        email: this.email.value,
+        company: this.company.value,
+        message: this.message.value,
+      })
+    }).then( (response) => {
+      console.log(response);
+      if (response.ok) {
+        this.setState({ complete: true, message: 'Success! Email Sent.' });
+      } else {
+        this.setState({ complete: true, message: 'Sorry, we could not process your request.'})
+      }
+    });
   }
 
   render() {
@@ -58,6 +84,11 @@ class ContactForm extends React.Component {
                 Submit
               </button>
             </div>
+            {(this.state.complete) && (
+                <p className={styles.message}>
+                  {this.state.message}
+                </p>
+              )}
           </form>
         </div>
       </section>
