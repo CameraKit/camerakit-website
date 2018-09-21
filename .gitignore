@@ -45,3 +45,4 @@ build
 
 # npm
 package-lock.json
+.env
