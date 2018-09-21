@@ -62,7 +62,6 @@ class CheckoutForm extends Component {
         </h1>
       );
     }
-    console.log(error);
     return (
       <section className={styles.payment}>
         <div className={globalStylesheet.container}>
@@ -77,10 +76,10 @@ class CheckoutForm extends Component {
               />
               <div className={styles.submit}>
                 <span className={styles.amount}>
-                  {'Amount'}
+                  {/* {'Amount'} */}
                 </span>
                 <span className={styles.usd}>
-                  <input className={styles.label} />
+                  <input className={styles.label} defaultValue="5" />
                 </span>
                 {error && (
                   <span className={styles.error}>

@@ -17,7 +17,7 @@ class LoginForm extends React.Component {
   }
 
   login() {
-    Auth.login(this.email.value, this.password.value).then(() => Router.push('/portal'));
+    Auth.login(this.email.value, this.password.value).then(() => Router.push('/dashboard'));
   }
 
   register() {

@@ -7,7 +7,6 @@ import LoginForm from 'components/public/login';
 class Login extends React.Component {
   constructor(props) {
     super(props);
-    console.log(props.token);
   }
 
   render() {

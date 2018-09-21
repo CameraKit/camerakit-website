@@ -1,23 +1,36 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import Sidebar from 'components/public/portal/sidebar';
+import Topbar from 'components/public/portal/topbar';
 
-import Sidebar from './sidebar';
+const layoutStyle = {
+  display: 'flex',
+  padding: '0px',
+  margin: '0px',
+  width: '100vw',
+  height: '100vh',
+  overflow: 'hidden',
+};
 
-class Dashboard extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+const wrapperStyle = {
+  display: 'flex',
+  flex: 1,
+  flexDirection: 'column',
+};
 
-  render() {
-    return (
-      <div>
-        <Sidebar />
-        <div className="dashboard">
-          <span>Dashboard content</span>
-        </div>
+const contentStyle = {
+  height: '100%',
+};
+
+const Dashboard = ({ view, children }) => (
+  <div style={layoutStyle}>
+    <Sidebar />
+    <div style={wrapperStyle}>
+      <Topbar view={view} />
+      <div style={contentStyle}>
+        {children}
       </div>
-    );
-  }
-}
+    </div>
+  </div>
+);
 
-export default connect()(Dashboard);
+export default Dashboard;

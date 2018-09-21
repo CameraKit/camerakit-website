@@ -15,7 +15,7 @@ const Menu = ({ active, toggle }) => (
       <div className={styles.content}>
         <ul className={styles.links}>
           <li className={styles.item}>
-            <a className={`${globalstylesheet['heading--large']} ${styles.link}`} href="/portal">
+            <a className={`${globalstylesheet['heading--large']} ${styles.link}`} href="/dashboard">
               {'Portal'}
             </a>
           </li>
