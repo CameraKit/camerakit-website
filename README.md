@@ -30,7 +30,13 @@ CameraKit takes one of the hardest Android APIs and makes it into a high level a
 ## Run Instructions
 
 1. `yarn install`
-2. `yarn dev`
+2. `yarn dev` 
+   
+To support Stripe, add and configure an `.env` file in the root directory with
+```
+STRIPE_PUBLISHABLE_API_KEY
+STRIPE_SECRET_API_KEY
+```
 
 ## Detailed Documentation
 
