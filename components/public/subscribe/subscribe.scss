@@ -50,7 +50,23 @@
 }
 
 .message {
-	margin-top: 0.5rem;
-	font-weight: 500;
-	color: $primary;
+	margin: 0 auto 5rem;
+	max-width: 30rem;
+	text-align: center;
+	transition: 0.5s;
+  opacity: 1;
+	visibility: visible; 
+}
+
+.messageParagraph {
+	min-width: 30rem;
+	min-height: 3rem;
+}
+
+.headingSuccess {
+	color: #1C7905;
+}
+
+.headingError {
+	color: #A60606;
 }
