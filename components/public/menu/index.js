@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Router from 'next/router';
-
-import AuthService from 'utils/auth';
-import globalstylesheet from 'styles/styles.global.scss';
+import Link from 'next/link';
 import styles from './menu.scss';
 
-const Auth = new AuthService();
+import usaFlag from '../../../static/ic_usa.svg';
+
+import global from '../../../styles/styles.global.scss';
+
 const Menu = ({ active, toggle }) => (
   <div id="menu" className={active ? styles.active : ''}>
     <div className={styles.overlay} onClick={toggle} onKeyDown={toggle} role="link" tabIndex={0} />
@@ -14,35 +14,20 @@ const Menu = ({ active, toggle }) => (
       <div className={styles.background} />
       <div className={styles.content}>
         <ul className={styles.links}>
-          <li className={styles.item}>
-            <a className={`${globalstylesheet['heading--large']} ${styles.link}`} href="/dashboard">
-              {'Portal'}
-            </a>
+         <li className={styles.item}>
+            <Link href="http://docs.camerakit.website'">
+              <a href="http://docs.camerakit.website/" className={`${global['heading--large']} ${styles.link}`}>
+                {'Docs'}
+              </a>
+            </Link>
           </li>
           <li className={styles.item}>
-            <a className={`${globalstylesheet['heading--large']} ${styles.link}`} href="http://docs.camerakit.website/#/">
-              {'Documentation'}
-            </a>
+            <Link href="https://github.com/CameraKit/camerakit-android">
+              <a href="https://github.com/CameraKit/camerakit-android" className={`${global['heading--large']} ${styles.link}`}>
+                {'Github'}
+              </a>
+            </Link>
           </li>
-          <li className={styles.item}>
-            <a className={`${globalstylesheet['heading--large']} ${styles.link}`} href="https://github.com/CameraKit/jpegkit-android">
-              {'JPEGKit'}
-            </a>
-          </li>
-          <li className={styles.item}>
-            <a className={`${globalstylesheet['heading--large']} ${styles.link}`} href="https://github.com/CameraKit/camerakit-android">
-              {'Github'}
-            </a>
-          </li>
-          {Auth.loggedIn()
-            && (
-              <li className={styles.item}>
-                <div className={`${globalstylesheet['heading--large']} ${styles.link}`} onClick={()=> {Auth.logout();Router.push('/');}}>
-                  {'Logout'}
-                </div>
-              </li>
-            )
-          }
         </ul>
         <div>
           <span>

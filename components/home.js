@@ -1,9 +1,6 @@
 import React from 'react';
 
 import jump from 'jump.js';
-
-import phoneTilted from 'static/il_phone_tilted.svg';
-import button from 'static/btn_scrolldown.svg';
 import features from 'static/features';
 import sponsors from 'static/sponsors';
 import clients from 'static/clients';
@@ -13,6 +10,10 @@ import featureStyles from 'styles/features.scss';
 import intro from 'styles/intro.scss';
 import animation from 'styles/bounce-animation.scss';
 import globalStylesheet from 'styles/styles.global.scss';
+
+import phoneTilted from '../static/il_phone_tilted.svg';
+import button from '../static/btn_scrolldown.svg';
+import usaFlag from '../static/ic_usa.svg';
 
 import Feature from './public/feature';
 import News from './public/news';
@@ -40,7 +41,7 @@ const Home = () => (
             </p>
             <div className={intro.madeInAmerica}>
               <span role="img" aria-label="American Flag">
-                {'🇺🇸'}
+                <img src={usaFlag} className={intro.flag__usa} alt="American Flag" />
               </span>
               {' Built and Managed in the USA'}
             </div>
