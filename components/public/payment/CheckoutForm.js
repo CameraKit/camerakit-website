@@ -34,23 +34,34 @@ class CheckoutForm extends Component {
     this.submit = this.submit.bind(this);
   }
 
+  getAmount() {
+    const amount = this.amountInput.value;
+    const parsedAmount = parseFloat(amount);
+    if (Number.isFinite(parsedAmount)) {
+      return Math.floor(parsedAmount * 100);
+    }
+    return null;
+  }
+
   async submit() {
     const { stripe } = this.props;
     const { error, token } = await stripe.createToken({ name: 'Name' });
-    if (error) {
-      this.setState({ error: error.message || 'Sorry! We could not process your payment.' });
-    } else {
-      const response = await Auth.callApi('http://localhost:3001/users/sponsor', {
-        method: 'POST',
-        body: JSON.stringify({ token: token.id }),
-      });
-
-      if (response.ok) {
-        this.setState({ complete: true, error: '' });
-      } else {
-        this.setState({ error: 'Sorry! We could not process your payment.' });
-      }
+    const amount = this.getAmount();
+    if (amount == null) {
+      return this.setState({ error: 'Invalid amount' });
     }
+    if (error) {
+      return this.setState({ error: error.message || 'Sorry! We could not process your payment.' });
+    }
+    const response = await Auth.callApi(`http://localhost:3001/users/sponsor`, {
+      method: 'POST',
+      body: JSON.stringify({ token: token.id, amount }),
+    }, true);
+
+    if (!response.ok) {
+      return this.setState({ error: 'Sorry! We could not process your payment.' });
+    }
+    return this.setState({ complete: true, error: '' });
   }
 
   render() {
@@ -79,7 +90,7 @@ class CheckoutForm extends Component {
                   {/* {'Amount'} */}
                 </span>
                 <span className={styles.usd}>
-                  <input className={styles.label} defaultValue="5" />
+                  <input ref={ref => { this.amountInput = ref; }} className={styles.label} defaultValue="5" />
                 </span>
                 {error && (
                   <span className={styles.error}>

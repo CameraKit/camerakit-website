@@ -1,6 +1,7 @@
 import isomorphicFetch from 'isomorphic-unfetch';
 import * as BluebirdPromise from 'bluebird';
-import { setCookie, getCookie, removeCookie } from './cookies';
+import { setCookie, getCookie, removeCookie } from './Cookies';
+import { reject } from 'any-promise';
 
 export default class AuthService {
   constructor() {
@@ -12,7 +13,7 @@ export default class AuthService {
   }
 
   login(email, password) {
-    return new BluebirdPromise(resolve => isomorphicFetch(`${this.api}/auth/login`, {
+    return new BluebirdPromise(resolve => this.callApi(`${this.api}/auth/login`, {
       method: 'POST',
       headers: {
         Accept: 'application/json',
@@ -22,21 +23,21 @@ export default class AuthService {
         email,
         password,
       }),
-    }).then(res => res.json().then(json => {
+    }, true).then(json => {
       this.setToken(json.accessToken);
       return this.callApi(`${this.api}/users`, {
         method: 'GET',
-      });
-    })).then(res => {
+      }, true);
+    }).then(res => {
       this.setProfile(res);
       return resolve(res);
-    }));
+    }).catch(error => BluebirdPromise.reject(error.message)));
   }
 
   loggedIn() {
     // Checks if there is a saved token and it's still valid
     const token = this.getToken();
-    return !!token;
+    return !!token && token !== 'undefined';
   }
 
   setProfile(profile) {
@@ -57,21 +58,21 @@ export default class AuthService {
   }
 
   register(email, password) {
-    return new BluebirdPromise(resolve => isomorphicFetch(`${this.api}/users/sponsor`, {
+    return new BluebirdPromise(resolve => this.callApi(`${this.api}/auth/register`, {
       method: 'POST',
       body: JSON.stringify({
         email,
         password,
       }),
-    }).then(res => res.json().then(json => {
+    }, true).then(json => {
       this.setToken(json.accessToken);
       return this.callApi(`${this.api}/users`, {
         method: 'GET',
-      });
-    })).then(res => {
+      }, true);
+    }).then(res => {
       this.setProfile(res);
       return resolve(res);
-    }));
+    }).catch(error => BluebirdPromise.reject(error.message)));
   }
 
   logout() {
@@ -89,7 +90,7 @@ export default class AuthService {
     throw error;
   }
 
-  callApi(url, options) {
+  callApi(url, options, json) {
     // performs api calls sending the required authentication headers
     const headers = {
       Accept: 'application/json',
@@ -100,11 +101,20 @@ export default class AuthService {
       headers.Authorization = `Bearer ${this.getToken()}`;
     }
 
+    if (json) {
+      return isomorphicFetch(url, {
+        headers,
+        ...options,
+      })
+        .then(this.checkStatus)
+        .then(response => response.json())
+        .catch(error => error);
+    }
     return isomorphicFetch(url, {
       headers,
       ...options,
     })
       .then(this.checkStatus)
-      .then(response => response.json());
+      .catch(error => error);
   }
 }

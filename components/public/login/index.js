@@ -10,18 +10,30 @@ const Auth = new AuthService();
 class LoginForm extends React.Component {
   constructor() {
     super();
-    this.state = { };
+    this.state = { status: '' };
 
     this.login = this.login.bind(this);
     this.register = this.register.bind(this);
   }
 
   login() {
-    Auth.login(this.email.value, this.password.value).then(() => Router.push('/dashboard'));
+    Auth.login(this.email.value, this.password.value).then(error => {
+      if (error && error.message) {
+        this.setState({ status: error.message });
+      } else {
+        Router.push('/dashboard');
+      }
+    });
   }
 
   register() {
-    Auth.register(this.email.value, this.password.value);
+    Auth.register(this.email.value, this.password.value).then(error => {
+      if (error) {
+        this.setState({ status: error.message != null ? error.message : error });
+      } else {
+        this.setState({ status: 'registration successful' });
+      }
+    });
   }
 
   render() {
