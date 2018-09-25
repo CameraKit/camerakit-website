@@ -24,7 +24,7 @@ class Subscribe extends React.Component {
                 <div className={styles.message}>
                   <h3 className={styles.messageText}>
                     {status === 'error' 
-                      ? 'Sorry, there was an error submitting your email.'
+                      ? 'Sorry, there was a problem subscribing to this list.'
                       : 'Thanks for subscribing!'}
                   </h3>
                 </div>
