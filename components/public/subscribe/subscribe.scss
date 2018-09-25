@@ -58,9 +58,10 @@
 	visibility: visible; 
 }
 
-.messageParagraph {
+.messageText {
 	min-width: 30rem;
 	min-height: 3rem;
+	color: $primary;
 }
 
 .headingSuccess {

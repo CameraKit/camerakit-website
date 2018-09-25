@@ -16,25 +16,22 @@ class Subscribe extends React.Component {
         render={({ subscribe, status, message }) => (
           <Transition
             from={{ opacity: 0, height: 0 }}
-            enter={{ opacity: 1, height: 100 }}
+            enter={{ opacity: 1, height: 220 }}
             leave={{ opacity: 0, height: 0 }}>
 
             {status === 'error' || status === 'success'
               ? s => <div style={s}>
-                <div className={`${styles.message}`}>
-                  <h2 className={`${global['heading--small']} ${status === 'error' ? styles.headingError : styles.headingSuccess}`}>
-                    {status === 'error' ? 'Error' : 'Success'}
-                  </h2>
-                  <p className={`${styles.paragraph} ${styles.messageParagraph}`}>
+                <div className={styles.message}>
+                  <h3 className={styles.messageText}>
                     {status === 'error' 
-                      ? 'There was an error submitting your email.'
+                      ? 'Sorry, there was an error submitting your email.'
                       : 'Thanks for subscribing!'}
-                  </p>
+                  </h3>
                 </div>
               </div>
 
               : s => <div style={s}>
-                <div className={`${styles.subscribe}`}>
+                <div className={styles.subscribe}>
                   <h2 className={global['heading--small']}>
                     {'Stay Up To Date'}
                   </h2>
