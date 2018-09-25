@@ -1,6 +1,6 @@
 import isomorphicFetch from 'isomorphic-unfetch';
 import * as BluebirdPromise from 'bluebird';
-import { setCookie, getCookie, removeCookie } from './Cookies';
+import { setCookie, getCookie, removeCookie } from './cookies';
 import { reject } from 'any-promise';
 
 export default class AuthService {
