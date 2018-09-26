@@ -1,5 +1,6 @@
 import React from 'react';
 import isomorphicFetch from 'isomorphic-unfetch';
+import { Transition } from 'react-spring';
 
 import styles from '../styles/contact-form.scss';
 import intro from '../styles/intro.scss';
@@ -32,7 +33,7 @@ class ContactForm extends React.Component {
       }),
     }).then(response => {
       if (response.ok) {
-        this.setState({ complete: true, message: 'Success! Email Sent.' });
+        this.setState({ complete: true, message: 'Success! Email sent.' });
       } else {
         this.setState({ complete: true, message: 'Sorry, we could not process your request.' });
       }
@@ -97,15 +98,29 @@ class ContactForm extends React.Component {
                   required
                 />
               </div>
-              <button className={styles.submitButton} type="submit">
-                Submit
-              </button>
+              <Transition
+                from={{ opacity: 0, height: 0 }}
+                enter={{ opacity: 1, height: 40 }}
+                leave={{ opacity: 0, height: 0 }}
+              >
+                {complete
+                  ? s => (
+                    <div style={s}>
+                      <p className={styles.message}>
+                        {message}
+                      </p>
+                    </div>
+                  )
+                  : s => (
+                    <div style={s}>
+                      <button className={styles.submitButton} type="submit">
+                        Submit
+                      </button>
+                    </div>
+                  )
+                }
+              </Transition>
             </div>
-            {(complete) && (
-              <p className={styles.message}>
-                {message}
-              </p>
-            )}
           </form>
         </div>
       </section>
