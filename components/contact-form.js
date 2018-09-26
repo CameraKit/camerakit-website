@@ -9,10 +9,10 @@ class ContactForm extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { 
+    this.state = {
       complete: false,
       message: '',
-    }
+    };
   }
 
   handleSubmit(event) {
@@ -29,18 +29,18 @@ class ContactForm extends React.Component {
         email: this.email.value,
         company: this.company.value,
         message: this.message.value,
-      })
-    }).then( (response) => {
-      console.log(response);
+      }),
+    }).then(response => {
       if (response.ok) {
         this.setState({ complete: true, message: 'Success! Email Sent.' });
       } else {
-        this.setState({ complete: true, message: 'Sorry, we could not process your request.'})
+        this.setState({ complete: true, message: 'Sorry, we could not process your request.' });
       }
     });
   }
 
   render() {
+    const { complete, message } = this.state;
     return (
       <section className={styles.intro}>
         <div className={`${global.container} ${global['container--large']}`}>
@@ -54,45 +54,62 @@ class ContactForm extends React.Component {
         <div className={global.container}>
           <form
             className={styles.form}
-            onSubmit={this.handleSubmit.bind(this)}>
+            onSubmit={this.handleSubmit.bind(this)}
+          >
             <div className={styles.container}>
               <div className={styles.contactWrapper}>
-                <input className={styles.input}
+                <input
+                  className={styles.input}
                   ref={input => { this.name = input; }}
                   placeholder="Name"
-                  name="name" type="text" required />
+                  name="name"
+                  type="text"
+                  required
+                />
               </div>
               <div className={styles.contactWrapper}>
-                <input className={styles.input}
+                <input
+                  className={styles.input}
                   ref={input => { this.email = input; }}
                   placeholder="Email"
-                  name="email" type="email" required />
+                  name="email"
+                  type="email"
+                  required
+                />
               </div>
               <div className={styles.contactWrapper}>
-                <input className={styles.input}
+                <input
+                  className={styles.input}
                   ref={input => { this.company = input; }}
                   placeholder="Company"
-                  name="company" type="text" required />
+                  name="company"
+                  type="text"
+                  required
+                />
               </div>
               <div className={`${styles.contactWrapper} ${styles.textAreaWrapper}`}>
-                <textarea className={`${styles.input} ${styles.textArea}`}
+                <textarea
+                  className={`${styles.input} ${styles.textArea}`}
                   ref={input => { this.message = input; }}
                   placeholder="Message"
-                  name="message" type="textarea" required />
+                  name="message"
+                  type="textarea"
+                  required
+                />
               </div>
               <button className={styles.submitButton} type="submit">
                 Submit
               </button>
             </div>
-            {(this.state.complete) && (
-                <p className={styles.message}>
-                  {this.state.message}
-                </p>
-              )}
+            {(complete) && (
+              <p className={styles.message}>
+                {message}
+              </p>
+            )}
           </form>
         </div>
       </section>
-    )
+    );
   }
 }
 
