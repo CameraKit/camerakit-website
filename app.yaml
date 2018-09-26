@@ -1,3 +1,0 @@
-service: website
-runtime: custom
-env: flex

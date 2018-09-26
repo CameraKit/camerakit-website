@@ -6,7 +6,8 @@
   "scripts": {
     "build": "next build",
     "start": "next start -p $PORT",
-    "dev": "next"
+    "dev": "next",
+    "heroku-postbuild": "next build"
   },
   "keywords": [],
   "author": "",
@@ -50,6 +51,7 @@
     "redux": "^4.0.0",
     "redux-devtools-extension": "^2.13.5",
     "redux-thunk": "^2.3.0",
+    "react-spring": "^5.8.0",
     "rss-to-json": "^1.0.4"
   },
   "devDependencies": {

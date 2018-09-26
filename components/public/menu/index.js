@@ -32,7 +32,7 @@ const Menu = ({ active, toggle }) => (
         <div>
           <span>
             <span role="img" aria-label="American Flag">
-              {'🇺🇸'}
+              <img src={usaFlag} className={styles.flag__usa} alt="American Flag" />
             </span>
             {' Built and Managed in the USA'}
           </span>

@@ -14,7 +14,7 @@ const Footer = () => (
       <nav className={styles.nav}>
         <ul className={styles.links}>
           <li className={styles.listItem}>
-            {'© 2018 • CameraKit is a registered trademark of Alterac, Inc.'}
+            {'© 2018 • CameraKit. All Rights Reserved.'}
           </li>
         </ul>
         {/* <div className={styles.copyright}>

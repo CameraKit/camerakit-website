@@ -1,7 +1,8 @@
 import React from 'react';
 import MailchimpSubscribe from 'react-mailchimp-subscribe';
 
-import globalStylesheet from 'styles/styles.global.scss';
+import { Transition } from 'react-spring';
+
 import styles from './subscribe.scss';
 
 
@@ -13,33 +14,51 @@ class Subscribe extends React.Component {
       <MailchimpSubscribe
         url={url}
         render={({ subscribe, status, message }) => (
-          <div className={styles.subscribe}>
-            <h2 className={globalStylesheet['heading--small']}>
-              {'Stay Up To Date'}
-            </h2>
-            <p className={styles.paragraph}>
-              {'We sometimes send out important updates concerning CameraKit. Provide your email if you are interested in receiving emails from us.'}
-            </p>
-            <form
-              className={styles.form}
-              onSubmit={event => {
-                event.preventDefault();
-                subscribe({ EMAIL: this.email.value });
-              }}
-            >
-              <div className={styles.inputWrapper}>
-                <input ref={input => { this.email = input; }} name="email" className={styles.input} type="email" required />
-                <button className={styles.submit} type="submit">
-                  {status === 'sending' ? 'Sending...' : 'Subscribe'}
-                </button>
-              </div>
-              {(status === 'error' || status === 'success') && (
-                <p className={styles.message}>
-                  {message}
-                </p>
-              )}
-            </form>
-          </div>
+          <Transition
+            from={{ opacity: 0, height: 0 }}
+            enter={{ opacity: 1, height: 220 }}
+            leave={{ opacity: 0, height: 0 }}>
+
+            {status === 'error' || status === 'success'
+              ? s => (
+                <div style={s}>
+                  <div className={styles.message}>
+                    <h3 className={styles.messageText}>
+                      {status === 'error'
+                        ? 'Sorry, there was a problem subscribing to this list.'
+                        : 'Thanks for subscribing!'}
+                    </h3>
+                  </div>
+                </div>
+              )
+              : s => (
+                <div style={s}>
+                  <div className={styles.subscribe}>
+                    <h2 className={global['heading--small']}>
+                      {'Stay Up To Date'}
+                    </h2>
+                    <p className={styles.paragraph}>
+                      {'We sometimes send out important updates concerning CameraKit. Provide your email if you are interested in receiving emails from us.'}
+                    </p>
+                    <form
+                      className={styles.form}
+                      onSubmit={event => {
+                        event.preventDefault();
+                        subscribe({ EMAIL: this.email.value });
+                      }}
+                    >
+                      <div className={styles.inputWrapper}>
+                        <input ref={input => { this.email = input; }} name="email" className={styles.input} type="email" required />
+                        <button className={styles.submit} type="submit">
+                          {status === 'sending' ? 'Sending...' : 'Subscribe'}
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              )
+            }
+          </Transition>
         )}
       />
     );
