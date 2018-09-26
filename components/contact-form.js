@@ -33,11 +33,19 @@ class ContactForm extends React.Component {
       }),
     }).then(response => {
       if (response.ok) {
+        this.clearInputs();
         this.setState({ complete: true, message: 'Success! Email sent.' });
       } else {
         this.setState({ complete: true, message: 'Sorry, we could not process your request.' });
       }
     });
+  }
+
+  clearInputs() {
+    this.name.value = '';
+    this.email.value = '';
+    this.company.value = '';
+    this.message.value = '';
   }
 
   render() {
