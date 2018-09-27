@@ -4,6 +4,7 @@ const enforce = require('express-sslify');
 const next = require('next');
 const bodyParser = require('body-parser');
 const request = require('request');
+const { body, check, validationResult } = require('express-validator/check');
 
 const port = parseInt(process.env.PORT, 10) || 3000;
 const dev = process.env.NODE_ENV !== 'production';
@@ -29,7 +30,30 @@ app.prepare().then(() => {
     console.log('Using enforced https;');
   }
 
-  expressApp.post('/processForm', (req, res) => {
+  expressApp.post('/processForm', [
+    body('name')
+      .isLength({ min: 1, max: 100 })
+      .trim()
+      .escape(),
+    body('email')
+      .isLength({ min: 1, max: 100 })
+      .isEmail()
+      .normalizeEmail(),
+    check('company')
+      .isLength({ min: 1, max: 100 })
+      .trim()
+      .escape(),
+    check('message')
+      .isLength({ min: 1, max: 10000 })
+      .not().isEmpty()
+      .trim()
+      .escape(),
+  ], (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(422).json({ errors: errors.array() });
+    }
+
     const {
       name, email, company, message,
     } = req.body;
@@ -41,12 +65,13 @@ app.prepare().then(() => {
     request.post({
       url: `${process.env.API_URL}/contact`,
       form,
-    }, (error, response, body) => {
+    }, (error, response, data) => {
       if (error != null) {
-        res.status(500).send(error);
+        return res.status(500).send(error);
       }
-      res.status(response.statusCode).send(body);
+      return res.status(response.statusCode).send(data);
     });
+    return res.status(500).send('Request was never made');
   });
 
   expressApp.use(handleResponse);
