@@ -74,8 +74,26 @@
 
 .message {
 	margin-top: 0.5rem;
-	font-weight: 500;
-	color: $primary;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: $dark-grey;
+  transition: .3s ease;
+  opacity: 0;
+}
+
+.successMessage {
+  margin-top: 6rem;
+  margin: 6rem auto auto auto;
+  max-width: 30rem;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: $dark-grey;
+  transition: .3s ease;
+  opacity: 1;
+}
+
+.show {
+  opacity: 1;
 }
 
 @media (min-width: 48em) {
