@@ -12,6 +12,9 @@ RUN yarn install
 COPY . /usr/src/app
 RUN yarn run build
 
+ENV NODE_ENV production
+ENV PORT 3000
+
 EXPOSE 3000
 
 CMD [ "yarn", "start" ]
