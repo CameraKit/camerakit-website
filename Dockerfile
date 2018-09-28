@@ -13,7 +13,8 @@ COPY . /usr/src/app
 RUN yarn run build
 
 # Set the default host/port
-ENV HOST 0.0.0.0
 ENV PORT 8080
+
+EXPOSE 4000
 
 CMD [ "yarn", "start" ]
