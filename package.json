@@ -1,13 +1,12 @@
 {
-  "name": "scratch",
-  "version": "1.0.0",
-  "description": "",
+  "name": "CameraKit-Website",
+  "version": "3.0.0",
+  "description": "Primary website for CameraKit",
   "main": "index.js",
   "scripts": {
     "build": "next build",
     "start": "next start -p $PORT",
-    "dev": "next",
-    "heroku-postbuild": "next build"
+    "dev": "next"
   },
   "keywords": [],
   "author": "",
