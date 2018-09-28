@@ -71,7 +71,6 @@ app.prepare().then(() => {
       }
       return res.status(response.statusCode).send(data);
     });
-    return res.status(500).send('Request was never made');
   });
 
   expressApp.use(handleResponse);
