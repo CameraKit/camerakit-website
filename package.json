@@ -1,6 +1,6 @@
 {
   "name": "CameraKit-Website",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Primary website for CameraKit",
   "main": "index.js",
   "scripts": {
