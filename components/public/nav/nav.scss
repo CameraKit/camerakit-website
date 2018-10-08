@@ -46,6 +46,12 @@
   justify-content: flex-end;
 }
 
+.link {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 .toggle {
   position: relative;
   background: none;
