@@ -28,6 +28,13 @@ const Menu = ({ active, toggle }) => (
               </a>
             </Link>
           </li>
+          <li className={styles.item}>
+            <Link href="/contact">
+              <a href="/contact" className={`${global['heading--large']} ${styles.link}`}>
+                {'Contact Us'}
+              </a>
+            </Link>
+          </li>
         </ul>
         <div>
           <span>
