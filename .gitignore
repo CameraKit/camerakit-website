@@ -45,4 +45,10 @@ build
 
 # npm
 package-lock.json
+<<<<<<< HEAD
 .env
+=======
+
+# dotenv environment variables file
+.env
+>>>>>>> develop
