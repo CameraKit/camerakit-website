@@ -1,0 +1,87 @@
+.payment {
+  margin: 3rem 0;
+  margin-top: 150px;
+}
+.container {
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+.Checkout {
+  margin: 0 auto;
+  max-width: 800px;
+  box-sizing: border-box;
+  padding: 0 5px;
+}
+
+.amount {
+  padding: 0.67em;
+  font-size: 20px;
+}
+
+.submit {
+  flex: 1;
+  display: flex;
+}
+
+.error {
+  color: #dd630c;
+  padding-left: 10px;
+}
+
+.usd {
+  flex: 1;
+  position: relative;
+}
+.usd input {
+  flex: 1;
+  padding-left:18px;
+  padding: 0.67em;
+  max-width: 100px;
+  padding-left: 25px;
+  font-size: 20px;
+  line-height: 2px;
+  text-align: center;
+  border: none;
+  outline: none;
+}
+.usd:before {
+  position: absolute;
+  content:"$";
+  left: 5px;
+  font-size: 2em;
+  color: green;
+}
+.StripeElement {
+  display: block;
+  margin: 10px 0 20px 0;
+  max-width: 500px;
+  padding: 10px 14px;
+  font-size: 1em;
+  font-family: 'Source Code Pro', monospace;
+  border: 0;
+  outline: 0;
+  border-radius: 4px;
+  background: white;
+}
+
+.StripeElement--focus {
+  -webkit-transition: all 150ms ease;
+  transition: all 150ms ease;
+}
+
+.StripeElement.IdealBankElement,
+.StripeElement.PaymentRequestButton {
+  padding: 0;
+}
+.sponsor {
+  float: right;
+  position: relative;
+  margin-right: 1em;
+  padding: 0.7em;
+  font-size: 1em;
+  outline: none;
+  height: 50px;
+  color: #222;
+  background: transparent;
+}

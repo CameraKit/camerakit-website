@@ -1,10 +1,10 @@
 import React from 'react';
 import Feed from 'rss-to-json';
 
-import NewsItem from './news-item';
-
+import globalStylesheet from 'styles/styles.global.scss';
 import styles from './news.scss';
-import global from '../../../styles/styles.global.scss';
+
+import NewsItem from './news-item';
 
 class News extends React.Component {
   constructor(props) {
@@ -26,8 +26,8 @@ class News extends React.Component {
     const { items } = this.state;
     return (
       <section className={styles.news}>
-        <div className={global.container}>
-          <h2 className={global['heading--small']}>
+        <div className={globalStylesheet.container}>
+          <h2 className={globalStylesheet['heading--small']}>
             {'Recent News'}
           </h2>
           {items.length > 0

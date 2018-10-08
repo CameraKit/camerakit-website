@@ -82,8 +82,9 @@ class MyDocument extends Document {
             gtag('config', '${GA_TRACKING_ID}');
           `}}
           />
+          <script src="https://js.stripe.com/v3/" />
         </Head>
-        <body {...this.helmetBodyAttrComponents}>
+        <body style={{ margin: 0 }} {...this.helmetBodyAttrComponents}>
           <Main />
           <NextScript />
         </body>

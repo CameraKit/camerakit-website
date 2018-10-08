@@ -1,6 +1,15 @@
 import React from 'react';
 
 import jump from 'jump.js';
+import features from 'static/features';
+import sponsors from 'static/sponsors';
+import clients from 'static/clients';
+
+import styles from 'styles/home.scss';
+import featureStyles from 'styles/features.scss';
+import intro from 'styles/intro.scss';
+import animation from 'styles/bounce-animation.scss';
+import globalStylesheet from 'styles/styles.global.scss';
 
 import phoneTilted from '../static/il_phone_tilted.svg';
 import button from '../static/btn_scrolldown.svg';
@@ -11,17 +20,6 @@ import News from './public/news';
 import Sponsor from './public/sponsor';
 import Client from './public/client';
 
-import features from '../static/features';
-import sponsors from '../static/sponsors';
-import clients from '../static/clients';
-
-import styles from '../styles/home.scss';
-import featureStyles from '../styles/features.scss';
-import intro from '../styles/intro.scss';
-
-import global from '../styles/styles.global.scss';
-import animation from '../styles/bounce-animation.scss';
-
 function scrollDown() {
   jump('#features');
 }
@@ -29,11 +27,11 @@ function scrollDown() {
 const Home = () => (
   <div>
     <section className={intro.intro}>
-      <div className={`${global.container} ${global['container--large']}`}>
+      <div className={`${globalStylesheet.container} ${globalStylesheet['container--large']}`}>
         <div className={intro.content}>
           <div className={intro.phone} />
           <div className={intro.hidden}>
-            <h2 className={`${global['heading--large']} ${intro.subheading}`}>
+            <h2 className={`${globalStylesheet['heading--large']} ${intro.subheading}`}>
               {'Complete'}
               <br />
               {'Camera Library'}
@@ -56,8 +54,8 @@ const Home = () => (
       <img src={phoneTilted} className={intro.phoneTilted} alt="preview-mockup" />
     </section>
     <section id="trusted-by" className={`${styles.section} ${styles.clients}`}>
-      <div className={global.container}>
-        <h2 className={global['heading--small']}>
+      <div className={globalStylesheet.container}>
+        <h2 className={globalStylesheet['heading--small']}>
           {'Trusted By'}
         </h2>
         <ul className={`${styles.list} ${styles.clientsList}`}>
@@ -73,13 +71,13 @@ const Home = () => (
       </div>
     </section>
     <section id="features" className={styles.section}>
-      <div className={global.container}>
+      <div className={globalStylesheet.container}>
         <div className={featureStyles.main}>
-          <h2 className={global['heading--small']}>
+          <h2 className={globalStylesheet['heading--small']}>
             {'Features'}
           </h2>
           <div className={styles.flexWrapper}>
-            <p className={`${global['heading--large']} ${featureStyles.heading}`}>
+            <p className={`${globalStylesheet['heading--large']} ${featureStyles.heading}`}>
               {'High-level, simple, and extremely performant'}
             </p>
             <ul className={`${styles.list} ${styles.flexWrapper} ${featureStyles.list}`}>
@@ -100,8 +98,8 @@ const Home = () => (
       <News />
     </section>
     <section id="sponsored-by" className={`${styles.section} ${styles.sponsors}`}>
-      <div className={global.container}>
-        <h2 className={global['heading--small']}>
+      <div className={globalStylesheet.container}>
+        <h2 className={globalStylesheet['heading--small']}>
           {'Support'}
         </h2>
         <ul className={`${styles.list} ${styles.sponsorsList}`}>

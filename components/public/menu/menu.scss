@@ -74,7 +74,8 @@
   display: block;
   margin-top: 1rem;
   transition: all 0.3s ease-out;
-
+  cursor: pointer;
+  
   @media (min-width: 48em) {
     margin-top: 2rem;
   }

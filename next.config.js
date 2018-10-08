@@ -30,7 +30,7 @@ module.exports = withPlugins([
     cssModules: true,
     cssLoaderOptions: {
       importLoaders: 1,
-      localIdentName: '[local]___[hash:base64:5]',
+      localIdentName: '[local]_[hash:base64:3]',
     },
   }],
   images,
