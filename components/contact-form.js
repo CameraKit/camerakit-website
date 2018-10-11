@@ -34,7 +34,7 @@ class ContactForm extends React.Component {
     }).then((response) => {
       if (response.ok) {
         this.clearInputs();
-        this.setState({ success: true, message: 'Thanks. Your feedback has been recieved. We\'ll get back to you shortly.' });
+        this.setState({ success: true, message: 'Thanks. Your message has been recieved. We\'ll get back to you shortly.' });
       } else {
         this.setState({ success: false, message: 'Sorry, we could not process your request.' });
       }

@@ -6,7 +6,6 @@
   position: relative;
   min-height: 100vh;
   padding-top: 8rem;
-  background: linear-gradient(to bottom, #CBCee9, #DDE1E9);
   text-align: center;
 }
 
@@ -64,6 +63,8 @@
   color: $primary;
   text-transform: uppercase;
   transition: all .3s ease;
+  outline: none;
+  border: none;
 
   &:hover, &:active, &:focus {
     outline: none;

@@ -15,7 +15,7 @@ const handleResponse = (req, res) => {
   handle(req, res);
 };
 
-const handleError = err => {
+const handleError = (err) => {
   if (err) throw err;
   console.log(`Ready on localhost:${port}`);
 };
