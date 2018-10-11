@@ -1,7 +1,7 @@
 import React from 'react';
-import Link from 'next/link'
+import Link from 'next/link';
 
-import globalStylesheet from 'styles/styles.global.scss';
+import globalStylesheet from '../../../styles/styles.global.scss';
 import styles from './nav.scss';
 
 import Menu from '../menu';
@@ -46,15 +46,19 @@ class Nav extends React.Component {
     return (
       <nav className={isTop ? styles.nav : styles.nav__scrolled}>
         <div className={`${globalStylesheet.container} ${globalStylesheet['container--full']} ${styles.container}`}>
-          <div className={`${styles.logo} ${styles.link}`}>
-            <Link href="/" className={styles.link}>
-              <img alt="CameraKit logo" src={Logo} />
-            </Link>
+          <div className={styles.logo}>
+            <div className={styles.link}>
+              <Link href="/">
+                <img alt="CameraKit logo" src={Logo} />
+              </Link>
+            </div>
           </div>
-          <div className={styles.brand} className={styles.link}>
-            <Link href="/">
-              <img alt="CameraKit" src={LogoType} />
-            </Link>
+          <div className={styles.brand}>
+            <div className={styles.link}>
+              <Link href="/">
+                <img alt="CameraKit" src={LogoType} />
+              </Link>
+            </div>
           </div>
           <div className={styles.menu}>
             <button

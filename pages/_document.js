@@ -36,9 +36,9 @@ export default class CameraKitWebsite extends Document {
           <meta name="msapplication-wide310x150logo" content="/static/favicon/mstile-310x150.png" />
           <meta name="msapplication-square310x310logo" content="/static/favicon/mstile-310x310.png" />
           <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
-          <script
+          <script 
             dangerouslySetInnerHTML={{
-              __html:  `
+              __html: `
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());

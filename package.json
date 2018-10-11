@@ -55,7 +55,8 @@
     "redux-devtools-extension": "^2.13.5",
     "redux-thunk": "^2.3.0",
     "request": "^2.88.0",
-    "rss-to-json": "^1.0.4"
+    "rss-to-json": "^1.0.4",
+    "webpack": "^4.20.2"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.0",

@@ -1,7 +1,8 @@
 import React from 'react';
-import globalStylesheet from 'styles/styles.global.scss';
-import AuthService from 'utils/auth';
 import Router from 'next/router';
+
+import globalStylesheet from '../styles/styles.global.scss';
+import AuthService from '../utils/auth';
 
 import styles from './login.scss';
 
@@ -17,7 +18,7 @@ class LoginForm extends React.Component {
   }
 
   login() {
-    Auth.login(this.email.value, this.password.value).then(error => {
+    Auth.login(this.email.value, this.password.value).then((error) => {
       if (error && error.message) {
         this.setState({ status: error.message });
       } else {
@@ -27,7 +28,7 @@ class LoginForm extends React.Component {
   }
 
   register() {
-    Auth.register(this.email.value, this.password.value).then(error => {
+    Auth.register(this.email.value, this.password.value).then((error) => {
       if (error) {
         this.setState({ status: error.message != null ? error.message : error });
       } else {
@@ -47,13 +48,13 @@ class LoginForm extends React.Component {
                 <span>
                   {'Email'}
                 </span>
-                <input ref={ref => { this.email = ref; }} />
+                <input ref={(ref) => { this.email = ref; }} />
               </div>
               <div>
                 <span>
                   {'Password'}
                 </span>
-                <input type="password" ref={ref => { this.password = ref; }} />
+                <input type="password" ref={(ref) => { this.password = ref; }} />
               </div>
             </div>
             <div className={styles.submit}>

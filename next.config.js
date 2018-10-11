@@ -9,7 +9,7 @@ require('dotenv').config({
 
 const nextConfig = {
   distDir: 'build',
-  webpack: config => {
+  webpack: (config) => {
     const newConfig = config;
     newConfig.node = {
       fs: 'empty',

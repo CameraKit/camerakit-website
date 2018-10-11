@@ -1,7 +1,7 @@
 import React from 'react';
-import Github from 'static/ic_github.svg';
+import Github from '../static/ic_github.svg';
 
-import globalStylesheet from 'styles/styles.global.scss';
+import globalStylesheet from '../styles/styles.global.scss';
 import styles from './floating-footer.scss';
 
 

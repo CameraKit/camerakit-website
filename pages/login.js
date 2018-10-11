@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import Nav from 'components/public/nav';
-import LoginForm from 'components/public/login';
+import Nav from '../components/public/nav';
+import LoginForm from '../components/public/login';
 
 class Login extends React.Component {
   constructor(props) {

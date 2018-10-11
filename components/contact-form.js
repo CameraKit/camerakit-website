@@ -31,14 +31,14 @@ class ContactForm extends React.Component {
         company: this.company.value,
         message: this.message.value,
       }),
-    }).then(response => {
+    }).then((response) => {
       if (response.ok) {
         this.clearInputs();
         this.setState({ success: true, message: 'Thanks. Your feedback has been recieved. We\'ll get back to you shortly.' });
       } else {
         this.setState({ success: false, message: 'Sorry, we could not process your request.' });
       }
-    }).catch(err => {
+    }).catch((err) => {
       console.error(err);
     });
   }
@@ -57,7 +57,6 @@ class ContactForm extends React.Component {
       <section className={styles.intro}>
         <div className={`${global.container} ${global['container--large']}`}>
           <div className={intro.content}>
-            <div className={intro.phone} />
             <h2 className={`${global['heading--large']} ${intro.subheading}`}>
               {'Contact Us'}
             </h2>
@@ -80,7 +79,7 @@ class ContactForm extends React.Component {
                       <div className={styles.contactWrapper}>
                         <input
                           className={styles.input}
-                          ref={input => { this.name = input; }}
+                          ref={(input) => { this.name = input; }}
                           placeholder="Name"
                           name="name"
                           type="text"
@@ -90,7 +89,7 @@ class ContactForm extends React.Component {
                       <div className={styles.contactWrapper}>
                         <input
                           className={styles.input}
-                          ref={input => { this.email = input; }}
+                          ref={(input) => { this.email = input; }}
                           placeholder="Email"
                           name="email"
                           type="email"
@@ -100,7 +99,7 @@ class ContactForm extends React.Component {
                       <div className={styles.contactWrapper}>
                         <input
                           className={styles.input}
-                          ref={input => { this.company = input; }}
+                          ref={(input) => { this.company = input; }}
                           placeholder="Company"
                           name="company"
                           type="text"
@@ -110,7 +109,7 @@ class ContactForm extends React.Component {
                       <div className={`${styles.contactWrapper} ${styles.textAreaWrapper}`}>
                         <textarea
                           className={`${styles.input} ${styles.textArea}`}
-                          ref={input => { this.message = input; }}
+                          ref={(input) => { this.message = input; }}
                           placeholder="Message"
                           name="message"
                           type="textarea"

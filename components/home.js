@@ -1,15 +1,16 @@
 import React from 'react';
 
 import jump from 'jump.js';
-import features from 'static/features';
-import sponsors from 'static/sponsors';
-import clients from 'static/clients';
 
-import styles from 'styles/home.scss';
-import featureStyles from 'styles/features.scss';
-import intro from 'styles/intro.scss';
-import animation from 'styles/bounce-animation.scss';
-import globalStylesheet from 'styles/styles.global.scss';
+import features from '../static/features';
+import sponsors from '../static/sponsors';
+import clients from '../static/clients';
+
+import styles from '../styles/home.scss';
+import featureStyles from '../styles/features.scss';
+import intro from '../styles/intro.scss';
+import animation from '../styles/bounce-animation.scss';
+import globalStylesheet from '../styles/styles.global.scss';
 
 import phoneTilted from '../static/il_phone_tilted.svg';
 import button from '../static/btn_scrolldown.svg';

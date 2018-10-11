@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import DashboardLayout from 'components/public/portal/dashboard';
-import ComingSoon from 'components/public/portal/view/comingsoon';
+import DashboardLayout from '../components/public/portal/dashboard';
+import ComingSoon from '../components/public/portal/view/comingsoon';
 
 import withAuth from '../utils/withAuth';
 

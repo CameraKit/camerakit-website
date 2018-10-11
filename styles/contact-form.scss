@@ -5,7 +5,7 @@
   flex-direction: column;
   position: relative;
   min-height: 100vh;
-  padding-top: 6rem;
+  padding-top: 8rem;
   background: linear-gradient(to bottom, #CBCee9, #DDE1E9);
   text-align: center;
 }
@@ -98,6 +98,6 @@
 
 @media (min-width: 48em) {
   .intro {
-    padding: 8rem 0;
+    padding: 20rem 0;
   }
 }

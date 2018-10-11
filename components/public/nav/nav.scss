@@ -38,7 +38,6 @@
   flex-basis: 30%;
   display: flex;
   justify-content: center;
-  line-height: 12px;
 }
 
 .menu {
@@ -57,7 +56,7 @@
   position: relative;
   background: none;
   border: none;
-  padding: 1rem 0 0.5rem 0.5rem;
+  padding: 0.5rem 0 0.5rem 0.5rem;
   color: $dark-grey;
   transition: all 0.3s ease;
   z-index: 20;
