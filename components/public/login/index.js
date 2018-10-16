@@ -1,8 +1,8 @@
 import React from 'react';
 import Router from 'next/router';
 
-import globalStylesheet from '../styles/styles.global.scss';
-import AuthService from '../utils/auth';
+import globalStylesheet from '../../../styles/styles.global.scss';
+import AuthService from '../../../utils/auth';
 
 import styles from './login.scss';
 

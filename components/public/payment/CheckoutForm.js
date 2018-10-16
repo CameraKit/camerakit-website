@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
 import { CardElement, injectStripe } from 'react-stripe-elements';
-import AuthService from 'utils/auth';
+import AuthService from '../../../utils/auth';
 
-import globalStylesheet from 'styles/styles.global.scss';
+import globalStylesheet from '../../../styles/styles.global.scss';
 import styles from './payment.scss';
 
 const Auth = new AuthService();
