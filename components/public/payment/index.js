@@ -38,7 +38,7 @@ class Payment extends React.Component {
     const response = await this.auth.callApi(`${process.env.API_BASE_URL}/payment/support`, {
       method: 'POST',
       body: JSON.stringify({
-        amount: amount * 100, monthly, token: token.id, email: token.email,
+        amount: amount * 100, monthly, token: token.id, email: token.email, plan: 'plan_Dmuw5XdiRkUseO', // using example 5 dollar/month plan
       }),
     }, true);
 
@@ -52,7 +52,7 @@ class Payment extends React.Component {
     const {
       error, complete, monthly, amount,
     } = this.state;
-    const name = `Custom ${monthly ? 'monthly' : 'one time'} donation.`;
+    const name = `${monthly ? 'Monthly' : 'Custom one time'} donation.`;
     const description = `Help support CameraKit${monthly ? ' monthly!' : '!'}`;
     return (
       <div>
@@ -63,13 +63,13 @@ class Payment extends React.Component {
             <br />
             <span>{description}</span>
             <br />
-            <input value={amount} onChange={this.onAmountChange} />
+            {!monthly && <input value={amount} onChange={this.onAmountChange} />}
             <br />
             <StripeCheckout
               name={name}
               currency="USD"
               description={description}
-              amount={amount * 100}
+              amount={monthly ? 500 : (amount * 100)} // using example 5 dollar/month plan
               {...this.stripeProps}
             />
             <span>{error}</span>
