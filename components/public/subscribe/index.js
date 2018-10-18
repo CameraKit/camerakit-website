@@ -42,13 +42,13 @@ class Subscribe extends React.Component {
                     </p>
                     <form
                       className={styles.form}
-                      onSubmit={event => {
+                      onSubmit={(event) => {
                         event.preventDefault();
                         subscribe({ EMAIL: this.email.value });
                       }}
                     >
                       <div className={styles.inputWrapper}>
-                        <input ref={input => { this.email = input; }} name="email" className={styles.input} type="email" required />
+                        <input ref={(input) => { this.email = input; }} name="email" placeholder="you@domain.com" className={styles.input} type="email" required />
                         <button className={styles.submit} type="submit">
                           {status === 'sending' ? 'Sending...' : 'Subscribe'}
                         </button>
