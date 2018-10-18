@@ -58,7 +58,7 @@ export default class AuthService {
   }
 
   register(email, password) {
-    return new BluebirdPromise(resolve => this.callApi(`${this.api}/auth/register`, {
+    return new BluebirdPromise(resolve => this.callApi(`${this.api}/users`, {
       method: 'POST',
       body: JSON.stringify({
         email,
@@ -66,7 +66,7 @@ export default class AuthService {
       }),
     }, true).then(json => {
       this.setToken(json.accessToken);
-      return this.callApi(`${this.api}/users`, {
+      return this.callApi(`${this.api}/users/${email}`, {
         method: 'GET',
       }, true);
     }).then(res => {

@@ -18,9 +18,9 @@ class LoginForm extends React.Component {
   }
 
   login() {
-    Auth.login(this.email.value, this.password.value).then((error) => {
-      if (error && error.message) {
-        this.setState({ status: error.message });
+    Auth.login(this.email.value, this.password.value).then(({ error }) => {
+      if (error) {
+        this.setState({ status: error });
       } else {
         Router.push('/dashboard');
       }
@@ -28,9 +28,9 @@ class LoginForm extends React.Component {
   }
 
   register() {
-    Auth.register(this.email.value, this.password.value).then((error) => {
+    Auth.register(this.email.value, this.password.value).then(({ error }) => {
       if (error) {
-        this.setState({ status: error.message != null ? error.message : error });
+        this.setState({ status: error });
       } else {
         this.setState({ status: 'registration successful' });
       }
