@@ -1,6 +1,6 @@
 {
   "name": "camerakit-website",
-  "version": "3.0.2",
+  "version": "3.1,0",
   "description": "Primary website for CameraKit",
   "main": "index.js",
   "scripts": {
@@ -50,7 +50,6 @@
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.3.1",
     "react-spring": "^5.8.0",
-    "react-stripe-checkout": "^2.6.3",
     "redux": "^4.0.0",
     "redux-devtools-extension": "^2.13.5",
     "redux-thunk": "^2.3.0",
