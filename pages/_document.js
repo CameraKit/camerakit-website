@@ -46,7 +46,6 @@ export default class CameraKitWebsite extends Document {
               `
             }}
           />
-          <script src="https://js.stripe.com/v3/" />
         </Head>
         <body style={{ margin: 0 }}>
           <Main />

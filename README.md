@@ -29,16 +29,10 @@ CameraKit takes one of the hardest Android APIs and makes it into a high level a
 <a href="https://www.expensify.com/"><img src=".repo/gh-readme-expensify.png"></a>
 <a href="https://www.buddy.works/"><img src=".repo/gh-readme-buddyworks.png"></a>
 
-## Run Instructions
+## Run Development Environment
 
 1. `yarn install`
 2. `yarn dev`
-
-To support Stripe, add and configure an `.env` file in the root directory with
-```
-STRIPE_PUBLISHABLE_API_KEY
-API_BASE_URL
-```
 
 ## Detailed Documentation
 
