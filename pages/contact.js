@@ -1,16 +1,15 @@
 import React from 'react';
-import { connect } from 'react-redux';
 
 import Nav from '../components/public/nav';
-import Home from '../components/home';
+import ContactForm from '../components/contact-form';
 import Footer from '../components/public/footer';
 
-const Public = () => (
+const Contact = () => (
   <div className="public">
     <Nav />
-    <Home />
+    <ContactForm />
     <Footer />
   </div>
 );
 
-export default connect()(Public);
+export default Contact;

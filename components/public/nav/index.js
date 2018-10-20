@@ -1,4 +1,7 @@
 import React from 'react';
+import Link from 'next/link';
+
+import globalStylesheet from '../../../styles/styles.global.scss';
 import styles from './nav.scss';
 
 import Menu from '../menu';
@@ -6,7 +9,6 @@ import Logo from './ic_logo.svg';
 import LogoType from './ic_logotype.svg';
 import MenuIcon from './ic_menu.svg';
 
-import global from '../../../styles/styles.global.scss';
 
 class Nav extends React.Component {
   constructor(props) {
@@ -20,12 +22,13 @@ class Nav extends React.Component {
     this.toggleActive = this.toggleActive.bind(this);
     this.onScroll = this.onScroll.bind(this);
   }
-  
+
   componentDidMount() {
+    const { isTop } = this.state;
     document.addEventListener('scroll', () => {
-      const isTop = window.scrollY < 100;
-      if (isTop !== this.state.isTop) {
-        this.onScroll( isTop );
+      const isCurrentlyTop = window.scrollY < 100;
+      if (isCurrentlyTop !== isTop) {
+        this.onScroll(isTop);
       }
     });
   }
@@ -39,15 +42,23 @@ class Nav extends React.Component {
   }
 
   render() {
-    const { active } = this.state;
+    const { active, isTop } = this.state;
     return (
-      <nav className={this.state.isTop ? styles.nav : styles.nav__scrolled}>
-        <div className={`${global.container} ${global['container--full']} ${styles.container}`}>
+      <nav className={isTop ? styles.nav : styles.nav__scrolled}>
+        <div className={`${globalStylesheet.container} ${globalStylesheet['container--full']} ${styles.container}`}>
           <div className={styles.logo}>
-            <img alt="CameraKit logo" src={Logo} />
+            <div className={styles.link}>
+              <Link href="/">
+                <img alt="CameraKit logo" src={Logo} />
+              </Link>
+            </div>
           </div>
           <div className={styles.brand}>
-            <img alt="CameraKit" src={LogoType} />
+            <div className={styles.link}>
+              <Link href="/">
+                <img alt="CameraKit" src={LogoType} />
+              </Link>
+            </div>
           </div>
           <div className={styles.menu}>
             <button
@@ -56,7 +67,8 @@ class Nav extends React.Component {
               aria-expanded={active}
               title="Toggle menu"
               aria-controls="menu"
-              type="button">
+              type="button"
+            >
               <img alt="Toggle menu" src={MenuIcon} />
             </button>
             <Menu active={active} toggle={this.toggleActive} />

@@ -1,12 +1,13 @@
 import React from 'react';
-import Github from 'static/ic_github.svg';
+import Github from '../static/ic_github.svg';
+
+import globalStylesheet from '../styles/styles.global.scss';
 import styles from './floating-footer.scss';
 
-import global from '../../../styles/styles.global.scss';
 
 const FloatingFooter = () => (
   <div className={styles.footer}>
-    <div className={`${global.container} ${global['container--full']} ${styles.container}`}>
+    <div className={`${globalStylesheet.container} ${globalStylesheet['container--full']} ${styles.container}`}>
       <a className={styles.wonderkiln} target="_blank" rel="noopener  noreferrer" href="https://www.wonderkiln.com">
         {'A Wonderkiln Project'}
       </a>

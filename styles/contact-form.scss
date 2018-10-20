@@ -1,0 +1,104 @@
+@import '../styles/variables';
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 100vh;
+  padding-top: 8rem;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 25rem;
+}
+
+.flexWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.contactWrapper {
+  background-color: #fff;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+	border-radius: 0.25rem;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 70%;
+  max-width: 500px;
+}
+
+.textAreaWrapper {
+  height: 7rem; 
+}
+
+.input {
+  min-width: 0;
+  width: 100%;
+	padding: 0.75rem;
+	border: none;
+	&:active, &:focus {
+		outline: none;
+	}
+}
+
+.textArea {
+  height: 100%;
+  resize: none;
+}
+
+.submitButton {
+  background-color: #fff;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  border-radius: 0.25rem;
+  margin: 0 auto;
+  padding: 0px;
+  width: 150px;
+  height: 40px; 
+  font-weight: 500;
+  color: $primary;
+  text-transform: uppercase;
+  transition: all .3s ease;
+  outline: none;
+  border: none;
+
+  &:hover, &:active, &:focus {
+    outline: none;
+    background-color: transparentize($primary, 0.8);
+    cursor: pointer;
+  }
+}
+
+.message {
+	margin-top: 0.5rem;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: $dark-grey;
+  transition: .3s ease;
+  opacity: 0;
+}
+
+.successMessage {
+  margin-top: 6rem;
+  margin: 6rem auto auto auto;
+  max-width: 30rem;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: $dark-grey;
+  transition: .3s ease;
+  opacity: 1;
+}
+
+.show {
+  opacity: 1;
+}
+
+@media (min-width: 48em) {
+  .intro {
+    padding: 20rem 0;
+  }
+}
