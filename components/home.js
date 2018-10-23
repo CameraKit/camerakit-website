@@ -14,7 +14,6 @@ import globalStylesheet from '../styles/styles.global.scss';
 
 import phoneTilted from '../static/il_phone_tilted.svg';
 import button from '../static/btn_scrolldown.svg';
-import usaFlag from '../static/ic_usa.svg';
 
 import Feature from './public/feature';
 import News from './public/news';
@@ -35,17 +34,11 @@ const Home = ({ feed }) => (
             <h2 className={`${globalStylesheet['heading--large']} ${intro.subheading}`}>
               {'Complete'}
               <br />
-              {'Camera Library'}
+              {'Camera Capture Platform'}
             </h2>
             <p>
-              {'CameraKit is an open-source library to support the Android Camera 1 and 2 APIs. Massively increase stability and reliability of photo and video capture on all Android devices.'}
+              {'Build camera-driven experience with ease. Never worry about fragmentation or complex APIs again.'}
             </p>
-            <div className={intro.madeInAmerica}>
-              <span role="img" aria-label="American Flag">
-                <img src={usaFlag} className={intro.flag__usa} alt="American Flag" />
-              </span>
-              {' Built and Managed in the USA'}
-            </div>
           </div>
         </div>
       </div>

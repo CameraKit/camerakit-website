@@ -32,21 +32,42 @@
   flex-basis: 30%;
   display: flex;
   justify-content: flex-start;
-}
-
-.brand {
-  flex-basis: 30%;
-  display: flex;
-  justify-content: center;
+  img {
+    height: 34px;
+  }
 }
 
 .menu {
   display: flex;
   flex-basis: 30%;
   justify-content: flex-end;
+  list-style: none;
+  .links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: no-wrap;
+    justify-content: flex-end;
+    .item {
+      margin-left: 20px;
+      font-weight: 300;
+      list-style: none;
+      font-size: 1.1rem;
+      a {
+        &:hover {
+          color:#2d2d2d;
+          transition: all 0.5s;
+          cursor: pointer;
+        }
+      }
+    }
+  }
 }
 
 .link {
+  font-weight: 500;
+  color: #3e445b;
+  display: flex;
+  align-content: center;
   &:hover {
     cursor: pointer;
   }

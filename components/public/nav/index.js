@@ -4,10 +4,8 @@ import Link from 'next/link';
 import globalStylesheet from '../../../styles/styles.global.scss';
 import styles from './nav.scss';
 
-import Menu from '../menu';
-import Logo from './ic_logo.svg';
-import LogoType from './ic_logotype.svg';
-import MenuIcon from './ic_menu.svg';
+import Logo from '../../../static/brand_camerakit_logo.svg';
+import GithubLogo from '../../../static/ic_github.svg';
 
 
 class Nav extends React.Component {
@@ -42,7 +40,7 @@ class Nav extends React.Component {
   }
 
   render() {
-    const { active, isTop } = this.state;
+    const { isTop } = this.state;
     return (
       <nav className={isTop ? styles.nav : styles.nav__scrolled}>
         <div className={`${globalStylesheet.container} ${globalStylesheet['container--full']} ${styles.container}`}>
@@ -53,25 +51,40 @@ class Nav extends React.Component {
               </Link>
             </div>
           </div>
-          <div className={styles.brand}>
-            <div className={styles.link}>
-              <Link href="/">
-                <img alt="CameraKit" src={LogoType} />
-              </Link>
-            </div>
-          </div>
           <div className={styles.menu}>
-            <button
-              className={`${styles.toggle} ${active ? styles.active : ''}`}
-              onClick={this.toggleActive}
-              aria-expanded={active}
-              title="Toggle menu"
-              aria-controls="menu"
-              type="button"
-            >
-              <img alt="Toggle menu" src={MenuIcon} />
-            </button>
-            <Menu active={active} toggle={this.toggleActive} />
+            <ul className={styles.links}>
+              <li className={styles.item}>
+                <Link href="/docs">
+                  <a href="/docs" className={`${global['heading--large']} ${styles.link}`}>
+                    {'Docs'}
+                  </a>
+                </Link>
+              </li>
+              <li className={styles.item}>
+                <Link href="/learn">
+                  <a href="/learn" className={`${global['heading--large']} ${styles.link}`}>
+                    {'Learn'}
+                  </a>
+                </Link>
+              </li>
+              <li className={styles.item}>
+                <Link href="/contact">
+                  <a href="/contact" className={`${global['heading--large']} ${styles.link}`}>
+                    {'Contact'}
+                  </a>
+                </Link>
+              </li>
+              <li className={styles.item}>
+                { '|' }
+              </li>
+              <li className={styles.item}>
+                <Link href="https://github.com/CameraKit/camerakit-android">
+                  <a href="https://github.com/CameraKit/camerakit-android" className={`${global['heading--large']} ${styles.link}`} target="_blank" rel="noopener noreferrer">
+                    <img src={GithubLogo} alt="Github Logo" />
+                  </a>
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
       </nav>
