@@ -1,15 +1,15 @@
 import React from 'react';
 
 import Nav from '../components/public/nav';
-import Learn from '../components/learn';
+import Docs from '../components/docs/docs';
 import Footer from '../components/public/footer';
 
-const Resources = () => (
+const Contact = () => (
   <div className="public">
     <Nav />
-    <Learn />
+    <Docs />
     <Footer />
   </div>
 );
 
-export default Resources;
+export default Contact;
