@@ -1,8 +1,8 @@
 import React from 'react';
 
-import styles from '../../styles/docs.scss';
+import styles from '../styles/getstarted.scss';
 
-class Docs extends React.Component {
+class GetStarted extends React.Component {
   constructor(props) {
     super(props);
 
@@ -12,13 +12,13 @@ class Docs extends React.Component {
 
   render() {
     return (
-      <section className={styles.documentation}>
+      <section className={styles.learn}>
         <div className={styles.welcome__message}>
           <h1>
-            {'Welcome to our new Docs'}
+            {'Getting Started with CameraKit'}
           </h1>
           <h3>
-            {'Documentation for all version of CameraKit coming soon.'}
+            {'Getting started with CameraKit is super simple, see below!'}
           </h3>
         </div>
       </section>
@@ -26,4 +26,4 @@ class Docs extends React.Component {
   }
 }
 
-export default Docs;
+export default GetStarted;

@@ -14,7 +14,12 @@ class Learn extends React.Component {
     return (
       <section className={styles.learn}>
         <div className={styles.welcome__message}>
-          {'Time to learn something new!'}
+          <h1>
+            {'Welcome to our new Learn page'}
+          </h1>
+          <h3>
+            {'A central place to help guide your usage of CameraKit and BlurKit.'}
+          </h3>
         </div>
       </section>
     );

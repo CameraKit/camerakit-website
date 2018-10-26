@@ -1,7 +1,5 @@
 import React from 'react';
 
-import jump from 'jump.js';
-
 import features from '../static/features';
 import sponsors from '../static/sponsors';
 import clients from '../static/clients';
@@ -9,7 +7,6 @@ import clients from '../static/clients';
 import styles from '../styles/home.scss';
 import featureStyles from '../styles/features.scss';
 import intro from '../styles/intro.scss';
-import animation from '../styles/bounce-animation.scss';
 import globalStylesheet from '../styles/styles.global.scss';
 
 import phoneTilted from '../static/il_phone_tilted.svg';
@@ -32,18 +29,18 @@ const Home = ({ feed }) => (
           <div className={intro.phone} />
           <div className={intro.hidden}>
             <h2 className={`${globalStylesheet['heading--large']} ${intro.subheading}`}>
-              {'Complete'}
+              {'Build Camera-Driven'}
               <br />
-              {'Camera Capture Platform'}
+              {'Apps with Ease'}
             </h2>
             <p>
-              {'Build camera-driven experience with ease. Never worry about fragmentation or complex APIs again.'}
+              {'Open-source camera sdk that helps developers build reliable and extensible camera experiences. Build easily. Boost reliability. Improve user experience.'}
             </p>
           </div>
         </div>
       </div>
-      <div role="button" tabIndex={0} onClick={scrollDown} onKeyDown={scrollDown}>
-        <img src={button} className={`${animation['scroll-button']} ${intro.button}`} alt="Scroll Down" />
+      <div role="button">
+        <img src={button} className={intro.button} alt="Get Started" />
       </div>
       <img src={phoneTilted} className={intro.phoneTilted} alt="preview-mockup" />
     </section>
