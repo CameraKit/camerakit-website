@@ -75,12 +75,19 @@ class Nav extends React.Component {
                 </Link>
               </li>
               <li className={styles.item}>
+                <Link href="/getstarted">
+                  <a href="/getstarted" className={`${global['heading--large']} ${styles.link}`}>
+                    {'Get Started'}
+                  </a>
+                </Link>
+              </li>
+              <li className={styles.item}>
                 { '|' }
               </li>
               <li className={styles.item}>
                 <Link href="https://github.com/CameraKit/camerakit-android">
                   <a href="https://github.com/CameraKit/camerakit-android" className={`${global['heading--large']} ${styles.link}`} target="_blank" rel="noopener noreferrer">
-                    <img src={GithubLogo} alt="Github Logo" />
+                    <img src={GithubLogo} alt="Github Logo" className={styles.github} />
                   </a>
                 </Link>
               </li>
