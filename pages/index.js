@@ -1,16 +1,14 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import Page from '../components/page';
 
 import Nav from '../components/nav';
 import Home from '../components/home/home';
 import Footer from '../components/footer';
 
-const Public = () => (
-  <div className="public">
+export default () => (
+  <Page title="CameraKit | Unified Camera Library for Android">
     <Nav />
     <Home />
     <Footer />
-  </div>
+  </Page>
 );
-
-export default connect()(Public);

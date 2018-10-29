@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from '../styles/learn.scss';
+import styles from '../../styles/learn.scss';
 
 class Learn extends React.Component {
   constructor(props) {

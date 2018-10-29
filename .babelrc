@@ -1,7 +1,6 @@
 {
     "presets": ["next/babel"],
     "plugins": [
-      "styled-jsx/babel",
       ["module-resolver", {
         "root": ["./"],
         "alias": {

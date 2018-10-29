@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Nav from '../components/public/nav';
-import Learn from '../components/learn';
-import Footer from '../components/public/footer';
+import Nav from '../components/nav';
+import Learn from '../components/learn/learn';
+import Footer from '../components/footer';
 
 const Resources = () => (
   <div className="public">
