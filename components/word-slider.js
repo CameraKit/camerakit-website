@@ -54,7 +54,7 @@ export default class extends PureComponent {
               style={{
                 position: 'absolute',
                 transform: y.interpolate(y => `translate3d(0, ${y}%, 0)`),
-                opacity
+                opacity,
               }}
             >
               {this.props.children[currentIndex]}

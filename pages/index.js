@@ -1,5 +1,5 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import Page from '../components/page';
 
 import Nav from '../components/nav';
 import Home from '../components/home/home';
