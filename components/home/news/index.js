@@ -1,6 +1,6 @@
 import React from 'react';
 
-import globalStylesheet from 'styles/styles.global.scss';
+import globalStylesheet from '../../../styles/styles.global.scss';
 import styles from './news.scss';
 
 import NewsItem from './news-item';

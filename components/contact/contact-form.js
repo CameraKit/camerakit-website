@@ -2,9 +2,9 @@ import React from 'react';
 import isomorphicFetch from 'isomorphic-unfetch';
 import { Transition } from 'react-spring';
 
-import styles from '../styles/contact-form.scss';
-import intro from '../styles/intro.scss';
-import global from '../styles/styles.global.scss';
+import styles from '../../styles/contact-form.scss';
+import intro from '../../styles/intro.scss';
+import global from '../../styles/styles.global.scss';
 
 class ContactForm extends React.Component {
   constructor(props) {

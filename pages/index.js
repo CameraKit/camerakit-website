@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import Nav from '../components/public/nav';
-import Home from '../components/home';
-import Footer from '../components/public/footer';
+import Nav from '../components/nav';
+import Home from '../components/home/home';
+import Footer from '../components/footer';
 
 import * as Feed from '../lib/feed';
 

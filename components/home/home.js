@@ -1,21 +1,21 @@
 import React from 'react';
 
-import features from '../static/features';
-import sponsors from '../static/sponsors';
-import clients from '../static/clients';
+import features from '../../static/features';
+import sponsors from '../../static/sponsors';
+import clients from '../../static/clients';
 
-import styles from '../styles/home.scss';
-import featureStyles from '../styles/features.scss';
-import intro from '../styles/intro.scss';
-import globalStylesheet from '../styles/styles.global.scss';
+import styles from '../../styles/home.scss';
+import featureStyles from '../../styles/features.scss';
+import intro from '../../styles/intro.scss';
+import globalStylesheet from '../../styles/styles.global.scss';
 
-import phoneTilted from '../static/il_phone_tilted.svg';
-import button from '../static/btn_scrolldown.svg';
+import phoneTilted from '../../static/il_phone_tilted.svg';
+import button from '../../static/btn_scrolldown.svg';
 
-import Feature from './public/feature';
-import News from './public/news';
-import Sponsor from './public/sponsor';
-import Client from './public/client';
+import Feature from './feature';
+import News from './news';
+import Sponsor from './sponsor';
+import Client from './client';
 
 function scrollDown() {
   jump('#features');
@@ -29,10 +29,9 @@ const Home = ({ feed }) => (
           <div className={intro.phone} />
           <div className={intro.hidden}>
             <h2 className={`${globalStylesheet['heading--large']} ${intro.subheading}`}>
-              {'Build Camera-Driven'}
-              <br />
-              {'Apps with Ease'}
+              {'The Ultimate Platform for'}
             </h2>
+            
             <p>
               {'Open-source camera sdk that helps developers build reliable and extensible camera experiences. Build easily. Boost reliability. Improve user experience.'}
             </p>

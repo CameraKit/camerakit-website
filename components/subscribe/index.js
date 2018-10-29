@@ -13,7 +13,7 @@ class Subscribe extends React.Component {
     return (
       <MailchimpSubscribe
         url={url}
-        render={({ subscribe, status, message }) => (
+        render={({ subscribe, status }) => (
           <Transition
             from={{ opacity: 0, height: 0 }}
             enter={{ opacity: 1, height: 220 }}

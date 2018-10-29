@@ -1,11 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
 
-import globalStylesheet from '../../../styles/styles.global.scss';
+import globalStylesheet from '../../styles/styles.global.scss';
 import styles from './nav.scss';
 
-import Logo from '../../../static/brand_camerakit_logo.svg';
-import GithubLogo from '../../../static/ic_github.svg';
+import Logo from '../../static/brand_camerakit_logo.svg';
+import GithubLogo from '../../static/ic_github.svg';
 
 
 class Nav extends React.Component {
