@@ -99,7 +99,7 @@ export default withPure(() => (
             }
           `}
         </style>
-        <div className="row">
+        <div>
           <Subscribe />
           <ul className="notices">
             <li>

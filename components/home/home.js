@@ -6,11 +6,7 @@ import clients from '../../static/clients';
 
 import styles from '../../styles/home.scss';
 import featureStyles from '../../styles/features.scss';
-import intro from '../../styles/intro.scss';
 import globalStylesheet from '../../styles/styles.global.scss';
-
-import phoneTilted from '../../static/il_phone_tilted.svg';
-import button from '../../static/btn_scrolldown.svg';
 
 import Feature from './feature';
 import News from './news';
@@ -19,26 +15,6 @@ import Client from './client';
 
 const Home = () => (
   <div>
-    <section className={intro.intro}>
-      <div className={`${globalStylesheet.container} ${globalStylesheet['container--large']}`}>
-        <div className={intro.content}>
-          <div className={intro.phone} />
-          <div className={intro.hidden}>
-            <h2 className={`${globalStylesheet['heading--large']} ${intro.subheading}`}>
-              {'The Ultimate Platform for'}
-            </h2>
-            
-            <p>
-              {'Open-source camera sdk that helps developers build reliable and extensible camera experiences. Build easily. Boost reliability. Improve user experience.'}
-            </p>
-          </div>
-        </div>
-      </div>
-      <div role="button">
-        <img src={button} className={intro.button} alt="Get Started" />
-      </div>
-      <img src={phoneTilted} className={intro.phoneTilted} alt="preview-mockup" />
-    </section>
     <section id="trusted-by" className={`${styles.section} ${styles.clients}`}>
       <div className={globalStylesheet.container}>
         <h2 className={globalStylesheet['heading--small']}>

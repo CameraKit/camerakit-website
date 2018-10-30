@@ -42,11 +42,11 @@ export default class CameraKitWebsite extends Document {
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
                 gtag('config', '${GA_TRACKING_ID}');
-              `
+              `,
             }}
           />
         </Head>
-        <body style={{ margin: 0 }}>
+        <body className="custom_class">
           <Main />
           <NextScript />
         </body>
