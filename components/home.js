@@ -25,7 +25,7 @@ function scrollDown() {
   jump('#features');
 }
 
-const Home = () => (
+const Home = ({ feed }) => (
   <div>
     <section className={intro.intro}>
       <div className={`${globalStylesheet.container} ${globalStylesheet['container--large']}`}>
@@ -96,7 +96,7 @@ const Home = () => (
       </div>
     </section>
     <section id="news" className={styles.section}>
-      <News />
+      <News feed={feed} />
     </section>
     <section id="sponsored-by" className={`${styles.section} ${styles.sponsors}`}>
       <div className={globalStylesheet.container}>
