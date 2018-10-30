@@ -13,7 +13,7 @@ import News from './news';
 import Sponsor from './sponsor';
 import Client from './client';
 
-const Home = () => (
+const Home = ({ feed }) => (
   <div>
     <section id="trusted-by" className={`${styles.section} ${styles.clients}`}>
       <div className={globalStylesheet.container}>
@@ -57,7 +57,7 @@ const Home = () => (
       </div>
     </section>
     <section id="news" className={styles.section}>
-      <News />
+      <News feed={feed} />
     </section>
     <section id="sponsored-by" className={`${styles.section} ${styles.sponsors}`}>
       <div className={globalStylesheet.container}>

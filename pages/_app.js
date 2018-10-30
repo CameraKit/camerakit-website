@@ -3,6 +3,7 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import withRedux from 'next-redux-wrapper';
+import Head from 'next/head';
 
 import { initStore, addCount } from '../lib/store';
 import withApollo from '../lib/with-apollo-client';
@@ -21,6 +22,9 @@ class CameraKitWebsite extends App {
     const { Component, pageProps, store } = this.props;
     return (
       <Container>
+        <Head>
+          <title>CameraKit | Unified Camera Library for Android</title>
+        </Head>
         <Provider store={store}>
           <Component {...pageProps} />
         </Provider>

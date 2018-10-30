@@ -7374,7 +7374,7 @@ repeating@^2.0.0:
   dependencies:
     is-finite "^1.0.0"
 
-request@^2.83.0, request@^2.87.0, request@^2.88.0:
+request@^2.87.0, request@^2.88.0:
   version "2.88.0"
   resolved "https://registry.yarnpkg.com/request/-/request-2.88.0.tgz#9c2fca4f7d35b592efe57c7f0a55e81052124fef"
   integrity sha512-NAqBSrijGLZdM0WZNsInLJpkJokL72XYjUpnB0iwsRgxh7dB6COrHnTBNwN0E+lHDAJzu7kLAkDeY08z2/A0hg==
@@ -7509,14 +7509,6 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
   dependencies:
     hash-base "^3.0.0"
     inherits "^2.0.1"
-
-rss-to-json@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/rss-to-json/-/rss-to-json-1.0.4.tgz#e1edf9402df89c9b07572e06afb0020494e53c29"
-  integrity sha512-rldG9HGOPZMYk2tE13lpWNd6AvizUS/Vcr7+6dIL4xdbF7PhkROcau5Ur4ygv++DUyTUeU+SBzrP5MGUM/CRqg==
-  dependencies:
-    request "^2.83.0"
-    xml2js "^0.4.19"
 
 run-async@^2.2.0:
   version "2.3.0"
@@ -8554,6 +8546,13 @@ util@^0.10.3:
   version "0.10.4"
   resolved "https://registry.yarnpkg.com/util/-/util-0.10.4.tgz#3aa0125bfe668a4672de58857d3ace27ecb76901"
   integrity sha512-0Pm9hTQ3se5ll1XihRic3FDIku70C+iHUdT/W926rSgHV5QgXsYbKZN8MSC3tJtSkhuROzvsQjAaFENRXr+19A==
+  dependencies:
+    inherits "2.0.3"
+
+util@^0.11.0:
+  version "0.11.0"
+  resolved "https://registry.yarnpkg.com/util/-/util-0.11.0.tgz#c5f391beb244103d799b21077a926fef8769e1fb"
+  integrity sha512-5n12uMzKCjvB2HPFHnbQSjaqAa98L5iIXmHrZCLavuZVe0qe/SJGbDGWlpaHk5lnBkWRDO+dRu1/PgmUYKPPTw==
   dependencies:
     inherits "2.0.3"
 
