@@ -1,9 +1,10 @@
+// @flow
+
 import React from 'react';
 import Page from '../components/page';
 import Header from '../components/header';
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
-import Notification from '../components/notification';
 import SocialMeta from '../components/social-meta';
 import { MediaQueryConsumer } from '../components/media-query';
 
