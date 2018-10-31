@@ -14,7 +14,7 @@ class News extends React.Component {
           <h2 className={globalStylesheet['heading--small']}>
             {'Recent News'}
           </h2>
-          {feed.length > 0
+          {feed && feed.length > 0
             ? (
               <ul className={styles.newsItems}>
                 {feed.slice(0, 4).map(item => (

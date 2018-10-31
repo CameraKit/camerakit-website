@@ -56,6 +56,9 @@ const Home = ({ feed }) => (
         </div>
       </div>
     </section>
+    <section id="news" className={styles.section}>
+      <News feed={feed} />
+    </section>
     <section id="sponsored-by" className={`${styles.section} ${styles.sponsors}`}>
       <div className={globalStylesheet.container}>
         <h2 className={globalStylesheet['heading--small']}>
