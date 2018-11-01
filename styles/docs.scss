@@ -1,11 +1,27 @@
 .documentation {
-    height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.welcome__message {
-    height: 100px;
-    text-align: center;
+    &__toc {
+        width: 300px;
+        margin-right: 30px;
+        padding: 0 30px 30px 30px;
+        border-right: 2px solid rgb(240,240,240);
+        &__select {
+            width: 100%;
+            display: block;
+        }
+        &__ul {
+            padding: 0;
+            list-style: none;
+            margin: 20px 0 0 0;
+        }
+        &__h2 {
+            margin-left: 0px;
+        }
+        &__h3 {
+            margin-left: 15px;
+        }
+        &__h4 {
+            margin-left: 30px;
+        }
+    }
 }
