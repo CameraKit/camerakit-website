@@ -12,7 +12,18 @@ class Contact extends React.Component {
     
     if (!process.browser) {
       const fs = require('fs');
-      docs = fs.readFileSync(`./components/docs/versions/${version}.md`, 'utf8');
+      const root = `./components/docs/versions/${version}/`;
+      
+      const jsonPath = root + 'pages.json';
+      if (fs.existsSync(jsonPath)) {
+        const pages = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
+        pages.forEach(page => {
+          const path = root + page;
+          if (fs.existsSync(path)) {
+            docs += fs.readFileSync(path, 'utf8');
+          }
+        });
+      }
     }
 
     return { docs, version };
