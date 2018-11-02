@@ -6,7 +6,7 @@ import Footer from '../components/footer';
 
 class Contact extends React.Component {
   static async getInitialProps({ query }) {
-    let docs;
+    let docs = '';
 
     const version = query.v || '0.1.0';
     

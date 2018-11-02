@@ -46,19 +46,26 @@ class Docs extends React.Component {
     const { html, tableOfContents } = this.state;
     const { version } = this.props;
 
+    const options = {
+      '0.1.0': 'v0.1.0',
+      '0.2.0': 'v0.2.0'
+    };
+
     return (
       <section className={styles.documentation}>
         <div className={styles.documentation__toc}>
-          <select
-            defaultValue={`?v=${version}`}
-            className={styles.documentation__toc__select}
-            onChange={e => {
-              window.location = e.target.value;
-            }}
-          >
-            <option value="?v=0.1.0">Version 0.1.0</option>
-            <option value="?v=0.2.0">Version 0.2.0</option>
-          </select>
+          <div className={styles.documentation__toc__select}>
+            <span>{options[version]}</span>
+            <div>
+              {Object.keys(options).map(key =>
+                <span onClick={() => {
+                  window.location = `?v=${key}`;
+                }}>
+                  {options[key]}
+                </span>
+              )}
+            </div>
+          </div>
           <ul className={styles.documentation__toc__ul}>
             {tableOfContents && tableOfContents.map((item, index) =>
               <li key={index} className={item.style}>
@@ -67,7 +74,7 @@ class Docs extends React.Component {
             )}
           </ul>
         </div>
-        <div style={{ flex: 1 }} dangerouslySetInnerHTML={{ __html: html }} />
+        <div className={styles.documentation__content} dangerouslySetInnerHTML={{ __html: html }} />
       </section>
     );
   }
