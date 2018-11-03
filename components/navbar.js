@@ -146,7 +146,7 @@ export default withRouter(({ isMobile, router }) => {
                     transition: all 1s;
                     display: flex;
                     justify-content: space-between;
-                    padding: 1rem 0;
+                    padding: 2rem 0;
                   }
                   
                   .navbar__brand {
@@ -185,7 +185,6 @@ export default withRouter(({ isMobile, router }) => {
                     font-weight: 400;
                     color: #2d2d2d;
                   }
-
 
                   .navbar__links > .icons > a:last-child {
                     margin-right: 0;

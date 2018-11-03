@@ -8,7 +8,7 @@ export default ({
   padding,
   overflow,
   minHeight,
-  dotBackground,
+  gradientBackground,
   children,
   mobileStyle,
   ...props
@@ -20,7 +20,7 @@ export default ({
         width: 100%;
         margin: 0 auto;
         padding: ${padding ? '4rem' : '0'} ${wide ? '0' : '1rem'};
-        ${wide && !small ? '' : 'max-width: 1024px;'}
+        ${wide && !small ? '' : 'max-width: 1140px;'}
         ${small ? 'max-width: 682px;' : ''}
         ${center ? 'text-align: center;' : ''}
         ${
@@ -34,10 +34,9 @@ export default ({
         ${minHeight ? `min-height: ${minHeight}px;` : ''}
         ${vCenter ? 'display: flex; align-items: center;' : ''}
         ${
-        dotBackground
+        gradientBackground
           ? `
-          background-image: radial-gradient(circle, #D7D7D7, #D7D7D7 1px, #FFF 1px, #FFF);
-          background-size: 28px 28px;
+          background-image: linear-gradient(to bottom, #CBCee9, #DDE1E9);
         `
           : ''
         }

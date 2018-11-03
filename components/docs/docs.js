@@ -1,7 +1,5 @@
 import React from 'react';
 
-import styles from '../../styles/docs.scss';
-
 class Docs extends React.Component {
   constructor(props) {
     super(props);
@@ -12,8 +10,8 @@ class Docs extends React.Component {
 
   render() {
     return (
-      <section className={styles.documentation}>
-        <div className={styles.welcome__message}>
+      <section>
+        <div>
           <h1>
             {'Welcome to our new Docs'}
           </h1>

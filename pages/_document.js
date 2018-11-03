@@ -5,7 +5,6 @@ import Document, { Head, Main, NextScript } from 'next/document';
 import { GA_TRACKING_ID } from '../lib/analytics';
 
 export default class CameraKitWebsite extends Document {
-
   render() {
     return (
       <html lang="en" dir="ltr">
@@ -33,6 +32,7 @@ export default class CameraKitWebsite extends Document {
           <meta name="msapplication-square150x150logo" content="/static/favicon/mstile-150x150.png" />
           <meta name="msapplication-wide310x150logo" content="/static/favicon/mstile-310x150.png" />
           <meta name="msapplication-square310x310logo" content="/static/favicon/mstile-310x310.png" />
+          <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet" /> 
           <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
           <script 
             dangerouslySetInnerHTML={{

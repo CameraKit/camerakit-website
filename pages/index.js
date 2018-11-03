@@ -8,8 +8,9 @@ import Footer from '../components/footer';
 import SocialMeta from '../components/social-meta';
 import { MediaQueryConsumer } from '../components/media-query';
 
-import Home from '../components/home/home';
+import Features from '../components/home/features';
 import Intro from '../components/home/intro';
+import CompanySlider from '../components/home/company-slider';
 
 export default () => (
   <Page title="CameraKit | Unified Camera Library for Android">
@@ -22,7 +23,7 @@ export default () => (
     <MediaQueryConsumer>
       {({ isMobile }) => (
         <Header
-          height={32}
+          height={0}
           offset={-32}
           distance={32}
           shadow
@@ -33,7 +34,8 @@ export default () => (
       )}
     </MediaQueryConsumer>
     <Intro />
-    <Home />
+    <CompanySlider />
+    <Features />
     <Footer />
   </Page>
 );
