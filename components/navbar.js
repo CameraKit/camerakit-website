@@ -218,11 +218,10 @@ export default withRouter(({ isMobile, router }) => {
                     {'Learn'}
                   </a>
                 </Link>
-                <Link href="/blog">
-                  <a href="/blog">
-                    {'Blog'}
-                  </a>
-                </Link>
+                {/* Remove <Link /> because we need to fully load the /docs route */}
+                <a href="/blog">
+                  {'Blog'}
+                </a>
               </div>
               <div className="navbar__links">
                 <div className="icons">
