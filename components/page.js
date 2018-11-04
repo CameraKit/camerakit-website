@@ -46,11 +46,12 @@ export default withMediaQuery(({ title, description, children }) => (
           min-height: 100%;
           margin: 0;
           line-height: 1.65;
-          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+          font-family: 'Roboto', 'Segoe UI',
             'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
             'Helvetica Neue', sans-serif;
           font-size: 16px;
           font-weight: 400;
+          color: #77829b;
           min-width: 320px;
           direction: ltr;
           font-feature-settings: 'kern';
@@ -62,7 +63,7 @@ export default withMediaQuery(({ title, description, children }) => (
         html,
         body {
           background-color: #fff;
-          color: #111;
+          color: #77829b;
         }
         ::selection {
           background-color: #0076ff;
@@ -135,6 +136,14 @@ export default withMediaQuery(({ title, description, children }) => (
         }
         .f6 {
           font-size: 0.7901234567901234em;
+        }
+        .f-highlight {
+          font-size: 3rem;
+          line-height: 1.2;
+          color: #3e445b;
+        }
+        .f-left {
+          text-align: left;
         }
         .fw1 {
           font-weight: 100;

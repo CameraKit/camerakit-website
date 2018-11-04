@@ -1,10 +1,14 @@
 import React from 'react';
-
-import Nav from '../components/navbar';
-import Docs from '../components/docs/docs';
+import Page from '../components/page';
+import Header from '../components/header';
+import Navbar from '../components/navbar';
 import Footer from '../components/footer';
+import SocialMeta from '../components/social-meta';
+import { MediaQueryConsumer } from '../components/media-query';
 
-class Contact extends React.Component {
+import Docs from '../components/docs/docs';
+
+export default class DocsPage extends React.Component {
   static async getInitialProps({ query }) {
     let docs = '';
 
@@ -32,13 +36,23 @@ class Contact extends React.Component {
   render() {
     const { docs, version } = this.props;
     return (
-      <div className="public">
-        <Nav />
+      <Page title="CameraKit | Documentation">
+        <MediaQueryConsumer>
+          {({ isMobile }) => (
+            <Header
+              height={0}
+              offset={0}
+              distance={32}
+              shadow
+              active={0}
+            >
+              <Navbar />
+            </Header>
+          )}
+        </MediaQueryConsumer>
         <Docs docs={docs} version={version} />
         <Footer />
-      </div>
+      </Page>
     );
   }
 }
-
-export default Contact;

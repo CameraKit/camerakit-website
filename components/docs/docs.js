@@ -1,7 +1,6 @@
 import React from 'react';
 import showdown from 'showdown';
 
-import '../../styles/styles.global.scss';
 import styles from '../../styles/docs.scss';
 
 class Docs extends React.Component {
