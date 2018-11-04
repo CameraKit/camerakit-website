@@ -24,7 +24,7 @@ export default () => (
       {({ isMobile }) => (
         <Header
           height={0}
-          offset={-32}
+          offset={0}
           distance={32}
           shadow
           active={isMobile ? 32 : 320}
