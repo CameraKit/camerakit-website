@@ -86,11 +86,10 @@ export default withRouter(({ isMobile, router }) => {
                 <div>
                   <ul>
                     <li>
-                      <Link href="/docs">
-                        <a href="/docs">
-                          {'Docs'}
-                        </a>
-                      </Link>
+                      {/* Remove <Link /> because we need to fully load the /docs route */}
+                      <a href="/docs">
+                        {'Docs'}
+                      </a>
                     </li>
                     <li>
                       <Link href="/learn">
@@ -210,11 +209,10 @@ export default withRouter(({ isMobile, router }) => {
                 </Link>
               </div>
               <div className="navbar__links">
-                <Link href="/docs">
-                  <a href="/docs">
-                    {'Docs'}
-                  </a>
-                </Link>
+                {/* Remove <Link /> because we need to fully load the /docs route */}
+                <a href="/docs">
+                  {'Docs'}
+                </a>
                 <Link href="/learn">
                   <a href="/learn">
                     {'Learn'}
