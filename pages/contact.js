@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Nav from '../components/public/nav';
-import ContactForm from '../components/contact-form';
-import Footer from '../components/public/footer';
+import Nav from '../components/nav';
+import ContactForm from '../components/contact/contact-form';
+import Footer from '../components/footer';
 
 const Contact = () => (
   <div className="public">

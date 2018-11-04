@@ -1,15 +1,29 @@
 import React from 'react';
+import Page from '../components/page';
+import Header from '../components/header';
+import Navbar from '../components/navbar';
+import Footer from '../components/footer';
+import SocialMeta from '../components/social-meta';
+import { MediaQueryConsumer } from '../components/media-query';
 
-import Nav from '../components/public/nav';
-import Home from '../components/home';
-import Footer from '../components/public/footer';
+import Docs from '../components/learn/learn';
 
-const Resources = () => (
-  <div className="public">
-    <Nav />
-    <Home />
+export default() => (
+  <Page title="CameraKit | Learn">
+    <MediaQueryConsumer>
+      {({ isMobile }) => (
+        <Header
+          height={0}
+          offset={0}
+          distance={32}
+          shadow
+          active={isMobile ? 32 : 320}
+        >
+          <Navbar />
+        </Header>
+      )}
+    </MediaQueryConsumer>
+    <Docs />
     <Footer />
-  </div>
+  </Page>
 );
-
-export default Resources;
