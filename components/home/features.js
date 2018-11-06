@@ -83,7 +83,7 @@ export default () => (<Container wide role="region" aria-labelledby="features">
         </div>
         <div className="features__item">
           <div className="item__icon">
-            <img src="../../static/ic_simple.svg" alt="Easy Implemnentation" />
+            <img src="../../static/ic_tested.svg" alt="Easy Implemnentation" />
           </div>
           <div className="item__text">
             <h3 className="title">
@@ -96,7 +96,7 @@ export default () => (<Container wide role="region" aria-labelledby="features">
         </div>
         <div className="features__item">
           <div className="item__icon">
-            <img src="../../static/ic_simple.svg" alt="Easy Implemnentation" />
+            <img src="../../static/ic_dual_cam.svg" alt="Easy Implemnentation" />
           </div>
           <div className="item__text">
             <h3 className="title">
@@ -109,7 +109,7 @@ export default () => (<Container wide role="region" aria-labelledby="features">
         </div>
         <div className="features__item">
           <div className="item__icon">
-            <img src="../../static/ic_simple.svg" alt="Easy Implemnentation" />
+            <img src="../../static/ic_vr_addons.svg" alt="Easy Implemnentation" />
           </div>
           <div className="item__text">
             <h3 className="title">

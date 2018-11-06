@@ -1,12 +1,6 @@
-import classNames from 'classnames';
-import Link from 'next/link';
-
 import Logo from '../logo';
 import Container from '../container';
 import Button from '../button';
-import Phone from '../phone';
-import Popover from '../popover';
-import Campaign from './campaign';
 
 export default ({}) => {
   return (
@@ -16,8 +10,8 @@ export default ({}) => {
       center
       overflow
       gradientBackground
-      minHeight="100vh"
-      mobileStyle={'min-height: 100vh;'}
+      minHeight="96vh"
+      mobileStyle={'min-height: 96vh;'}
       style={{
         display: 'flex',
         alignItems: 'center',
@@ -138,14 +132,11 @@ export default ({}) => {
           </style>
           <div className="intro">
             <div className="intro__left">
-              <div className="logo-main f4 fw3">
-                <Logo size={50} />
-              </div>
               <h1 className="fw4">Camera Dev. Made Easy.</h1>
               <p>CameraKit is an open-source library to support the Android Camera 1 and 2 APIs. Massively increase stability and reliability of photo and video capture on all Android devices.</p>
               <div className="actions">
                 <div className="main-button">
-                  <Button href="#getting-started" callout>
+                  <Button href="/getstarted" callout>
                     Get Started
                   </Button>
                 </div>

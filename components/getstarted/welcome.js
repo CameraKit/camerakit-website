@@ -3,7 +3,19 @@ import Container from '../container';
 import withPure from '../hoc/pure';
 
 export default withPure(() => (
-  <Container wide>
+  <Container
+    role="main"
+    wide
+    center
+    overflow
+    gradientBackground
+    minHeight="96vh"
+    mobileStyle={'min-height: 96vh;'}
+    style={{
+      display: 'flex',
+      alignItems: 'center',
+    }}
+  >
     <Container>
       <div>
         <style jsx>
