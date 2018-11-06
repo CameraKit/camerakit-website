@@ -16,8 +16,8 @@ export default ({}) => {
       center
       overflow
       gradientBackground
-      minHeight={650}
-      mobileStyle={'min-height: 460px;'}
+      minHeight="100vh"
+      mobileStyle={'min-height: 100vh;'}
       style={{
         display: 'flex',
         alignItems: 'center',
@@ -36,26 +36,18 @@ export default ({}) => {
               align-items: flex-start;
             }
             .intro {
-              display: flex;
-              justify-content: space-between;
-              flex-direction: row;
+              margin: 100px;
             }
             .intro__left {
-              flex-basis: 40%;
-              text-align: left;
-              justify-content: center;
+              text-align: center;
               display: flex;
-              align-items: left;
+              align-items: center;
               flex-direction: column;
             }
-
-            .intro__left .actions {
-              text-align: left;
-            }
             .intro__right {
-              flex-basis: 45%;
+              margin-top: 100px;
               display: flex;
-              justify-content: flex-end;
+              justify-content: center;
             }
 
             .intro__right img {

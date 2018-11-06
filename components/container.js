@@ -31,7 +31,7 @@ export default ({
         ${dark ? 'color: #f1f1f1;' : ''}
         ${gray ? 'background-color: #f6f6f6;' : ''}
         ${wide && !overflow ? 'overflow: hidden;' : ''}
-        ${minHeight ? `min-height: ${minHeight}px;` : ''}
+        ${minHeight ? `min-height: ${minHeight};` : ''}
         ${vCenter ? 'display: flex; align-items: center;' : ''}
         ${
         gradientBackground

@@ -23,7 +23,7 @@ export default withPure(
               border-radius: 7px;
               color: #0076ff;
               transition: background 0.2s ease, color 0.2s ease,
-                box-shadow 0.2s ease;
+              box-shadow 0.2s ease;
             }
             a:hover {
               color: #0076ff;
@@ -39,14 +39,14 @@ export default withPure(
               border-radius: 4px;
               background: rgba(255,255,255,1);
               box-shadow: 0 0 0px 9px rgba(255, 255, 255, 0.25);
-              background-clip: content-box;
+              transition: all 0.45s;
             }
             a.callout:hover {
-              transition: all 0.45s;
               background: rgba(245,245,245,1);
               box-shadow: 0 0 0px 9px rgba(255, 255, 255, 0.15);
             }
             a.callout:active {
+              color: white;
               background: #006ae6;
             }
             a.invert {
