@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import showdown from 'showdown';
 
 import styles from '../../styles/docs.scss';
@@ -53,6 +54,13 @@ class Docs extends React.Component {
     return (
       <section className={styles.documentation}>
         <div className={styles.documentation__toc}>
+          <div className={styles.documentation__toc__back}>
+            <Link href="/">
+              <a href="/">
+                <img src="/static/ic_logo.svg" alt="Back to homepage" />
+              </a>
+            </Link>
+          </div>
           <div className={styles.documentation__toc__select}>
             <span>{options[version]}</span>
             <div>
