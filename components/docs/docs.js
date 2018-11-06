@@ -17,7 +17,7 @@ class Docs extends React.Component {
       const regex = /<(h[2-4]) [^>]+>(.+)<\/h[2-4]>/gi;
       const tableOfContents = [];
 
-      const getStyle = type => {
+      const getStyle = (type) => {
         switch (type) {
           case 'h3': return styles.documentation__toc__h3;
           case 'h4': return styles.documentation__toc__h3;

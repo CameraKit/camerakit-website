@@ -213,11 +213,6 @@ export default withRouter(({ isMobile, router }) => {
                 <a href="/docs">
                   {'Docs'}
                 </a>
-                <Link href="/learn">
-                  <a href="/learn">
-                    {'Learn'}
-                  </a>
-                </Link>
                 <Link href="/blog">
                   <a href="/blog">
                     {'Blog'}
