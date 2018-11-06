@@ -9,7 +9,7 @@ class Docs extends React.Component {
 
   constructor(props) {
     super(props);
-    
+
     if (props.docs) {
       const converter = new showdown.Converter();
       const html = converter.makeHtml(props.docs);
@@ -23,16 +23,16 @@ class Docs extends React.Component {
           case 'h4': return styles.documentation__toc__h3;
           default: return styles.documentation__toc__h2;
         }
-      }
-      
+      };
+
       let match = regex.exec(html);
 
-      while(match) {
+      while (match) {
         const idRegex = /<.*id="(.+)".*>/gi;
         const id = idRegex.exec(match[0])[1];
 
         tableOfContents.push({
-          style: getStyle(match[1]), text: match[2], id
+          style: getStyle(match[1]), text: match[2], id,
         });
 
         match = regex.exec(html);
@@ -48,7 +48,7 @@ class Docs extends React.Component {
 
     const options = {
       '0.1.0': 'v0.1.0',
-      '0.2.0': 'v0.2.0'
+      '0.2.0': 'v0.2.0',
     };
 
     return (
