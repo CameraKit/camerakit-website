@@ -8,7 +8,7 @@ import InFitting from '../icons/companies/infitting';
 export default () => (
   <Container wide>
     <div className="company-slider">
-      <BackgroundSlider duration={40}>
+      <BackgroundSlider duration={20}>
         <div className="company-logos-container">
           <div><Expensify /></div>
           <div><Goosechase /></div>
@@ -36,15 +36,11 @@ export default () => (
             outline: none;
             cursor: default;
             transition: opacity .2s ease;
-            height: 100px;
-            width: 400px;
-            display: flex;
-            align-content: center;
-            justify-content: center;
+            width: 300px;
             align-self: center;
           }
           .company-logos-container > div:hover {
-            opacity: .8;
+            opacity: 1;
           }
         `}
       </style>
