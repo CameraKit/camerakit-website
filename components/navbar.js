@@ -7,6 +7,7 @@ import { MediaQueryConsumer } from './media-query';
 import CameraKitLogo from './logo';
 import GithubLogo from './icons/github';
 import SpectrumLogo from './icons/spectrum';
+import RssLogo from './icons/rss';
 
 
 export default withRouter(({ isMobile, router }) => {
@@ -225,6 +226,15 @@ export default withRouter(({ isMobile, router }) => {
               </div>
               <div className="navbar__links">
                 <div className="icons">
+                  {route.startsWith('/blog') &&
+                    <a
+                      href="https://medium.com/feed/camerakit"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      <RssLogo />
+                    </a>
+                  }
                   <Link href="https://spectrum.chat/camerakit">
                     <a
                       href="https://spectrum.chat/camerakit"
