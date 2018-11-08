@@ -7,6 +7,7 @@ import { MediaQueryConsumer } from './media-query';
 import CameraKitLogo from './logo';
 import GithubLogo from './icons/github';
 import SpectrumLogo from './icons/spectrum';
+import RssLogo from './icons/rss';
 
 
 export default withRouter(({ isMobile, router }) => {
@@ -218,14 +219,22 @@ export default withRouter(({ isMobile, router }) => {
                     {'Learn'}
                   </a>
                 </Link>
-                <Link href="/blog">
-                  <a href="/blog">
-                    {'Blog'}
-                  </a>
-                </Link>
+                {/* Remove <Link /> because we need to fully load the /docs route */}
+                <a href="/blog">
+                  {'Blog'}
+                </a>
               </div>
               <div className="navbar__links">
                 <div className="icons">
+                  {route.startsWith('/blog') &&
+                    <a
+                      href="https://medium.com/feed/camerakit"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      <RssLogo />
+                    </a>
+                  }
                   <Link href="https://spectrum.chat/camerakit">
                     <a
                       href="https://spectrum.chat/camerakit"
