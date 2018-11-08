@@ -1,3 +1,4 @@
+import React from 'react';
 import Link from 'next/link';
 import { withRouter } from 'next/router';
 
@@ -5,246 +6,104 @@ import Container from './container';
 import { MediaQueryConsumer } from './media-query';
 
 import CameraKitLogo from './logo';
+import TwitterLogo from './icons/twitter';
 import GithubLogo from './icons/github';
 import SpectrumLogo from './icons/spectrum';
 
+import MenuIcon from './ic_menu';
 
-export default withRouter(({ isMobile, router }) => {
-  const { route } = router;
+import styles from '../styles/navbar.scss';
 
+class MobileNavbar extends React.Component {
+  state = {
+    opened: false
+  };
+
+  render() {
+    let navClassNames = styles.navbar;
+
+    if (this.state.opened) {
+      navClassNames += ` ${styles.navbar_open}`;
+    }
+
+    return (
+      <nav className={navClassNames}>
+        <div className={styles.navbar__content}>
+          <a href="/">
+            <CameraKitLogo withoutText />
+          </a>
+          <a
+            href="javascript:void(0);"
+            className={styles.navbar__button}
+            onClick={() => this.setState(({ opened }) => ({
+              opened: !opened
+            }))}
+          >
+            <MenuIcon />
+            <span>Menu</span>
+          </a>
+        </div>
+        <div className={styles.navbar__menu}>
+          <ul>
+            <li><a href="">Docs</a></li>
+            <li><a href="">Learn</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="">Twitter</a></li>
+            <li><a href="">Spectrum</a></li>
+            <li><a href="">Github</a></li>
+          </ul>
+        </div>
+      </nav>
+    );
+  }
+}
+
+const DesktopNavbar = () => (
+  <nav className={`${styles.navbar} ${styles.navbar_full}`}>
+    <div className={styles.navbar__content}>
+      <a href="/" rel="noreferrer">
+        <CameraKitLogo />
+      </a>
+      <span className={styles.navbar__flex} />
+      <a href="/docs">Docs</a>
+      <a href="/learn">Learn</a>
+      <a href="/blog">Blog</a>
+      <span className={styles.navbar__separator} />
+      <a
+        className={`${styles.navbar__button} ${styles.navbar__button_circle}`}
+        href="https://twitter.com/withcamerakit"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <TwitterLogo />
+      </a>
+      <a
+        className={`${styles.navbar__button} ${styles.navbar__button_circle}`}
+        href="https://spectrum.chat/camerakit"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <SpectrumLogo />
+      </a>
+      <a
+        className={styles.navbar__button}
+        href="https://github.com/CameraKit/camerakit-android"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <GithubLogo />
+        <span>Github</span>
+      </a>
+    </div>
+  </nav>
+);
+
+export default withRouter(() => {
   return (
     <MediaQueryConsumer>
       {(media) => {
-        if (media.isMobile) {
-          return (
-            <Container center>
-              <h1 className="visually-hidden" aria-hidden="true">
-                CameraKit
-              </h1>
-              <nav className="main">
-                <style jsx>
-                  {`
-                    .logo {
-                      flex-basis: 30%;
-                      display: flex;
-                      justify-content: flex-start;
-                    }
-
-                    .menu {
-                      display: flex;
-                      flex-basis: 30%;
-                      justify-content: flex-end;
-                      list-style: none;
-                    }
-
-                    .menu > .links {
-                      display: flex;
-                      flex-direction: row;
-                      flex-wrap: no-wrap;
-                      justify-content: flex-end;
-
-                    }
-
-                    .menu > .links > .item {
-                      margin-left: 20px;
-                      font-weight: 300;
-                      list-style: none;
-                      font-size: 1.1rem;
-
-                    }
-
-                    .menu > .links > .item > a:hover {
-                      color:#2d2d2d;
-                      text-shadow: 0px 2px 6px rgba(0,0,0,0.25);
-                      transition: all 0.5s;
-                      cursor: pointer;
-                    }
-
-                    .link {
-                      font-weight: 500;
-                      color: #3e445b;
-                      display: flex;
-                      align-content: center;
-                    }
-
-                    @media (min-width: 34em) {
-
-                      .nav {
-                        padding-top: 3rem;
-                        padding-bottom: 3rem;
-                      }
-                    }
-                  `}
-                </style>
-                <div>
-                  <div>
-                    <Link href="/">
-                      <img alt="CameraKit Logo" src={CameraKitLogo} />
-                    </Link>
-                  </div>
-                </div>
-                <div>
-                  <ul>
-                    <li>
-                      {/* Remove <Link /> because we need to fully load the /docs route */}
-                      <a href="/docs">
-                        {'Docs'}
-                      </a>
-                    </li>
-                    <li>
-                      <Link href="/learn">
-                        <a href="/learn">
-                          {'Learn'}
-                        </a>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/contact">
-                        <a href="/contact">
-                          {'Contact'}
-                        </a>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/getstarted">
-                        <a href="/getstarted">
-                          {'Get Started'}
-                        </a>
-                      </Link>
-                    </li>
-                    <li>
-                      { '|' }
-                    </li>
-                    <li>
-                      <Link href="https://github.com/CameraKit/camerakit-android">
-                        <a href="https://github.com/CameraKit/camerakit-android" target="_blank" rel="noopener noreferrer">
-                          <img src={GithubLogo} alt="Github Logo" />
-                        </a>
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </nav> 
-            </Container>
-          );
-        }
-
-        return (
-          <Container center>
-            <h1 className="visually-hidden" aria-hidden="true">
-              CameraKit
-            </h1>
-            <nav className="main">
-              <style jsx>
-                {`
-                  nav {
-                    position: relative;
-                    top: 0;
-                    width: 100%;
-                    z-index: 11;
-                    transition: all 1s;
-                    display: flex;
-                    justify-content: space-between;
-                    padding: 2rem 0;
-                  }
-                  
-                  .navbar__brand {
-                    position: absolute;
-                    width: 100%;
-                    font-size: 0;
-                    overflow: hidden;
-                    transition: all 0.55s ease;
-                    pointer-events: none;
-                    transform: translate3d(0, 30%, 0);
-                    opacity: 0;
-                  }
-                  
-                  .navbar__links {
-                    display: flex;
-                    flex-direction: row;
-                  }
-
-                  .navbar__links > a {
-                    display: inline-block;
-                    margin-right: 35px;
-                    font-weight: 400;
-                    color: #2d2d2d;
-                  }
-
-                  .navbar__links > a:hover {
-                    color:#2d2d2d;
-                    text-shadow: 0px 2px 6px rgba(0,0,0,0.25);
-                    transition: all 0.5s;
-                    cursor: pointer;
-                  }
-
-                  .navbar__links > .icons > a {
-                    display: inline-block;
-                    margin-right: 35px;
-                    font-weight: 400;
-                    color: #2d2d2d;
-                  }
-
-                  .navbar__links > .icons > a:last-child {
-                    margin-right: 0;
-                  }
-
-                  @media (min-width: 34em) {
-                    .nav {
-                      padding-top: 3rem;
-                      padding-bottom: 3rem;
-                    }
-                  }
-                `}
-              </style>
-              <div className="navbar__brand">
-                <Link href="/">
-                  <a
-                    aria-label="Homepage of CameraKit"
-                    rel="noreferrer"
-                    target=""
-                  >
-                    <CameraKitLogo />
-                  </a>
-                </Link>
-              </div>
-              <div className="navbar__links">
-                {/* Remove <Link /> because we need to fully load the /docs route */}
-                <a href="/docs">
-                  {'Docs'}
-                </a>
-                <Link href="/blog">
-                  <a href="/blog">
-                    {'Blog'}
-                  </a>
-                </Link>
-              </div>
-              <div className="navbar__links">
-                <div className="icons">
-                  <Link href="https://spectrum.chat/camerakit">
-                    <a
-                      href="https://spectrum.chat/camerakit"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      <SpectrumLogo />
-                    </a>
-                  </Link>
-                  <Link href="https://github.com/CameraKit/camerakit-android">
-                    <a
-                      href="https://github.com/CameraKit/camerakit-android"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                      className="no-margin"
-                    >
-                      <GithubLogo />
-                    </a>
-                  </Link>
-                </div>
-              </div>
-            </nav>
-          </Container>
-        );
+        if (media.isMobile) return <MobileNavbar />;
+        return <DesktopNavbar />;
       }}
     </MediaQueryConsumer>
   );
