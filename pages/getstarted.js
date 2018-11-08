@@ -2,7 +2,7 @@ import { withRouter } from 'next/router';
 
 import Page from '../components/page';
 
-import Nav from '../components/nav';
+import Nav from '../components/navbar';
 import Welcome from '../components/getstarted/welcome';
 import Footer from '../components/footer';
 
