@@ -61,7 +61,7 @@ class MobileNavbar extends React.Component {
 const DesktopNavbar = () => (
   <nav className={`${styles.navbar} ${styles.navbar_full}`}>
     <div className={styles.navbar__content}>
-      <a href="/" rel="noreferrer" class={styles.navbar__content__home}>
+      <a href="/" rel="noreferrer" className={styles.navbar__content__home}>
         <CameraKitLogo />
       </a>
       <span className={styles.navbar__flex} />
