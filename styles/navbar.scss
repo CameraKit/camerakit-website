@@ -39,6 +39,11 @@
     align-items: center;
     padding: 1.6rem 2rem;
     justify-content: space-between;
+    &__home {
+      svg {
+        height: 1.8rem;
+      }
+    }
     a {
       font-size: 1.1rem;
       font-weight: 600;
@@ -67,6 +72,10 @@
     }
     span {
       margin-left: .4rem;
+    }
+    svg {
+      max-width: 1.2rem;
+      max-height: 1.2rem;
     }
   }
   &__menu {
