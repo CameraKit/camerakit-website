@@ -30,20 +30,20 @@ export default withPure(
               background: rgba(0, 118, 255, 0.1);
             }
             a.callout {
-              color: #6B60E9;
+              color: white;
               font-weight: 600;
               margin: 0;
-              padding: 0 2rem;
-              height: 2.5rem;
-              line-height: 2.5rem;
+              padding: 0 3rem;
+              height: 3rem;
+              line-height: 3rem;
               border-radius: 4px;
-              background: rgba(255,255,255,1);
-              box-shadow: 0 0 0px 9px rgba(255, 255, 255, 0.25);
+              background: #6B60E9;
+              box-shadow: 0 0 0px 6px #6B60E92F;
               transition: all 0.45s;
             }
             a.callout:hover {
-              background: rgba(245,245,245,1);
-              box-shadow: 0 0 0px 9px rgba(255, 255, 255, 0.15);
+              // background: rgba(245,245,245,1);
+              // box-shadow: 0 0 0px 9px rgba(255, 255, 255, 0.15);
             }
             a.callout:active {
               color: white;
@@ -54,14 +54,14 @@ export default withPure(
               padding: 0 2rem;
               height: 2.5rem;
               line-height: 2.5rem;
-              border-radius: 7px;
-              background: #0076ff;
-              box-shadow: 0 4px 14px 0 rgba(0, 118, 255, 0.39);
+              border-radius: 4px;
+              background: #6B60E9;
+              box-shadow: 0 4px 14px 0 #6B60E96F;
               color: white;
             }
             a.invert:hover {
-              background: rgba(0, 118, 255, 0.9);
-              box-shadow: 0 6px 20px rgba(0, 118, 255, 0.23);
+              // background: rgba(0, 118, 255, 0.9);
+              box-shadow: 0 4px 10px 0 #6B60E99F;
             }
             a.invert:active {
               background: #006ae6;

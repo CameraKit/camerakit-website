@@ -1,6 +1,7 @@
 import Logo from '../logo';
 import Container from '../container';
 import Button from '../button';
+import Particles from 'react-particles-js';
 
 export default ({}) => {
   return (
@@ -10,11 +11,13 @@ export default ({}) => {
       center
       overflow
       gradientBackground
-      minHeight="96vh"
-      mobileStyle={'min-height: 96vh;'}
+      minHeight="100vh"
+      mobileStyle={'min-height: 100vh;'}
       style={{
         display: 'flex',
+        position: 'relative',
         alignItems: 'center',
+        marginBottom: '180px'
       }}
     >
       <Container>
@@ -39,13 +42,17 @@ export default ({}) => {
               flex-direction: column;
             }
             .intro__right {
-              margin-top: 100px;
-              display: flex;
-              justify-content: center;
+              left: 0;
+              right: 0;
+              z-index: 100;
+              height: 300px;
+              bottom: -160px;
+              position: absolute;
             }
 
             .intro__right img {
               width: 100%;
+              height: 100%;
             }
 
             h2 {
@@ -131,6 +138,30 @@ export default ({}) => {
           `}
           </style>
           <div className="intro">
+            <Particles
+              params={{
+                particles: {
+                  line_linked: {
+                    width: 2,
+                    opacity: 0.5,
+                    distance: 250,
+                    color: '#6B60E9',
+                  },
+                  number: {
+                    value: 100
+                  }
+                }
+              }}
+              style={{
+                width: '100%',
+                height: '100px',
+                position: 'absolute',
+                top: 0,
+                bottom: 0,
+                left: 0,
+                rigth: 0
+              }}
+            />
             <div className="intro__left">
               <h1 className="fw4">Camera Dev. Made Easy.</h1>
               <p>CameraKit is an open-source library to support the Android Camera 1 and 2 APIs. Massively increase stability and reliability of photo and video capture on all Android devices.</p>
@@ -143,7 +174,7 @@ export default ({}) => {
               </div>
             </div>
             <div className="intro__right">
-              <img src="../../static/il_phone_horizontal.svg" alt="CK Phone" />
+              <img src="../../static/il_phone_tilted.svg" alt="CK Phone" />
             </div>
           </div>
         </div>
