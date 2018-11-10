@@ -1,5 +1,7 @@
 import React from 'react';
 import Page from '../components/page';
+import Header from '../components/header';
+import Navbar from '../components/navbar';
 
 import Docs from '../components/docs/docs';
 
@@ -32,6 +34,9 @@ export default class DocsPage extends React.Component {
     const { docs, version } = this.props;
     return (
       <Page title="CameraKit | Documentation">
+        <Header height={0} offset={0} distance={32} shadow active={0}>
+          <Navbar full />
+        </Header>
         <Docs docs={docs} version={version} />
       </Page>
     );

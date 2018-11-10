@@ -46,8 +46,8 @@ export default withPure(
               // box-shadow: 0 0 0px 9px rgba(255, 255, 255, 0.15);
             }
             a.callout:active {
-              color: white;
-              background: #006ae6;
+              // color: white;
+              // background: #006ae6;
             }
             a.invert {
               margin: 0;

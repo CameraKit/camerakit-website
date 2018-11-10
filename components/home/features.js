@@ -124,7 +124,7 @@ export default () => (<Container wide role="region" aria-labelledby="features">
     </div>
     <div className="get-started">
       <div className="callout-button">
-        <Button href="#getting-started" invert>
+        <Button href="/getstarted" invert>
           Get Started
         </Button>
       </div>

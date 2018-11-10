@@ -141,32 +141,6 @@ export default ({}) => {
               `}
               </style>
               <div className="intro">
-                {!media.isMobile &&
-                  <Particles
-                    params={{
-                      particles: {
-                        line_linked: {
-                          width: 2,
-                          opacity: 0.5,
-                          distance: 250,
-                          color: '#6B60E9',
-                        },
-                        number: {
-                          value: 100
-                        }
-                      }
-                    }}
-                    style={{
-                      top: 0,
-                      left: 0,
-                      rigth: 0,
-                      bottom: 0,
-                      width: '100%',
-                      height: '100px',
-                      position: 'absolute'
-                    }}
-                  />
-                }
                 <div className="intro__left">
                   <h1 className="fw4">Camera Dev. Made Easy.</h1>
                   <p>CameraKit is an open-source library to support the Android Camera 1 and 2 APIs. Massively increase stability and reliability of photo and video capture on all Android devices.</p>

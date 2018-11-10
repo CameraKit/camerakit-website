@@ -43,6 +43,10 @@ class MobileNavbar extends React.Component {
             padding: 1.6rem 2rem;
             justify-content: space-between;
           }
+          .separator {
+            height: 1px;
+            margin: .4rem 2rem;
+          }
           .link {
             color: #3E445B;
             font-weight: 600;
@@ -109,12 +113,36 @@ class MobileNavbar extends React.Component {
         </div>
         <div className="menu">
           <ul>
-            <li><a href="">Docs</a></li>
-            <li><a href="">Learn</a></li>
-            <li><a href="">Blog</a></li>
-            <li><a href="">Twitter</a></li>
-            <li><a href="">Spectrum</a></li>
-            <li><a href="">Github</a></li>
+            <li><a href="/docs">Docs</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li className="separator" />
+            <li>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://twitter.com/withcamerakit"
+              >
+                Twitter
+              </a>
+            </li>
+            <li>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://spectrum.chat/camerakit"
+              >
+                Spectrum
+              </a>
+            </li>
+            <li>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://github.com/CameraKit/camerakit-android"
+              >
+                Github
+              </a>
+            </li>
           </ul>
         </div>
       </nav>
@@ -122,7 +150,7 @@ class MobileNavbar extends React.Component {
   }
 }
 
-const DesktopNavbar = () => (
+const DesktopNavbar = ({ full }) => (
   <nav className="navbar">
     <style jsx>{`
       .navbar {
@@ -131,7 +159,7 @@ const DesktopNavbar = () => (
         justify-content: center;
       }
       .content {
-        width: 60rem;
+        width: ${full ? '100%' : '60rem'};
         z-index: 100;
         display: flex;
         overflow-x: auto;
@@ -190,7 +218,6 @@ const DesktopNavbar = () => (
       </a>
       <span className="flex" />
       <a href="/docs" className="link">Docs</a>
-      <a href="/learn" className="link">Learn</a>
       <a href="/blog" className="link">Blog</a>
       <span className="separator" />
       <a
@@ -222,12 +249,12 @@ const DesktopNavbar = () => (
   </nav>
 );
 
-export default withRouter(() => {
+export default withRouter(({ full }) => {
   return (
     <MediaQueryConsumer>
       {(media) => {
         if (media.isMobile) return <MobileNavbar />;
-        return <DesktopNavbar />;
+        return <DesktopNavbar full={full} />;
       }}
     </MediaQueryConsumer>
   );
