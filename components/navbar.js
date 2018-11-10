@@ -1,8 +1,6 @@
 import React from 'react';
-import Link from 'next/link';
 import { withRouter } from 'next/router';
 
-import Container from './container';
 import { MediaQueryConsumer } from './media-query';
 
 import CameraKitLogo from './logo';
@@ -12,29 +10,95 @@ import SpectrumLogo from './icons/spectrum';
 
 import MenuIcon from './ic_menu';
 
-import styles from '../styles/navbar.scss';
-
 class MobileNavbar extends React.Component {
   state = {
     opened: false
   };
 
   render() {
-    let navClassNames = styles.navbar;
+    let navClassNames = 'navbar';
 
     if (this.state.opened) {
-      navClassNames += ` ${styles.navbar_open}`;
+      navClassNames += ' open';
     }
 
     return (
       <nav className={navClassNames}>
-        <div className={styles.navbar__content}>
-          <a href="/" className={styles.navbar__content__home}>
+        <style jsx>{`
+          .navbar {
+            width: 100%;
+          }
+          .navbar.open .content {
+            background: white;
+          }
+          .navbar.open .menu {
+            display: block;
+          }
+          .content {
+            z-index: 100;
+            display: flex;
+            overflow-x: auto;
+            position: relative;
+            align-items: center;
+            padding: 1.6rem 2rem;
+            justify-content: space-between;
+          }
+          .link {
+            color: #3E445B;
+            font-weight: 600;
+            font-size: 1.1rem;
+          }
+          .link:hover {
+            color: #3E445B;
+          }
+          .button {
+            display: flex;
+            height: 2.6rem;
+            flex-shrink: 0;
+            padding: 0 1rem;
+            align-items: center;
+            border-radius: 1.3rem;
+            border: .1rem solid #CFD8DC;
+            transition: background .2s linear;
+          }
+          .button:hover {
+            background: #ECEFF1;
+          }
+          .button span {
+            margin-left: .4rem;
+          }
+          .menu {
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 50;
+            display: none;
+            position: fixed;
+            overflow-y: auto;
+            padding-top: 6rem;
+            background: white;
+          }
+          .menu ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+          }
+          .menu ul li a {
+            display: block;
+            color:  #3E445B;
+            font-weight: 600;
+            font-size: 1.6rem;
+            padding: .4rem 2rem;
+          }
+        `}</style>
+        <div className="content">
+          <a href="/" className="link home">
             <CameraKitLogo withoutText />
           </a>
           <a
+            className="link button"
             href="javascript:void(0);"
-            className={styles.navbar__button}
             onClick={() => this.setState(({ opened }) => ({
               opened: !opened
             }))}
@@ -43,7 +107,7 @@ class MobileNavbar extends React.Component {
             <span>Menu</span>
           </a>
         </div>
-        <div className={styles.navbar__menu}>
+        <div className="menu">
           <ul>
             <li><a href="">Docs</a></li>
             <li><a href="">Learn</a></li>
@@ -59,37 +123,97 @@ class MobileNavbar extends React.Component {
 }
 
 const DesktopNavbar = () => (
-  <nav className={`${styles.navbar} ${styles.navbar_full}`}>
-    <div className={styles.navbar__content}>
-      <a href="/" rel="noreferrer" className={styles.navbar__content__home}>
+  <nav className="navbar">
+    <style jsx>{`
+      .navbar {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      .content {
+        width: 60rem;
+        z-index: 100;
+        display: flex;
+        overflow-x: auto;
+        position: relative;
+        align-items: center;
+        padding: 1.6rem 2rem;
+        justify-content: space-between;
+      }
+      .link {
+        color: #3E445B;
+        font-weight: 600;
+        font-size: 1.1rem;
+      }
+      .link:hover {
+        color: #3E445B;
+      }
+      .link:not(:last-child), .separator {
+        margin-right: 2rem;
+      }
+      .button:not(:last-child) {
+        margin-right: .5rem;
+      }
+      .flex {
+        flex: 1;
+      }
+      .separator {
+        width: 1px;
+        height: 1.6rem;
+        background: #CFD8DC;
+      }
+      .button {
+        display: flex;
+        height: 2.6rem;
+        flex-shrink: 0;
+        padding: 0 1rem;
+        align-items: center;
+        border-radius: 1.3rem;
+        border: .1rem solid #CFD8DC;
+        transition: background .2s linear;
+      }
+      .button:hover {
+        background: #ECEFF1;
+      }
+      .button.circle {
+        padding: 0;
+        width: 2.6rem;
+        justify-content: center;
+      }
+      .button span {
+        margin-left: .4rem;
+      }
+    `}</style>
+    <div className="content">
+      <a href="/" rel="noreferrer" className="link home">
         <CameraKitLogo />
       </a>
-      <span className={styles.navbar__flex} />
-      <a href="/docs">Docs</a>
-      <a href="/learn">Learn</a>
-      <a href="/blog">Blog</a>
-      <span className={styles.navbar__separator} />
+      <span className="flex" />
+      <a href="/docs" className="link">Docs</a>
+      <a href="/learn" className="link">Learn</a>
+      <a href="/blog" className="link">Blog</a>
+      <span className="separator" />
       <a
-        className={`${styles.navbar__button} ${styles.navbar__button_circle}`}
-        href="https://twitter.com/withcamerakit"
-        rel="noopener noreferrer"
         target="_blank"
+        rel="noopener noreferrer"
+        className="link button circle"
+        href="https://twitter.com/withcamerakit"
       >
         <TwitterLogo />
       </a>
       <a
-        className={`${styles.navbar__button} ${styles.navbar__button_circle}`}
-        href="https://spectrum.chat/camerakit"
-        rel="noopener noreferrer"
         target="_blank"
+        rel="noopener noreferrer"
+        className="link button circle"
+        href="https://spectrum.chat/camerakit"
       >
         <SpectrumLogo />
       </a>
       <a
-        className={styles.navbar__button}
-        href="https://github.com/CameraKit/camerakit-android"
-        rel="noopener noreferrer"
         target="_blank"
+        className="link button"
+        rel="noopener noreferrer"
+        href="https://github.com/CameraKit/camerakit-android"
       >
         <GithubLogo />
         <span>Github</span>
