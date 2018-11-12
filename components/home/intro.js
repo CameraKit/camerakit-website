@@ -14,13 +14,13 @@ export default ({}) => {
           center
           overflow
           gradientBackground
-          minHeight="100vh"
+          minHeight="78vh"
           mobileStyle={'min-height: 100vh;'}
           style={{
             display: 'flex',
             position: 'relative',
             alignItems: 'center',
-            marginBottom: '180px'
+            marginBottom: '130px',
           }}
         >
           <Container>
