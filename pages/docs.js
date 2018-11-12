@@ -18,7 +18,7 @@ export default class DocsPage extends React.Component {
       const jsonPath = root + 'pages.json';
       if (fs.existsSync(jsonPath)) {
         const pages = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
-        pages.forEach(page => {
+        pages.forEach((page) => {
           const path = root + page;
           if (fs.existsSync(path)) {
             docs += fs.readFileSync(path, 'utf8');
@@ -34,10 +34,19 @@ export default class DocsPage extends React.Component {
     const { docs, version } = this.props;
     return (
       <Page title="CameraKit | Documentation">
-        <Header height={0} offset={0} distance={32} shadow active={0}>
-          <Navbar full />
+        <Header
+          height={0}
+          offset={0}
+          distance={32}
+          shadow
+          active={0}
+        >
+          <Navbar />
         </Header>
-        <Docs docs={docs} version={version} />
+        <Docs
+          docs={docs}
+          version={version} 
+        />
       </Page>
     );
   }
