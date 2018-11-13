@@ -78,7 +78,7 @@ class ContactForm extends React.Component {
             display: flex;
             flex-direction: column;
             justify-content: space-around;
-            height: 45vh;
+            height: 500px;
           }
           
           .flexWrapper {
