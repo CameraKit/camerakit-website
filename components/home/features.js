@@ -42,20 +42,10 @@ export default () => (<Container wide role="region" aria-labelledby="features">
           margin-top: 3rem;
         }
 
-        @media (min-width: 25em) {
-          .feature {
-            lost-column: 1/2 2 4rem flex;
-          }
-        }
-
-        @media (min-width: 48em) {
-          .feature {
-            display: flex;
-            text-align: left;
-          }
-          .iconWrapper {
-            flex: 0 0 1.75rem;
-            margin: 0 1rem 0 0;
+        @media (max-width: 64rem) {
+          .features__grid {
+            flex-basis: 95%;
+            margin-top: 5rem;
           }
         }
       `}
