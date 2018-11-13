@@ -1,27 +1,26 @@
 import Container from '../container';
 import Button from '../button';
 
-export default () => {
-  return (
-    <Container
-      role="main"
-      wide
-      center
-      overflow
-      gradientBackground
-      minHeight="78vh"
-      mobileStyle="min-height: 100vh;"
-      style={{
-        display: 'flex',
-        position: 'relative',
-        alignItems: 'center',
-        marginBottom: '130px',
-      }}
-    >
-      <Container>
-        <div className="intro-container">
-          <style jsx>
-            {`
+export default () => (
+  <Container
+    role="main"
+    wide
+    center
+    overflow
+    gradientBackground
+    minHeight="78vh"
+    mobileStyle="min-height: 100vh;"
+    style={{
+      display: 'flex',
+      position: 'relative',
+      alignItems: 'center',
+      marginBottom: '130px',
+    }}
+  >
+    <Container>
+      <div className="intro-container">
+        <style jsx>
+          {`
               .intro-container {
                 margin: 2rem 0 0 0;
                 overflow: visible;
@@ -132,27 +131,26 @@ export default () => {
                 }
               }
             `}
-          </style>
-          <div className="intro">
-            <div className="intro__left">
-              <h1 className="fw4">Camera Dev. Made Easy.</h1>
-              <p>
-                { 'CameraKit is an open-source library to support the Android Camera 1 and 2 APIs. Massively increase stability and reliability of photo and video capture on all Android devices.' }
-              </p>
-              <div className="actions">
-                <div className="main-button">
-                  <Button href="/getstarted" callout>
-                    Get Started
-                  </Button>
-                </div>
+        </style>
+        <div className="intro">
+          <div className="intro__left">
+            <h1 className="fw4">Camera Dev. Made Easy.</h1>
+            <p>
+              {'CameraKit is an open-source library to support the Android Camera 1 and 2 APIs. Massively increase stability and reliability of photo and video capture on all Android devices.'}
+            </p>
+            <div className="actions">
+              <div className="main-button">
+                <Button href="/getstarted" callout>
+                  Get Started
+                </Button>
               </div>
             </div>
-            <div className="intro__right">
-              <img src="../../static/il_phone_tilted.svg" alt="CK Phone" />
-            </div>
+          </div>
+          <div className="intro__right">
+            <img src="../../static/il_phone_tilted.svg" alt="CK Phone" />
           </div>
         </div>
-      </Container>
+      </div>
     </Container>
-  );
-};
+  </Container>
+);

@@ -16,8 +16,8 @@ export default withMediaQuery(({ title, description, children }) => (
       <meta
         name="description"
         content={
-          description ||
-          'CameraKit is the easiest way to use Camera in your mobile application.'
+          description
+          || 'CameraKit is the easiest way to use Camera in your mobile application.'
         }
       />
     </Head>

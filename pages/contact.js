@@ -11,7 +11,7 @@ import Footer from '../components/footer';
 export default () => (
   <Page title="CameraKit | Contact our Team">
     <SocialMeta
-      image={'/static/il_footer.png'}
+      image="/static/il_footer.png"
       title="CameraKit"
       url="https://camerakit.io"
       description="CameraKit is an open-source library to support the Android Camera 1 and 2 APIs. Massively increase stability and reliability of photo and video capture on all Android devices."

@@ -2,18 +2,26 @@ import React, { PureComponent } from 'react';
 
 const {
   Provider: MediaQueryProvider,
-  Consumer: MediaQueryConsumer
+  Consumer: MediaQueryConsumer,
 } = React.createContext({
   isMobile: false,
-  isTablet: false
+  isTablet: false,
 });
 
-const withMediaQuery = Comp =>
-  class extends PureComponent {
+const withMediaQuery = Comp => class extends PureComponent {
     state = {
       isMobile: false,
-      isTablet: false
+      isTablet: false,
     };
+
+    componentDidMount() {
+      window.addEventListener('resize', this.onResize);
+      this.onResize();
+    }
+
+    componentWillUnmount() {
+      window.removeEventListener('resize', this.onResize);
+    }
 
     onResize = () => {
       const isMobile = window.innerWidth < 640;
@@ -26,15 +34,6 @@ const withMediaQuery = Comp =>
       }
     };
 
-    componentDidMount() {
-      window.addEventListener('resize', this.onResize);
-      this.onResize();
-    }
-
-    componentWillUnmount() {
-      window.removeEventListener('resize', this.onResize);
-    }
-
     render() {
       const { isMobile, isTablet } = this.state;
 
@@ -44,6 +43,6 @@ const withMediaQuery = Comp =>
         </MediaQueryProvider>
       );
     }
-  };
+};
 
 export { MediaQueryProvider, MediaQueryConsumer, withMediaQuery };

@@ -13,7 +13,7 @@ import MenuIcon from './ic_menu';
 
 class MobileNavbar extends React.Component {
   state = {
-    opened: false
+    opened: false,
   };
 
   render() {
@@ -117,7 +117,7 @@ class MobileNavbar extends React.Component {
         <div className="menu">
           <ul>
             <li><a href="/docs">Docs</a></li>
-            <li><a href="/docs">Docs</a></li>            
+            <li><a href="/docs">Docs</a></li>
             <li><a href="/contact">Contact</a></li>
             <li className="separator" />
             <li>
@@ -244,13 +244,11 @@ const DesktopNavbar = ({ full }) => (
   </nav>
 );
 
-export default withRouter(({ full }) => {
-  return (
-    <MediaQueryConsumer>
-      {(media) => {
-        if (media.isMobile) return <MobileNavbar />;
-        return <DesktopNavbar full={full} />;
-      }}
-    </MediaQueryConsumer>
-  );
-});
+export default withRouter(({ full }) => (
+  <MediaQueryConsumer>
+    {(media) => {
+      if (media.isMobile) return <MobileNavbar />;
+      return <DesktopNavbar full={full} />;
+    }}
+  </MediaQueryConsumer>
+));

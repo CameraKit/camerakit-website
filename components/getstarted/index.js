@@ -14,12 +14,13 @@ export default withPure(() => (
     style={{
       display: 'flex',
       maxWidth: '52rem',
-      alignItems: 'center'
+      alignItems: 'center',
     }}
   >
     <Container>
       <section className="getstarted">
-        <style jsx>{`
+        <style jsx>
+          {`
           .getstarted {
             margin-top: 20rem;
             margin-bottom: 20rem;
@@ -83,7 +84,8 @@ export default withPure(() => (
               margin-left: 0;
             }
           }
-        `}</style>
+        `}
+        </style>
         <div>
           <div>
             <h1>
@@ -95,7 +97,7 @@ export default withPure(() => (
           </div>
           <div>
             <div className="section">
-              <img src="../../static/ic_installation.svg" />
+              <img src="../../static/ic_installation.svg" alt="" />
               <h2>
                 {'Installation'}
               </h2>
@@ -117,7 +119,7 @@ export default withPure(() => (
           </div>
           <div>
             <div className="section">
-              <img src="../../static/ic_code.svg" />
+              <img src="../../static/ic_code.svg" alt="" />
               <h2>
                 {'Basic Usage'}
               </h2>
@@ -187,7 +189,7 @@ export default withPure(() => (
         </div>
         <div>
           <div className="section">
-            <img src="../../static/ic_completed.svg" />
+            <img src="../../static/ic_completed.svg" alt="" />
             <h2>
               {'That’s It!'}
             </h2>

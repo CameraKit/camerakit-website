@@ -13,13 +13,13 @@ import * as Feed from '../lib/feed';
 class BlogPage extends React.Component {
   static async getInitialProps() {
     let feed = {};
-    
+
     try {
       feed = await Feed.get();
-    } catch(err) {
+    } catch (err) {
       console.error('Error while downloading feed: %s', err);
     }
-    
+
     return { feed };
   }
 

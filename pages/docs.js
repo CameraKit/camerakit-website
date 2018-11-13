@@ -10,12 +10,12 @@ export default class DocsPage extends React.Component {
     let docs = '';
 
     const version = query.v || '1.0.0-beta3.9';
-    
+
     if (!process.browser) {
       const fs = require('fs');
       const root = `./components/docs/versions/${version}/`;
-      
-      const jsonPath = root + 'pages.json';
+
+      const jsonPath = `${root  }pages.json`;
       if (fs.existsSync(jsonPath)) {
         const pages = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
         pages.forEach((page) => {
@@ -45,7 +45,7 @@ export default class DocsPage extends React.Component {
         </Header>
         <Docs
           docs={docs}
-          version={version} 
+          version={version}
         />
       </Page>
     );

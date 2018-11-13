@@ -48,4 +48,4 @@ export default () => (
       </style>
     </div>
   </Container>
-)
+);

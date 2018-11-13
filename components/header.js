@@ -5,7 +5,7 @@ export default class extends PureComponent {
   state = {
     scrolled: false,
     fixed: false,
-    active: false
+    active: false,
   };
 
   componentDidMount() {
@@ -42,7 +42,7 @@ export default class extends PureComponent {
       distance,
       background,
       defaultActive,
-      children
+      children,
     } = this.props;
 
     return (

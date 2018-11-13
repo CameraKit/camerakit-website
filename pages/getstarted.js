@@ -28,6 +28,7 @@ function GetStartedPage({ router }) {
       <GetStarted />
       <Footer />
     </Page>
-  )};
+  );
+}
 
 export default withRouter(GetStartedPage);
