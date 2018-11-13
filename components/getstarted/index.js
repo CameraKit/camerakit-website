@@ -2,6 +2,8 @@ import React from 'react';
 import Container from '../container';
 import withPure from '../hoc/pure';
 
+import Button from '../button';
+
 export default withPure(() => (
   <Container
     role="main"
@@ -71,6 +73,10 @@ export default withPure(() => (
           }
           .getstarted code .c-s {
             height: 1rem;
+          }
+          .getstarted .button {
+            margin-top: 10rem;
+            text-align: center;
           }
           @media(max-width: 60rem) {
             .getstarted .section {
@@ -189,6 +195,9 @@ export default withPure(() => (
           <p>
             {'Congratulations! You’ve successfully integrated CameraKit. CameraKit is a powerful framework with lots of possibilities. Dive into our Learn page to step by step tutorials on setup and image capture. See all the possible options and settings of CameraKit in our Documentation.'}
           </p>
+        </div>
+        <div className="button">
+          <Button href="/docs" callout>Documentation</Button>
         </div>
       </section>
     </Container>
