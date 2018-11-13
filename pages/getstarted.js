@@ -2,18 +2,32 @@ import { withRouter } from 'next/router';
 
 import Page from '../components/page';
 
-import Nav from '../components/navbar';
-import Welcome from '../components/getstarted/welcome';
+import Header from '../components/header';
+import Navbar from '../components/navbar';
+import GetStarted from '../components/getstarted';
 import Footer from '../components/footer';
+import { MediaQueryConsumer } from '../components/media-query';
 
-function Getstarted({ router }) {
+function GetStartedPage({ router }) {
   const { item, from } = router.query;
   return (
     <Page title="CameraKit | Getting Started">
-      <Nav />
-      <Welcome />
+      <MediaQueryConsumer>
+        {({ isMobile }) => (
+          <Header
+            height={0}
+            offset={0}
+            distance={32}
+            shadow
+            active={isMobile ? 32 : 320}
+          >
+            <Navbar />
+          </Header>
+        )}
+      </MediaQueryConsumer>
+      <GetStarted />
       <Footer />
     </Page>
   )};
 
-export default withRouter(Getstarted);
+export default withRouter(GetStartedPage);
