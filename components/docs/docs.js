@@ -1,7 +1,20 @@
 import React from 'react';
 import showdown from 'showdown';
+import highlight from 'showdown-highlight';
 
 import styles from '../../styles/docs.scss';
+
+const classMap = {
+  table: `${styles.documentation__docs_table}`,
+  h3: `${styles.documentation__h3}`,
+};
+
+const bindings = Object.keys(classMap)
+  .map(key => ({
+    type: 'output',
+    regex: new RegExp(`<${key}(.*)>`, 'g'),
+    replace: `<${key} class="${classMap[key]}" $1>`,
+  }));
 
 class Docs extends React.Component {
   state = {};
@@ -10,7 +23,11 @@ class Docs extends React.Component {
     super(props);
 
     if (props.docs) {
-      const converter = new showdown.Converter();
+      const converter = new showdown.Converter({
+        extensions: [highlight, ...bindings],
+        tables: true,
+        setFlavor: 'github',
+      });
       const html = converter.makeHtml(props.docs);
 
       const regex = /<(h[2-4]) [^>]+>(.+)<\/h[2-4]>/gi;
@@ -19,7 +36,7 @@ class Docs extends React.Component {
       const getStyle = (type) => {
         switch (type) {
           case 'h3': return styles.documentation__toc__h3;
-          case 'h4': return styles.documentation__toc__h3;
+          case 'h4': return styles.documentation__toc__h4;
           default: return styles.documentation__toc__h2;
         }
       };
@@ -46,8 +63,8 @@ class Docs extends React.Component {
     const { version } = this.props;
 
     const options = {
-      '0.1.0': 'v0.1.0',
-      '0.2.0': 'v0.2.0',
+      '1.0.0-beta3.9': 'v1.0.0-beta3.9',
+      '0.13.2': 'v0.13.2',
     };
 
     return (
@@ -56,21 +73,21 @@ class Docs extends React.Component {
           <div className={styles.documentation__toc__select}>
             <span>{options[version]}</span>
             <div>
-              {Object.keys(options).map(key =>
-                <span onClick={() => {
+              {Object.keys(options).map(key => (
+                <span key={key} onClick={() => {
                   window.location = `?v=${key}`;
                 }}>
                   {options[key]}
                 </span>
-              )}
+              ))}
             </div>
           </div>
           <ul className={styles.documentation__toc__ul}>
-            {tableOfContents && tableOfContents.map((item, index) =>
+            {tableOfContents && tableOfContents.map((item, index) => (
               <li key={index} className={item.style}>
                 <a href={`#${item.id}`} dangerouslySetInnerHTML={{ __html: item.text }} />
               </li>
-            )}
+            ))}
           </ul>
         </div>
         <div className={styles.documentation__content} dangerouslySetInnerHTML={{ __html: html }} />

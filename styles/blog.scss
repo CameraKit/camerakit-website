@@ -1,0 +1,66 @@
+@import '../styles/variables';
+
+$row-height: 26px;
+$num-of-lines: 6;
+
+.blog {
+  margin-top: 100px;
+  &__item {
+    padding: 40px 0;
+    transition: all 0.2s linear;
+    border-bottom: 1px solid rgb(230,230,230);
+    &:hover {
+      z-index: 100;
+      box-shadow: 0 0 50px rgba(0,0,0,0.1);
+    }
+    &__title {
+      margin: 0;
+      padding: 0;
+    }
+    &__wrapper {
+      margin: 0 32px;
+      @media only screen and (min-width: 1000px) {
+        margin: 0;
+        width: 40%;
+        margin-left: 30%;
+      }
+    }
+    &__expanded__content {
+      text-align: justify;
+      img {
+        max-width: 100%;
+      }
+    }
+    &__content {
+      overflow: hidden;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      max-height: $row-height * $num-of-lines;
+      * {
+        margin: 0;
+        padding: 0;
+        font-size: 16px;
+        color: #77829b;
+        font-style: normal;
+        text-align: justify;
+        font-weight: normal;
+        line-height: $row-height;
+      }
+      figure, img {
+        display: none;
+      }
+    }
+    &__read {
+      color: $primary;
+      font-size: 14px;
+      padding: 10px 16px;
+      border-radius: 3px;
+      border: 1px solid $primary;
+      transition: all 0.1s linear;
+      &:hover {
+        color: white;
+        background-color: $primary;
+      }
+    }
+  }
+}

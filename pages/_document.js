@@ -34,7 +34,8 @@ export default class CameraKitWebsite extends Document {
           <meta name="msapplication-square310x310logo" content="/static/favicon/mstile-310x310.png" />
           <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet" /> 
           <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
-          <script 
+          <link rel="stylesheet" href="/static/default.css" />
+          <script
             dangerouslySetInnerHTML={{
               __html: `
                 window.dataLayer = window.dataLayer || [];

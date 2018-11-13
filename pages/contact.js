@@ -2,7 +2,7 @@ import React from 'react';
 
 import Page from '../components/page';
 import SocialMeta from '../components/social-meta';
-import MediaQueryConsumer from '../components/media-query';
+import { MediaQueryConsumer } from '../components/media-query';
 import Header from '../components/header';
 import Navbar from '../components/navbar';
 import ContactForm from '../components/contact/contact-form';
