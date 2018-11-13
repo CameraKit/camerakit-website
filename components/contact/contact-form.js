@@ -2,10 +2,6 @@ import React from 'react';
 import isomorphicFetch from 'isomorphic-unfetch';
 import { Transition } from 'react-spring';
 
-import styles from '../../styles/contact-form.scss';
-import intro from '../../styles/intro.scss';
-import global from '../../styles/styles.global.scss';
-
 class ContactForm extends React.Component {
   constructor(props) {
     super(props);
@@ -54,10 +50,117 @@ class ContactForm extends React.Component {
     const { message, success } = this.state;
 
     return (
-      <section className={styles.intro}>
-        <div className={`${global.container} ${global['container--large']}`}>
-          <div className={intro.content}>
-            <h2 className={`${global['heading--large']} ${intro.subheading}`}>
+      <section className="intro">
+        <style jsx>{`
+          .intro {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            min-height: 100vh;
+            padding-top: 8rem;
+            text-align: center;
+          }
+          
+          .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 25rem;
+          }
+          
+          .flexWrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+          }
+          
+          .contactWrapper {
+            background-color: #fff;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            border-radius: 0.25rem;
+            overflow: hidden;
+            margin: 0 auto;
+            width: 70%;
+            max-width: 500px;
+          }
+          
+          .textAreaWrapper {
+            height: 7rem; 
+          }
+          
+          .input {
+            min-width: 0;
+            width: 100%;
+            font-size: 1rem;
+            padding: 0.75rem;
+            border: none;
+          }
+
+          .input:active, .input:focus {
+            outline: none;
+          }
+          
+          .textArea {
+            height: 100%;
+            resize: none;
+          }
+          
+          .submitButton {
+            background-color: #fff;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            border-radius: 0.25rem;
+            margin: 0 auto;
+            padding: 0px;
+            width: 150px;
+            height: 40px; 
+            font-size: 1rem;
+            font-weight: 500;
+            color: #6b60e9;
+            text-transform: uppercase;
+            transition: all .3s ease;
+            outline: none;
+            border: none;
+          }
+          
+          .submitButton:hover, .submitButton:active, .submitButton:focus {
+            outline: none;
+            background-color: transparentize(#6b60e9, 0.8);
+            cursor: pointer;
+          }
+
+          .message {
+            margin-top: 0.5rem;
+            font-weight: 400;
+            font-size: 1.2rem;
+            color: #3E445B;
+            transition: .3s ease;
+            opacity: 0;
+          }
+          
+          .successMessage {
+            margin-top: 6rem;
+            margin: 6rem auto auto auto;
+            max-width: 30rem;
+            font-weight: 400;
+            font-size: 1.5rem;
+            color: #3E445B;
+            transition: .3s ease;
+            opacity: 1;
+          }
+          
+          .show {
+            opacity: 1;
+          }
+          
+          @media (min-width: 48em) {
+            .intro {
+              padding: 20rem 0;
+            }
+          }
+        `}</style>
+        <div className="container container--large">
+          <div className="content">
+            <h2 className="heading--large subheading">
               {'Contact Us'}
             </h2>
           </div>
@@ -72,13 +175,13 @@ class ContactForm extends React.Component {
               ? style => (
                 <div style={style}>
                   <form
-                    className={styles.form}
+                    className="form"
                     onSubmit={this.handleSubmit.bind(this)}
                   >
-                    <div className={styles.container}>
-                      <div className={styles.contactWrapper}>
+                    <div className="container">
+                      <div className="contactWrapper">
                         <input
-                          className={styles.input}
+                          className="input"
                           ref={(input) => { this.name = input; }}
                           placeholder="Name"
                           name="name"
@@ -86,9 +189,9 @@ class ContactForm extends React.Component {
                           required
                         />
                       </div>
-                      <div className={styles.contactWrapper}>
+                      <div className="contactWrapper">
                         <input
-                          className={styles.input}
+                          className="input"
                           ref={(input) => { this.email = input; }}
                           placeholder="Email"
                           name="email"
@@ -96,9 +199,9 @@ class ContactForm extends React.Component {
                           required
                         />
                       </div>
-                      <div className={styles.contactWrapper}>
+                      <div className="contactWrapper">
                         <input
-                          className={styles.input}
+                          className="input"
                           ref={(input) => { this.company = input; }}
                           placeholder="Company"
                           name="company"
@@ -106,9 +209,9 @@ class ContactForm extends React.Component {
                           required
                         />
                       </div>
-                      <div className={`${styles.contactWrapper} ${styles.textAreaWrapper}`}>
+                      <div className="contactWrapper textAreaWrapper">
                         <textarea
-                          className={`${styles.input} ${styles.textArea}`}
+                          className="input textArea"
                           ref={(input) => { this.message = input; }}
                           placeholder="Message"
                           name="message"
@@ -116,7 +219,7 @@ class ContactForm extends React.Component {
                           required
                         />
                       </div>
-                      <button className={styles.submitButton} type="submit">
+                      <button className="submitButton" type="submit">
                         {message && success === false
                           ? 'Try Again'
                           : 'Submit'
@@ -129,7 +232,7 @@ class ContactForm extends React.Component {
 
               : style => (
                 <div style={style}>
-                  <p className={styles.successMessage}>
+                  <p className="successMessage">
                     {message}
                   </p>
                 </div>
@@ -137,7 +240,7 @@ class ContactForm extends React.Component {
             }
           </Transition>
         </div>
-        <p className={`${styles.message} ${message && success === false ? styles.show : ''}`}>
+        <p className={`message ${message && success === false ? 'show' : ''}`}>
           {message}
         </p>
       </section>
