@@ -4,6 +4,7 @@ import Container from '../container';
 import Expensify from '../icons/companies/expensify';
 import Goosechase from '../icons/companies/goosechase';
 import InFitting from '../icons/companies/infitting';
+import InLoop from '../icons/companies/inloop';
 
 export default () => (
   <Container wide>
@@ -13,6 +14,7 @@ export default () => (
           <div><Expensify /></div>
           <div><Goosechase /></div>
           <div><InFitting /></div>
+          <div><InLoop /></div>
         </div>
       </BackgroundSlider>
 
