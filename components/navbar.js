@@ -117,17 +117,9 @@ class MobileNavbar extends React.Component {
         <div className="menu">
           <ul>
             <li><a href="/docs">Docs</a></li>
-            <li><a href="/blog">Blog</a></li>
+            <li><a href="/docs">Docs</a></li>            
+            <li><a href="/contact">Contact</a></li>
             <li className="separator" />
-            <li>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://twitter.com/withcamerakit"
-              >
-                Twitter
-              </a>
-            </li>
             <li>
               <a
                 target="_blank"
