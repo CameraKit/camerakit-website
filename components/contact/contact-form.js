@@ -59,13 +59,26 @@ class ContactForm extends React.Component {
             min-height: 100vh;
             padding-top: 8rem;
             text-align: center;
+            background-image: linear-gradient(to bottom, #CCCFEA 0%, #FFFFFF 100%);
+          }
+
+          .heading {
+            font-size: 2.4rem;
+            font-weight: 300;
+          }
+
+          .container-small {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 15vh;
           }
           
           .container {
             display: flex;
             flex-direction: column;
             justify-content: space-around;
-            height: 25rem;
+            height: 45vh;
           }
           
           .flexWrapper {
@@ -77,7 +90,7 @@ class ContactForm extends React.Component {
           .contactWrapper {
             background-color: #fff;
             box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-            border-radius: 0.25rem;
+            border-radius: 6px;
             overflow: hidden;
             margin: 0 auto;
             width: 70%;
@@ -91,8 +104,8 @@ class ContactForm extends React.Component {
           .input {
             min-width: 0;
             width: 100%;
-            font-size: 1rem;
-            padding: 0.75rem;
+            font-size: 1.1rem;
+            padding: 1.2rem 1.4rem;
             border: none;
           }
 
@@ -108,13 +121,13 @@ class ContactForm extends React.Component {
           .submitButton {
             background-color: #fff;
             box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-            border-radius: 0.25rem;
+            border-radius: 6px;
             margin: 0 auto;
             padding: 0px;
             width: 150px;
-            height: 40px; 
+            height: 50px;
             font-size: 1rem;
-            font-weight: 500;
+            font-weight: 600;
             color: #6b60e9;
             text-transform: uppercase;
             transition: all .3s ease;
@@ -158,14 +171,14 @@ class ContactForm extends React.Component {
             }
           }
         `}</style>
-        <div className="container container--large">
+        <div className="container-small">
           <div className="content">
-            <h2 className="heading--large subheading">
+            <h1 className="heading">
               {'Contact Us'}
-            </h2>
+            </h1>
           </div>
         </div>
-        <div className={global.container}>
+        <div className="container">
           <Transition
             from={{ opacity: 0, height: 0 }}
             enter={{ opacity: 1, height: 400 }}
@@ -173,7 +186,7 @@ class ContactForm extends React.Component {
           >
             {success === false
               ? style => (
-                <div style={style}>
+                <div>
                   <form
                     className="form"
                     onSubmit={this.handleSubmit.bind(this)}
