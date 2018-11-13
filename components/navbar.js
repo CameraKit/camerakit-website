@@ -221,13 +221,13 @@ const DesktopNavbar = ({ full }) => (
         <CameraKitLogo />
       </a>
       <span className="flex" />
-      <Link>
+      <Link href="/docs">
         <a href="/docs" className="link">Docs</a>
       </Link>
-      <Link>
+      <Link href="/blog">
         <a href="/blog" className="link">Blog</a>
       </Link>
-      <Link>
+      <Link href="/contact">
         <a href="/contact" className="link">Contact</a>
       </Link>
       <span className="separator" />
@@ -241,8 +241,8 @@ const DesktopNavbar = ({ full }) => (
       </a>
       <a
         target="_blank"
-        className="link button"
-        rel="noopener noreferrer circle"
+        rel="noopener noreferrer"
+        className="link button circle"
         href="https://github.com/CameraKit/camerakit-android"
       >
         <GithubLogo />
