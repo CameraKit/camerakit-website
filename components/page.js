@@ -60,7 +60,7 @@ export default withMediaQuery(({ title, description, children }) => (
           -moz-osx-font-smoothing: grayscale;
           scroll-behavior: smooth;
         }
-        body, input, select, textarea, button {
+        input, select, textarea, button {
           font-family: inherit;
           font-size: inherit;
         }
