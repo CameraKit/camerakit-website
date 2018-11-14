@@ -9,13 +9,14 @@ import SocialMeta from '../components/social-meta';
 import { MediaQueryConsumer } from '../components/media-query';
 
 import Features from '../components/home/features';
+import Stats from '../components/home/stats';
 import Intro from '../components/home/intro';
 import CompanySlider from '../components/home/company-slider';
 
 export default () => (
   <Page title="CameraKit | Unified Camera Library for Android">
     <SocialMeta
-      image={'/static/il_footer.png'}
+      image="/static/il_footer.png"
       title="CameraKit"
       url="https://camerakit.io"
       description="CameraKit is an open-source library to support the Android Camera 1 and 2 APIs. Massively increase stability and reliability of photo and video capture on all Android devices."
@@ -36,6 +37,7 @@ export default () => (
     <Intro />
     <CompanySlider />
     <Features />
+    <Stats />
     <Footer />
   </Page>
 );

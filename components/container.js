@@ -31,12 +31,12 @@ export default ({
         ${dark ? 'color: #f1f1f1;' : ''}
         ${gray ? 'background-color: #f6f6f6;' : ''}
         ${wide && !overflow ? 'overflow: hidden;' : ''}
-        ${minHeight ? `min-height: ${minHeight}px;` : ''}
+        ${minHeight ? `min-height: ${minHeight};` : ''}
         ${vCenter ? 'display: flex; align-items: center;' : ''}
         ${
         gradientBackground
           ? `
-          background-image: linear-gradient(to bottom, #CBCee9, #DDE1E9);
+          background-image: linear-gradient(to bottom, transparent, #DDE1E9);
         `
           : ''
         }
@@ -57,7 +57,7 @@ export default ({
       // CSS only media query for mobile
       @media screen and (max-width: 640px) {
         div {
-          padding: ${padding ? '4rem' : '0'} ${wide ? '0' : '1rem'};
+          padding: ${padding ? '4rem' : '0'} ${wide ? '0' : '2rem'};
           ${mobileStyle || ''}
         }
       }

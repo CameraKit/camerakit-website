@@ -21,12 +21,13 @@ export default ({ duration, children }) => (
             transform: translate3d(0, 0, 0);
           }
           to {
-            transform: translate3d(-50%, 0, 0);
+            transform: translate3d(-33.33%, 0, 0);
           }
         }
       `}
     </style>
     <div className="slider-content-wrapper">
+      <div>{children}</div>
       <div>{children}</div>
       <div>{children}</div>
     </div>

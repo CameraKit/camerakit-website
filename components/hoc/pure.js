@@ -6,5 +6,5 @@ export default function (Comp) {
     render() {
       return <Comp {...this.props} />;
     }
-  }
+  };
 }

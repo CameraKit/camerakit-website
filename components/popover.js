@@ -5,8 +5,18 @@ export default class Popover extends PureComponent {
   state = {
     show: false,
     top: true,
-    left: false
+    left: false,
   };
+
+  componentDidMount() {
+    window.addEventListener('mousedown', this.handleClickOutside);
+    window.addEventListener('touchstart', this.handleClickOutside);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('mousedown', this.handleClickOutside);
+    window.removeEventListener('touchstart', this.handleClickOutside);
+  }
 
   onMouseEnter = () => {
     let top = Infinity;
@@ -24,7 +34,7 @@ export default class Popover extends PureComponent {
       show: true,
       left: right < 100,
       right: left < 100,
-      bottom: top < (this.props.top || 110)
+      bottom: top < (this.props.top || 110),
     });
   };
 
@@ -32,25 +42,16 @@ export default class Popover extends PureComponent {
     this.setState({ show: false });
   };
 
-  handleClickOutside = ev => {
+  handleClickOutside = (ev) => {
+    const { show } = this.state;
     if (
-      this.state.show &&
-      this.containerEl &&
-      (this.containerEl === ev.target || this.containerEl.contains(ev.target))
+      show
+      && this.containerEl
+      && (this.containerEl === ev.target || this.containerEl.contains(ev.target))
     ) {
       this.onMouseLeave();
     }
   };
-
-  componentDidMount() {
-    window.addEventListener('mousedown', this.handleClickOutside);
-    window.addEventListener('touchstart', this.handleClickOutside);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('mousedown', this.handleClickOutside);
-    window.removeEventListener('touchstart', this.handleClickOutside);
-  }
 
   render() {
     const {
@@ -58,9 +59,15 @@ export default class Popover extends PureComponent {
       left: _left,
       right: _right,
       content,
-      children
+      children,
     } = this.props;
-    const { show, left, right, bottom } = this.state;
+    
+    const {
+      show,
+      left,
+      right,
+      bottom,
+    } = this.state;
 
     return (
       <div
@@ -145,7 +152,7 @@ export default class Popover extends PureComponent {
             show,
             bottom: _bottom || bottom,
             left: _left || left,
-            right: _right || right
+            right: _right || right,
           })}
         >
           {content}
