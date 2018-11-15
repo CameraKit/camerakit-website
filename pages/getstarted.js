@@ -11,7 +11,7 @@ import { MediaQueryConsumer } from '../components/media-query';
 function GetStartedPage({ router }) {
   const { item, from } = router.query;
   return (
-    <Page title="CameraKit | Getting Started">
+    <Page title="CameraKit | Getting Started with CameraKit">
       <MediaQueryConsumer>
         {({ isMobile }) => (
           <Header

@@ -26,7 +26,7 @@ class BlogPage extends React.Component {
   render() {
     const { feed } = this.props;
     return (
-      <Page title="CameraKit | Blog">
+      <Page title="CameraKit | Latest News">
         <MediaQueryConsumer>
           {({ isMobile }) => (
             <Header
