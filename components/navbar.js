@@ -116,6 +116,7 @@ class MobileNavbar extends React.Component {
         <div className="menu">
           <ul>
             <li><a href="/docs">Docs</a></li>
+            <li><a href="/blog">Blog</a></li>
             <li><a href="/contact">Contact</a></li>
             <li className="separator" />
             <li>
