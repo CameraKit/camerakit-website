@@ -195,7 +195,7 @@ export default withPure(() => (
             </h2>
           </div>
           <p>
-            {'Congratulations! You’ve successfully integrated CameraKit. CameraKit is a powerful framework with lots of possibilities. Dive into our Learn page to step by step tutorials on setup and image capture. See all the possible options and settings of CameraKit in our Documentation.'}
+            {'Congratulations! You’ve successfully integrated CameraKit. CameraKit is a powerful framework with lots of possibilities. Dive into our Learn page for step by step tutorials on setup and image capture. See all the possible options and settings of CameraKit in our Documentation.'}
           </p>
         </div>
         <div className="button">

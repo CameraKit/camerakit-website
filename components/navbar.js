@@ -1,6 +1,5 @@
 import React from 'react';
 import { withRouter } from 'next/router';
-import Link from 'next/link';
 
 import { MediaQueryConsumer } from './media-query';
 
@@ -117,7 +116,7 @@ class MobileNavbar extends React.Component {
         <div className="menu">
           <ul>
             <li><a href="/docs">Docs</a></li>
-            <li><a href="/docs">Docs</a></li>
+            <li><a href="/blog">Blog</a></li>
             <li><a href="/contact">Contact</a></li>
             <li className="separator" />
             <li>
@@ -214,15 +213,9 @@ const DesktopNavbar = ({ full }) => (
         <CameraKitLogo />
       </a>
       <span className="flex" />
-      <Link href="/docs">
-        <a href="/docs" className="link">Docs</a>
-      </Link>
-      <Link href="/blog">
-        <a href="/blog" className="link">Blog</a>
-      </Link>
-      <Link href="/contact">
-        <a href="/contact" className="link">Contact</a>
-      </Link>
+      <a href="/docs" className="link">Docs</a>
+      <a href="/blog" className="link">Blog</a>
+      <a href="/contact" className="link">Contact</a>
       <span className="separator" />
       <a
         target="_blank"

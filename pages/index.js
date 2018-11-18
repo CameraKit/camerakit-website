@@ -14,7 +14,7 @@ import Intro from '../components/home/intro';
 import CompanySlider from '../components/home/company-slider';
 
 export default () => (
-  <Page title="CameraKit | Unified Camera Library for Android">
+  <Page title="CameraKit | Unified Camera Platform">
     <SocialMeta
       image="/static/il_footer.png"
       title="CameraKit"
