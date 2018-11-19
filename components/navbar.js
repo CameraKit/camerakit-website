@@ -238,10 +238,23 @@ const DesktopNavbar = ({ full }) => (
 );
 
 export default withRouter(({ full }) => (
-  <MediaQueryConsumer>
-    {(media) => {
-      if (media.isMobile) return <MobileNavbar />;
-      return <DesktopNavbar full={full} />;
-    }}
-  </MediaQueryConsumer>
+  <div className="fill">
+    <style jsx>{`
+      .fill {
+        width: 100%;
+      }
+      @media(min-width: 640px) {
+        .mobile {
+          display: none
+        }
+      }
+      @media(max-width: 640px) {
+        .desktop {
+          display: none
+        }
+      }
+    `}</style>
+    <div className="fill" className="mobile"><MobileNavbar /></div>
+    <div className="fill" className="desktop"><DesktopNavbar full={full} /></div>
+  </div>
 ));
