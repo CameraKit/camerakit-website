@@ -79,7 +79,6 @@ export default class extends PureComponent {
             .fixed {
               position: fixed;
               top: ${offset || 0}px;
-              pointer-events: none;
             }
             .scrolled {
               position: fixed;
