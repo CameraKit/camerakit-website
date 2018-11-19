@@ -243,7 +243,7 @@ export default withRouter(({ full }) => (
       .fill {
         width: 100%;
       }
-      @media(min-width: 640px) {
+      @media(min-width: 641px) {
         .mobile {
           display: none
         }
