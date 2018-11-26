@@ -38,7 +38,15 @@ class Subscribe extends React.Component {
                         font-size: 1.1rem;
                         text-transform: uppercase;
                       }
-
+                      hr {
+                        padding: 0;
+                        width: 100%;
+                        height: 1px;
+                        border: none;
+                        display: block;
+                        margin: 0 0 8rem 0;
+                        background: rgba(220,220,220,0.5);
+                      }
                       .subscribe {
                         margin: 0 auto 5rem;
                         max-width: 30rem;
@@ -106,6 +114,7 @@ class Subscribe extends React.Component {
                       }                  
                     `}
                   </style>
+                  <hr />
                   <div className="subscribe">
                     <h2 className="heading">
                       {'Stay Up To Date'}

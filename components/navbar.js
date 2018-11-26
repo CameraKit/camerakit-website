@@ -1,12 +1,9 @@
 import React from 'react';
 import { withRouter } from 'next/router';
 
-import { MediaQueryConsumer } from './media-query';
-
 import CameraKitLogo from './logo';
 import GithubLogo from './icons/github';
 import SpectrumLogo from './icons/spectrum';
-import RssLogo from './icons/rss';
 
 import MenuIcon from './ic_menu';
 

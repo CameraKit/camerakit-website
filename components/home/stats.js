@@ -11,14 +11,18 @@ export default () => (
             height: 1px;
             border: none;
             display: block;
-            max-width: 40rem;
             margin: 0 0 8rem 0;
-            background: rgb(220,220,220);
+            background: rgba(220,220,220,0.5);
+          }
+          .stats {
+            display: flex;
+            justify-content: space-between;
           }
           .stats__item {
             display: flex;
             align-items: center;
             flex-direction: column;
+            flex-basis: 30%;
           }
           .item__icon {
             margin-bottom: 4rem;
@@ -31,9 +35,9 @@ export default () => (
           }
         `}
       </style>
+      <hr />
       <div className="stats">
         <div className="stats__item">
-          <hr />
           <div className="item__icon">
             <img src="../../static/ic_stats.svg" alt="Easy Implemnentation" />
           </div>
@@ -47,7 +51,6 @@ export default () => (
           </div>
         </div>
         <div className="stats__item">
-          <hr />
           <div className="item__icon">
             <img src="../../static/ic_stats.svg" alt="Easy Implemnentation" />
           </div>
@@ -61,7 +64,6 @@ export default () => (
           </div>
         </div>
         <div className="stats__item">
-          <hr />
           <div className="item__icon">
             <img src="../../static/ic_stats.svg" alt="Easy Implemnentation" />
           </div>

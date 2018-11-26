@@ -37,7 +37,6 @@ export default () => (
     <Intro />
     <CompanySlider />
     <Features />
-    <Stats />
     <Footer />
   </Page>
 );

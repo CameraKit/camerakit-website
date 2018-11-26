@@ -114,7 +114,8 @@ export default () => (
       </div>
       <div className="get-started">
         <div className="callout-button">
-          <h2>CameraKit currently supports the Android operating system.</h2>
+          <h3>CameraKit currently supports the Android operating system.</h3>
+          <br/>
           <Button href="/getstarted" invert>
             Get Started
           </Button>
