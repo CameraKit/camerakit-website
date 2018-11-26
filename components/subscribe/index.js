@@ -111,7 +111,7 @@ class Subscribe extends React.Component {
                       {'Stay Up To Date'}
                     </h2>
                     <p className="paragraph">
-                      {'We sometimes send out important updates concerning CameraKit. Provide your email if you are interested in receiving emails from us.'}
+                      {'We sometimes send out important updates regarding CameraKit. Provide your email if you are interested in very infrequent messages about progress, improvements, and changes.'}
                     </p>
                     <form
                       className="form"
