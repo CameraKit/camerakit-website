@@ -47,6 +47,16 @@ class Subscribe extends React.Component {
                         margin: 0 0 8rem 0;
                         background: rgba(220,220,220,0.5);
                       }
+                      .sr-only {
+                        position: absolute;
+                        width: 1px;
+                        height: 1px;
+                        padding: 0;
+                        margin: -1px;
+                        overflow: hidden;
+                        clip: rect(0,0,0,0);
+                        border: 0;
+                      }
                       .subscribe {
                         margin: 0 auto 5rem;
                         max-width: 30rem;
@@ -111,7 +121,12 @@ class Subscribe extends React.Component {
                         min-width: 30rem;
                         min-height: 3rem;
                         color: #6b60e9;
-                      }                  
+                      }
+                      label {
+                        flex: 1 1 70%;
+                        display: flex;
+                        justify-content: flex-start;
+                      }
                     `}
                   </style>
                   <hr />
@@ -130,7 +145,10 @@ class Subscribe extends React.Component {
                       }}
                     >
                       <div className="inputWrapper">
-                        <input ref={(input) => { this.email = input; }} name="email" placeholder="you@domain.com" className="input" type="email" required />
+                        <label htmlFor="email">
+                          <input ref={(input) => { this.email = input; }} id="email" name="email" placeholder="you@domain.com" className="input" type="email" required />
+                          <span className="sr-only">Email</span>
+                        </label>
                         <button className="submit" type="submit">
                           {status === 'sending' ? 'Sending...' : 'Subscribe'}
                         </button>
