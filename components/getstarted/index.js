@@ -10,7 +10,7 @@ export default withPure(() => (
     wide
     overflow
     minHeight="96vh"
-    mobileStyle={'min-height: 96vh;'}
+    mobileStyle="min-height: 96vh;"
     style={{
       display: 'flex',
       maxWidth: '52rem',
@@ -92,7 +92,7 @@ export default withPure(() => (
               {'Getting Started with CameraKit'}
             </h1>
             <p>
-              {'This page will help you install and integrate CameraKit into your Android Project. If this is your first time using Android we reccomend taking a look at the Android Developer Guides before you get started.'}
+              {'This page helps you install and integrate CameraKit into your Android project. We recommend taking a look at the Developer Guides before you get started if this is your first time developing for Android. Here we will walk you through installation and basic usage to get you started on CameraKit.'}
             </p>
           </div>
           <div>
@@ -103,7 +103,7 @@ export default withPure(() => (
               </h2>
             </div>
             <p>
-              {'Install CameraKit through the app-level biuld.gradle file of your Android project. In the dependencies section add the following 4 dependencies:'}
+              {'Install CameraKit through the app-level build.gradle file for your Android project. In the dependencies section, add the following four dependencies:'}
             </p>
             <code>
               <div><span>{'dependencies {'}</span></div>
@@ -114,7 +114,7 @@ export default withPure(() => (
               <div><span>{'}'}</span></div>
             </code>
             <p>
-              {'CameraKit 1.0.0-beta3.9 relies on 3 dependencies in addition to the CameraKit library; our own JPEGKit and 2 Kotlin libraries.'}
+              {'CameraKit 1.0.0-beta3.9 relies on three additional dependencies, in addition to the CameraKit library, which are our own JPEGKit and two other Kotlin libraries.'}
             </p>
           </div>
           <div>
@@ -125,7 +125,7 @@ export default withPure(() => (
               </h2>
             </div>
             <p>
-              {'There are two components to creating a CameraKit View. The first is the xml layout file. Below is an example CameraKitView with several properties set. To see all the settable options check out our Documentation.'}
+              {'There are two components when creating a CameraKitView. First, the XML Layout file. Below is an example for CameraKitView with several properties set. To see all settable options, check out our <a href="/docs">Docs</a>.'}
             </p>
             <code>
               <div><span>{'<com.camerakit.CameraKitView'}</span></div>
@@ -140,7 +140,7 @@ export default withPure(() => (
               <div className="c-i1"><span className="c-b">{"app"}</span><span className="c-r">{':camera_permissions="camera"'}</span> <span>{'/>'}</span></div>
             </code>
             <p>
-              {'Now, initialize the CameraKitView in the corresponding Java activity and override the following methods.'}
+              {'Now, initialize the CameraKitView in the corresponding Java activity and override the following methods:'}
             </p>
             <code>
               <div><span>{'private CameraKitView cameraKitView;'}</span></div>
@@ -183,7 +183,7 @@ export default withPure(() => (
               <div><span>{'}'}</span></div>
             </code>
             <p>
-              {'The first 5 methods handle lifecycle changes in the application, while the final method handles the camera permissions. Run the applicaiton on your device to see the live camera preview.'}
+              {'The first five methods handle lifecycle changes in the application, while the final method handles camera permissions. Run the application on your device to see the live camera preview.'}
             </p>
           </div>
         </div>
@@ -195,11 +195,13 @@ export default withPure(() => (
             </h2>
           </div>
           <p>
-            {'Congratulations! You’ve successfully integrated CameraKit. CameraKit is a powerful framework with lots of possibilities. Dive into our Learn page for step by step tutorials on setup and image capture. See all the possible options and settings of CameraKit in our Documentation.'}
+            {'Congratulations! You have successfully integrated CameraKit into your Android project. CameraKit is a powerful platform with many possibilities. Dive into our Docs for step-by-step tutorials on setup and image capture and learn more about the possible options and settings of CameraKit.'}
           </p>
         </div>
         <div className="button">
-          <Button href="/docs" callout>Documentation</Button>
+          <Button href="/docs" callout>
+            Documentation
+          </Button>
         </div>
       </section>
     </Container>

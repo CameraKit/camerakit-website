@@ -1,12 +1,9 @@
 import React from 'react';
 import { withRouter } from 'next/router';
 
-import { MediaQueryConsumer } from './media-query';
-
 import CameraKitLogo from './logo';
 import GithubLogo from './icons/github';
 import SpectrumLogo from './icons/spectrum';
-import RssLogo from './icons/rss';
 
 import MenuIcon from './ic_menu';
 
@@ -115,14 +112,15 @@ class MobileNavbar extends React.Component {
         </div>
         <div className="menu">
           <ul>
-            <li><a href="/docs">Docs</a></li>
-            <li><a href="/blog">Blog</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li><a href="/docs" alt="CameraKit's Documentation">Docs</a></li>
+            <li><a href="/blog" alt="CameraKit's Blog">Blog</a></li>
+            <li><a href="/contact" alt="CameraKit's Contact Us page">Contact</a></li>
             <li className="separator" />
             <li>
               <a
                 target="_blank"
                 rel="noopener noreferrer"
+                alt="CameraKit's Spectrum.chat"
                 href="https://spectrum.chat/camerakit"
               >
                 Spectrum
@@ -132,6 +130,7 @@ class MobileNavbar extends React.Component {
               <a
                 target="_blank"
                 rel="noopener noreferrer"
+                alt="CameraKit's Github"
                 href="https://github.com/CameraKit/camerakit-android"
               >
                 Github
@@ -221,6 +220,7 @@ const DesktopNavbar = ({ full }) => (
         target="_blank"
         rel="noopener noreferrer"
         className="link button circle"
+        alt="CameraKit's Spectrum.chat"
         href="https://spectrum.chat/camerakit"
       >
         <SpectrumLogo />
@@ -229,6 +229,7 @@ const DesktopNavbar = ({ full }) => (
         target="_blank"
         rel="noopener noreferrer"
         className="link button circle"
+        alt="CameraKit's Github"
         href="https://github.com/CameraKit/camerakit-android"
       >
         <GithubLogo />

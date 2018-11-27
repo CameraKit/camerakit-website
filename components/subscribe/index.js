@@ -38,7 +38,25 @@ class Subscribe extends React.Component {
                         font-size: 1.1rem;
                         text-transform: uppercase;
                       }
-
+                      hr {
+                        padding: 0;
+                        width: 100%;
+                        height: 1px;
+                        border: none;
+                        display: block;
+                        margin: 0 0 8rem 0;
+                        background: rgba(220,220,220,0.5);
+                      }
+                      .sr-only {
+                        position: absolute;
+                        width: 1px;
+                        height: 1px;
+                        padding: 0;
+                        margin: -1px;
+                        overflow: hidden;
+                        clip: rect(0,0,0,0);
+                        border: 0;
+                      }
                       .subscribe {
                         margin: 0 auto 5rem;
                         max-width: 30rem;
@@ -103,15 +121,21 @@ class Subscribe extends React.Component {
                         min-width: 30rem;
                         min-height: 3rem;
                         color: #6b60e9;
-                      }                  
+                      }
+                      label {
+                        flex: 1 1 70%;
+                        display: flex;
+                        justify-content: flex-start;
+                      }
                     `}
                   </style>
+                  <hr />
                   <div className="subscribe">
                     <h2 className="heading">
                       {'Stay Up To Date'}
                     </h2>
                     <p className="paragraph">
-                      {'We sometimes send out important updates concerning CameraKit. Provide your email if you are interested in receiving emails from us.'}
+                      {'We sometimes send out important updates regarding CameraKit. Provide your email if you are interested in very infrequent messages about progress, improvements, and changes.'}
                     </p>
                     <form
                       className="form"
@@ -121,7 +145,10 @@ class Subscribe extends React.Component {
                       }}
                     >
                       <div className="inputWrapper">
-                        <input ref={(input) => { this.email = input; }} name="email" placeholder="you@domain.com" className="input" type="email" required />
+                        <label htmlFor="email">
+                          <input ref={(input) => { this.email = input; }} id="email" name="email" placeholder="you@domain.com" className="input" type="email" required />
+                          <span className="sr-only">Email</span>
+                        </label>
                         <button className="submit" type="submit">
                           {status === 'sending' ? 'Sending...' : 'Subscribe'}
                         </button>

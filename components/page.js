@@ -20,6 +20,7 @@ export default withMediaQuery(({ title, description, children }) => (
           || 'CameraKit is the easiest way to use Camera in your mobile application.'
         }
       />
+      <meta name="theme-color" content="#6B60E9" />
     </Head>
     <style jsx>
       {`

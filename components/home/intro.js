@@ -134,9 +134,9 @@ export default () => (
         </style>
         <div className="intro">
           <div className="intro__left">
-            <h1 className="fw4">Camera Dev. Made Easy.</h1>
+            <h1 className="fw4">Camera that works for you every time, worry-free</h1>
             <p>
-              {'CameraKit is an open-source library to support the Android Camera 1 and 2 APIs. Massively increase stability and reliability of photo and video capture on all Android devices.'}
+              {'CameraKit helps you add reliable camera to your app quickly. Our open source camera platform provides consistent capture results, service that scales, and endless camera possibilities.'}
             </p>
             <div className="actions">
               <div className="main-button">

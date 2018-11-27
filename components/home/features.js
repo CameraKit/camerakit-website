@@ -54,7 +54,7 @@ export default () => (
       <div className="features">
         <div className="features__highlight">
           <h1 className="fw1 f-highlight f-left">
-            {'High-level, simple, and extremely performant'}
+            {'Predictable, extensible, and performant camera software'}
           </h1>
         </div>
         <div className="features__grid">
@@ -67,46 +67,46 @@ export default () => (
                 Easy Implementation
               </h3>
               <p className="description">
-                CameraKit fits into your existing stack and can be run up almost immediately. Implement the library and start improving reliability immediately.
+                CameraKit fits into your existing stack, sitting between your app and the operating system, to improve camera capture reliability almost immediately.
               </p>
             </div>
           </div>
           <div className="features__item">
             <div className="item__icon">
-              <img src="../../static/ic_tested.svg" alt="Easy Implemnentation" />
+              <img src="../../static/ic_tested.svg" alt="Time Savings" />
             </div>
             <div className="item__text">
               <h3 className="title">
-                Extensively Tested
+                Time Savings
               </h3>
               <p className="description">
-                CameraKit has been tested across thousands of Android devices, major Android OS versions, and is ready for upcoming flagship Android device releases.
+              CameraKit doesn't require you to rewrite code, just add our software in minutes saving significant development hours and producing great results.
               </p>
             </div>
           </div>
           <div className="features__item">
             <div className="item__icon">
-              <img src="../../static/ic_dual_cam.svg" alt="Easy Implemnentation" />
+              <img src="../../static/ic_dual_cam.svg" alt="Advanced Functions" />
             </div>
             <div className="item__text">
               <h3 className="title">
-                All Camera Features
+                Advanced Functions
               </h3>
               <p className="description">
-                CameraKit supports all camera features, including seamless photo and video capture, auto permission handling, continuous and tap focus, scaling, and more.
+                CameraKit supports all camera features, including seamless still photo and video capture, auto permission handling, continuous and tap focus, and more.
               </p>
             </div>
           </div>
           <div className="features__item">
             <div className="item__icon">
-              <img src="../../static/ic_vr_addons.svg" alt="Easy Implemnentation" />
+              <img src="../../static/ic_vr_addons.svg" alt="Open Source" />
             </div>
             <div className="item__text">
               <h3 className="title">
-                Camera 1 and 2
+                Open Source
               </h3>
               <p className="description">
-                CameraKit supports and improves, hooking in the library in minutes, Camera 1 and 2 APIs while drastically improving stability and reliability for your app.
+                CameraKit is open source because we believe in the principles of open exchange, collaboration, and community, especially for camera software development.
               </p>
             </div>
           </div>
@@ -114,6 +114,8 @@ export default () => (
       </div>
       <div className="get-started">
         <div className="callout-button">
+          <h3>CameraKit currently supports the Android operating system.</h3>
+          <br/>
           <Button href="/getstarted" invert>
             Get Started
           </Button>
