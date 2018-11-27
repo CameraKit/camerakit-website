@@ -1,4 +1,4 @@
-# CameraKit Documentation - v1.0.0-beta3.9
+# CameraKit Documentation - v1.0.0-beta3.10
 
 1. Setup
 2. Basic Usage
@@ -6,15 +6,16 @@
 4. Attributes
 5. Permissions
 6. Event Listeners
+7. Additional Notes
 
 ## Setup
 Add CameraKit and Kotlin to the dependencies section of your <b>build.gradle</b>.
 ```groovy
 dependencies {
-    implementation 'com.camerakit:camerakit:1.0.0-beta3.9'
+    implementation 'com.camerakit:camerakit:1.0.0-beta3.10'
     implementation 'com.camerakit:jpegkit:0.1.0'
-    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.2.61'
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:0.24.0'
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.0'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.0.0'
 }
 ```
 
@@ -29,7 +30,7 @@ CameraKit relies on a <b>CameraKitView</b> in the XML layout.
     android:adjustViewBounds="true"/>
 ```
 
-Initialize the <b>CameraKitView</b> in the Java activity. <b>v1.0.0-beta3.9</b> requires five methods to be overloaded; four handling state, and one handling permissions.
+Initialize the <b>CameraKitView</b> in the Java activity. <b>v1.0.0-beta3.10</b> requires five methods to be overloaded; four handling state, and one handling permissions.
 
 ```java
 public class MainActivity extends AppCompatActivity {
@@ -341,3 +342,16 @@ cameraKitView.setErrorListener(new CameraKitView.ErrorListener() {
     }
 });
 ```
+
+## Additional Notes and Common Issues
+### onConfigurationChanged
+In <b>beta3.10</b> setting <b>onConfigurationChanged</b> to watch for screen size changes in <b>AndroidManifest.xml</b> will produce unexpected output when rotating the deivce on Android version 7.0 or higher. 
+
+If you encounter issues with rotation, first ensure the following line is NOT in your <b>AndroidManifest.xml</b>.
+
+```xml
+<activity>
+    android:configChanges="orientation|screenLayout"
+</activity>
+```
+
