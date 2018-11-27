@@ -12,12 +12,12 @@ RouterEvents.on('routeChangeComplete', (url) => {
 export default withMediaQuery(({ title, description, children }) => (
   <div>
     <Head>
-      <title>{title || 'CameraKit'}</title>
+      <title>{title || 'CameraKit | Camera software platform for developers'}</title>
       <meta
         name="description"
         content={
           description
-          || 'CameraKit is the easiest way to use Camera in your mobile application.'
+          || 'An open source camera platform that adds reliable photo and video capture to any application. Scalable, updated, and extensible camera functions instantly.'
         }
       />
       <meta name="theme-color" content="#6B60E9" />

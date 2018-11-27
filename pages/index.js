@@ -18,7 +18,7 @@ export default () => (
       image="/static/il_footer.png"
       title="CameraKit"
       url="https://camerakit.io"
-      description="CameraKit is an open-source library to support the Android Camera 1 and 2 APIs. Massively increase stability and reliability of photo and video capture on all Android devices."
+      description="An open source camera platform that adds reliable photo and video capture to any application. Scalable, updated, and extensible camera functions instantly."
     />
     <MediaQueryConsumer>
       {({ isMobile }) => (
