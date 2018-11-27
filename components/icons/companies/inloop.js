@@ -1,6 +1,6 @@
 export default () =>
   <svg 
-		viewBox="0 0 160 42"
+		viewBox="0 0 132 40"
     fillRule="evenodd"
     clipRule="evenodd"
     strokeLinejoin="round"
