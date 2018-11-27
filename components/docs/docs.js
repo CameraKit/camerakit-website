@@ -61,6 +61,7 @@ class Docs extends React.Component {
     const { version } = this.props;
 
     const options = {
+      '1.0.0-beta3.10': 'v1.0.0-beta3.10',
       '1.0.0-beta3.9': 'v1.0.0-beta3.9',
       '0.13.2': 'v0.13.2',
     };
