@@ -5,6 +5,8 @@ import Expensify from '../icons/companies/expensify';
 import Goosechase from '../icons/companies/goosechase';
 import InFitting from '../icons/companies/infitting';
 import InLoop from '../icons/companies/inloop';
+import Pega from '../icons/companies/pega';
+import AlphaApps from '../icons/companies/alphaapps';
 
 export default () => (
   <Container wide>
@@ -15,6 +17,8 @@ export default () => (
           <div><Goosechase /></div>
           <div><InFitting /></div>
           <div><InLoop /></div>
+          <div><Pega /></div>
+          <div><AlphaApps /></div>
         </div>
       </BackgroundSlider>
 

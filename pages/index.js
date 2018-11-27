@@ -9,7 +9,6 @@ import SocialMeta from '../components/social-meta';
 import { MediaQueryConsumer } from '../components/media-query';
 
 import Features from '../components/home/features';
-import Stats from '../components/home/stats';
 import Intro from '../components/home/intro';
 import CompanySlider from '../components/home/company-slider';
 
