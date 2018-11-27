@@ -45,7 +45,7 @@ class Subscribe extends React.Component {
                         border: none;
                         display: block;
                         margin: 0 0 8rem 0;
-                        background: rgba(220,220,220,0.5);
+                        background: rgba(220,220,220,0.0);
                       }
                       .sr-only {
                         position: absolute;
