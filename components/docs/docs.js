@@ -66,6 +66,66 @@ class Docs extends React.Component {
       '0.13.2': 'v0.13.2',
     };
 
+    const select = (
+      <div style={{ width: '100%' }}>
+        <style jsx>{`
+            .documentation__toc__select {
+              margin: 30px;
+              cursor: pointer;
+              padding: 10px 15px;
+              position: relative;
+              border-radius: 5px;
+              background-color: white;
+              box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            }
+            .documentation__toc__select:hover {
+              border-radius: 5px 5px 0 0;
+            }
+            .documentation__toc__select:hover > div {
+              display: block;
+            }
+            .documentation__toc__select > div {
+              left: 0;
+              right: 0;
+              top: 100%;
+              z-index: 100;
+              display: none;
+              overflow: hidden;
+              position: absolute;
+              background-color: white;
+              border-radius: 0 0 5px 5px;
+              box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+            }
+            .documentation__toc__select > div > span {
+              display: block;
+              padding: 10px 15px;
+              border-top: 1px solid rgba(0,0,0,0.05);
+            }
+            .documentation__toc__select > div > span:hover {
+              background-color: rgba(0,0,0,0.05);
+            }
+            @media screen and (max-width: 640px) {
+              .documentation__toc__select {
+                padding: 10px 15px;
+                margin: 130px;
+                display: block;
+              }
+            }
+          `}</style>
+        <div className="documentation__toc__select">
+          <span>{options[version]}</span>
+          <div>
+            {Object.keys(options).map(key => (
+              <span key={key} onClick={() => {
+                window.location = `?v=${key}`;
+              }}>
+                {options[key]}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    );
     return (
       <div className="documentation">
         <style jsx>{`
@@ -78,6 +138,11 @@ class Docs extends React.Component {
             margin-top: 30px;
             margin-left: 330px;
             padding-top: 100px;
+            width: -webkit-calc(100% - 330px);
+            width: expression(100% - 330px);
+            width: -moz-calc(100% - 330px);
+            width: -o-calc(100% - 330px);
+            width: calc(100% - 330px);
           }
           .documentation__toc {
             top: 0;
@@ -89,41 +154,6 @@ class Docs extends React.Component {
             margin-top: 96px;
             background-color: rgb(250,250,250);
             border-right: 1px solid rgb(240,240,240);
-          }
-          .documentation__toc__select {
-            margin: 30px;
-            cursor: pointer;
-            padding: 10px 15px;
-            position: relative;
-            border-radius: 5px;
-            background-color: white;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
-          }
-          .documentation__toc__select:hover {
-            border-radius: 5px 5px 0 0;
-          }
-          .documentation__toc__select:hover > div {
-            display: block;
-          }
-          .documentation__toc__select > div {
-            left: 0;
-            right: 0;
-            top: 100%;
-            z-index: 100;
-            display: none;
-            overflow: hidden;
-            position: absolute;
-            background-color: white;
-            border-radius: 0 0 5px 5px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-          }
-          .documentation__toc__select > div > span {
-            display: block;
-            padding: 10px 15px;
-            border-top: 1px solid rgba(0,0,0,0.05);
-          }
-          .documentation__toc__select > div > span:hover {
-            background-color: rgba(0,0,0,0.05);
           }
           .documentation__toc__ul {
             padding: 0 0 10px 0;
@@ -176,21 +206,34 @@ class Docs extends React.Component {
           }
           .documentation__docs_table tr:nth-child(even) {
             background-color: rgba(242,242,242,0.5)
-          }     
+          }
+          .documentation__select__mobile {
+            width: 100%;
+            display: none;
+          }
+          @media screen and (max-width: 640px) {
+            .documentation {
+              flex-direction: column;
+            }
+            .documentation__toc{
+              position: unset;
+              height: unset;
+              width: 100%;
+              display: none;
+            }
+            .documentation__content {
+              margin: 0px;
+              width: 100%;
+              padding-left: 10px;
+              padding-top: 0px;
+            }
+            .documentation__select__mobile {
+              display: flex;
+            }
+          }
         `}</style>
         <div className="documentation__toc">
-          <div className="documentation__toc__select">
-            <span>{options[version]}</span>
-            <div>
-              {Object.keys(options).map(key => (
-                <span key={key} onClick={() => {
-                  window.location = `?v=${key}`;
-                }}>
-                  {options[key]}
-                </span>
-              ))}
-            </div>
-          </div>
+          {select}
           <ul className="documentation__toc__ul">
             {tableOfContents && tableOfContents.map((item, index) => (
               <li key={index} className={item.style}>
@@ -198,6 +241,9 @@ class Docs extends React.Component {
               </li>
             ))}
           </ul>
+        </div>
+        <div className="documentation__select__mobile">
+          {select}
         </div>
         <div className="documentation__content" dangerouslySetInnerHTML={{ __html: html }} />
       </div>
