@@ -11,11 +11,13 @@ export default class DocsPage extends React.Component {
 
     const version = query.v || '1.0.0-beta3.10';
 
-    if (!process.browser) {
+    if (process.browser) {
+      window.location = '/docs';
+    } else {
       const fs = require('fs');
       const root = `./components/docs/versions/${version}/`;
 
-      const jsonPath = `${root  }pages.json`;
+      const jsonPath = `${root}pages.json`;
       if (fs.existsSync(jsonPath)) {
         const pages = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
         pages.forEach((page) => {

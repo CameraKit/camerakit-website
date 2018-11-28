@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'next/router';
+import Link from 'next/link';
 
 import CameraKitLogo from './logo';
 import GithubLogo from './icons/github';
@@ -96,9 +97,11 @@ class MobileNavbar extends React.Component {
           `}
         </style>
         <div className="content">
-          <a href="/" className="link home">
-            <CameraKitLogo withoutText />
-          </a>
+          <Link href="/">
+            <a href="/" className="link home">
+              <CameraKitLogo withoutText />
+            </a>
+          </Link>
           <a
             className="link button"
             href="javascript:void(0);"
@@ -112,9 +115,13 @@ class MobileNavbar extends React.Component {
         </div>
         <div className="menu">
           <ul>
-            <li><a href="/docs" alt="CameraKit's Documentation">Docs</a></li>
-            <li><a href="/blog" alt="CameraKit's Blog">Blog</a></li>
-            <li><a href="/contact" alt="CameraKit's Contact Us page">Contact</a></li>
+            <Link href="/docs">
+              <li><a href="/docs">Docs</a></li>
+            </Link>
+            <li><a href="/blog">Blog</a></li>
+            <Link href="/contact">
+              <li><a href="/contact">Contact</a></li>
+            </Link>
             <li className="separator" />
             <li>
               <a
@@ -208,13 +215,19 @@ const DesktopNavbar = ({ full }) => (
       `}
     </style>
     <div className="content">
-      <a href="/" rel="noreferrer" className="link home">
-        <CameraKitLogo />
-      </a>
+      <Link href="/">
+        <a href="/" rel="noreferrer" className="link home">
+          <CameraKitLogo />
+        </a>
+      </Link>
       <span className="flex" />
-      <a href="/docs" className="link">Docs</a>
+      <Link href="/docs">
+        <a href="/docs" className="link">Docs</a>
+      </Link>
       <a href="/blog" className="link">Blog</a>
-      <a href="/contact" className="link">Contact</a>
+      <Link href="/contact">
+        <a href="/contact" className="link">Contact</a>
+      </Link>
       <span className="separator" />
       <a
         target="_blank"
