@@ -13,7 +13,7 @@ class Subscribe extends React.Component {
         render={({ subscribe, status }) => (
           <Transition
             from={{ opacity: 0, height: 0 }}
-            enter={{ opacity: 1, height: 220 }}
+            enter={{ opacity: 1, height: 300 }}
             leave={{ opacity: 0, height: 0 }}
           >
 
@@ -38,6 +38,7 @@ class Subscribe extends React.Component {
                         font-size: 1.1rem;
                         text-transform: uppercase;
                       }
+                      
                       hr {
                         padding: 0;
                         width: 100%;
@@ -47,6 +48,7 @@ class Subscribe extends React.Component {
                         margin: 0 0 8rem 0;
                         background: rgba(220,220,220,0.0);
                       }
+
                       .sr-only {
                         position: absolute;
                         width: 1px;
@@ -92,7 +94,7 @@ class Subscribe extends React.Component {
                       }
                       
                       .submit {
-                        flex: 0 0 8rem;
+                        flex: 0 0 30%;
                         padding: 0.75rem 1.1rem;
                         border: none;
                         background-color: transparent;
@@ -122,10 +124,17 @@ class Subscribe extends React.Component {
                         min-height: 3rem;
                         color: #6b60e9;
                       }
+
                       label {
                         flex: 1 1 70%;
                         display: flex;
                         justify-content: flex-start;
+                      }
+
+                      @media (max-width: 48em) {
+                        .submit {
+                          padding: 0.75rem 0;
+                        }
                       }
                     `}
                   </style>
