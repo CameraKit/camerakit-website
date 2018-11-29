@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="121px" height="90px" viewBox="0 0 121 90" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <title>stats</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="20" y="0" width="1" height="90"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="1" height="90" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <rect id="path-3" x="40" y="0" width="1" height="90"></rect>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="1" height="90" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+        <rect id="path-5" x="60" y="0" width="1" height="90"></rect>
+        <mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="1" height="90" fill="white">
+            <use xlink:href="#path-5"></use>
+        </mask>
+        <rect id="path-7" x="80" y="0" width="1" height="90"></rect>
+        <mask id="mask-8" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="1" height="90" fill="white">
+            <use xlink:href="#path-7"></use>
+        </mask>
+        <rect id="path-9" x="100" y="0" width="1" height="90"></rect>
+        <mask id="mask-10" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="1" height="90" fill="white">
+            <use xlink:href="#path-9"></use>
+        </mask>
+        <rect id="path-11" x="120" y="0" width="1" height="90"></rect>
+        <mask id="mask-12" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="1" height="90" fill="white">
+            <use xlink:href="#path-11"></use>
+        </mask>
+        <rect id="path-13" x="0" y="69" width="120" height="1"></rect>
+        <mask id="mask-14" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="120" height="1" fill="white">
+            <use xlink:href="#path-13"></use>
+        </mask>
+        <rect id="path-15" x="0" y="49" width="120" height="1"></rect>
+        <mask id="mask-16" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="120" height="1" fill="white">
+            <use xlink:href="#path-15"></use>
+        </mask>
+        <rect id="path-17" x="0" y="29" width="120" height="1"></rect>
+        <mask id="mask-18" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="120" height="1" fill="white">
+            <use xlink:href="#path-17"></use>
+        </mask>
+        <rect id="path-19" x="0" y="9" width="120" height="1"></rect>
+        <mask id="mask-20" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="120" height="1" fill="white">
+            <use xlink:href="#path-19"></use>
+        </mask>
+        <linearGradient x1="17.3087256%" y1="36.9172888%" x2="0%" y2="100%" id="linearGradient-21">
+            <stop stop-color="#6B60E9" stop-opacity="0.19678442" offset="0%"></stop>
+            <stop stop-color="#6B60E9" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Web-Design-v2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home" transform="translate(-900.000000, -2678.000000)">
+            <g id="Features" transform="translate(360.000000, 1802.000000)">
+                <g id="Feature-1" transform="translate(316.000000, 873.000000)">
+                    <g id="stats" transform="translate(224.000000, 0.000000)">
+                        <g id="Group-3" transform="translate(0.000000, 3.000000)">
+                            <use id="Rectangle" stroke="#DEE2EA" mask="url(#mask-2)" stroke-width="2" stroke-dasharray="2" xlink:href="#path-1"></use>
+                            <use id="Rectangle" stroke="#DEE2EA" mask="url(#mask-4)" stroke-width="2" stroke-dasharray="2" xlink:href="#path-3"></use>
+                            <use id="Rectangle" stroke="#DEE2EA" mask="url(#mask-6)" stroke-width="2" stroke-dasharray="2" xlink:href="#path-5"></use>
+                            <use id="Rectangle" stroke="#DEE2EA" mask="url(#mask-8)" stroke-width="2" stroke-dasharray="2" xlink:href="#path-7"></use>
+                            <use id="Rectangle" stroke="#DEE2EA" mask="url(#mask-10)" stroke-width="2" stroke-dasharray="2" xlink:href="#path-9"></use>
+                            <use id="Rectangle" stroke="#DEE2EA" mask="url(#mask-12)" stroke-width="2" stroke-dasharray="2" xlink:href="#path-11"></use>
+                            <use id="Rectangle" stroke="#DEE2EA" mask="url(#mask-14)" stroke-width="2" stroke-dasharray="2" xlink:href="#path-13"></use>
+                            <use id="Rectangle" stroke="#DEE2EA" mask="url(#mask-16)" stroke-width="2" stroke-dasharray="2" xlink:href="#path-15"></use>
+                            <use id="Rectangle" stroke="#DEE2EA" mask="url(#mask-18)" stroke-width="2" stroke-dasharray="2" xlink:href="#path-17"></use>
+                            <use id="Rectangle" stroke="#DEE2EA" mask="url(#mask-20)" stroke-width="2" stroke-dasharray="2" xlink:href="#path-19"></use>
+                            <polygon id="Path-3" stroke="#6B60E9" stroke-width="2" fill="url(#linearGradient-21)" stroke-linecap="round" stroke-linejoin="round" points="1 2 55 87 119 87 119 89 1 89"></polygon>
+                            <rect id="Rectangle" fill="#DEE2EA" x="0" y="0" width="2" height="90"></rect>
+                            <rect id="Rectangle" fill="#DEE2EA" x="0" y="88" width="120" height="2"></rect>
+                        </g>
+                        <g id="Group-2" transform="translate(35.000000, 0.000000)" fill="#6B60E9">
+                            <text id="98%" font-family="Roboto-Bold, Roboto" font-size="32" font-weight="bold" letter-spacing="0.5714284">
+                                <tspan x="22" y="29.5">98%</tspan>
+                            </text>
+                            <polygon id="Path-4" points="4.61538462 7.78947368 4.61538462 20.7548476 0 20.7548476 7.5 30.1842105 15 20.7548476 10.3846154 20.7548476 10.3846154 7.78947368"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

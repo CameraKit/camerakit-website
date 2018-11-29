@@ -2,19 +2,16 @@
 import React from 'react';
 import Document, { Head, Main, NextScript } from 'next/document';
 
-import { GA_TRACKING_ID } from '../lib/gtag';
+import { GA_TRACKING_ID } from '../lib/analytics';
 
 export default class CameraKitWebsite extends Document {
-
   render() {
     return (
       <html lang="en" dir="ltr">
         <Head>
-          <title>CameraKit | Unified Camera Library for Android</title>
           <meta name="description" content="CameraKit is an open-source library to support the Android Camera 1 and 2 APIs. Massively increase stability and reliability of photo and video capture on all Android devices." />
           <meta property="og:type" content="website" />
           <meta name="viewport" content="user-scalable=0, initial-scale=1, minimum-scale=1, width=device-width, height=device-height" />
-          <link rel="stylesheet" href="/_next/static/style.css" />
           <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/static/favicon/apple-touch-icon-57x57.png" />
           <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/static/favicon/apple-touch-icon-114x114.png" />
           <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/static/favicon/apple-touch-icon-72x72.png" />
@@ -35,19 +32,21 @@ export default class CameraKitWebsite extends Document {
           <meta name="msapplication-square150x150logo" content="/static/favicon/mstile-150x150.png" />
           <meta name="msapplication-wide310x150logo" content="/static/favicon/mstile-310x150.png" />
           <meta name="msapplication-square310x310logo" content="/static/favicon/mstile-310x310.png" />
+          <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet" /> 
           <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
-          <script 
+          <link rel="stylesheet" href="/static/default.css" />
+          <script
             dangerouslySetInnerHTML={{
               __html: `
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
                 gtag('config', '${GA_TRACKING_ID}');
-              `
+              `,
             }}
           />
         </Head>
-        <body style={{ margin: 0 }}>
+        <body className="custom_class">
           <Main />
           <NextScript />
         </body>

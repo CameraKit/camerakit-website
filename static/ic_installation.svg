@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="26px" viewBox="0 0 22 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_installation</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Web-Design-v2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Getting-Started" transform="translate(-562.000000, -705.000000)">
+            <g id="Installation" transform="translate(555.000000, 701.000000)">
+                <g id="Title">
+                    <g id="Icons/Installation">
+                        <g id="baseline-get_app-24px">
+                            <path d="M28.097561,13.3773314 L22.0766551,13.3773314 L22.0766551,4.3902439 L13.0452962,4.3902439 L13.0452962,13.3773314 L7.02439024,13.3773314 L17.5609756,23.8622669 L28.097561,13.3773314 Z M7.02439024,26.8579627 L7.02439024,29.8536585 L28.097561,29.8536585 L28.097561,26.8579627 L7.02439024,26.8579627 Z" id="Shape" fill="#6B60E9" fill-rule="nonzero"></path>
+                            <polygon id="Path" points="0 0 36 0 36 36 0 36"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

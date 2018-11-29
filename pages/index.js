@@ -1,16 +1,41 @@
+// @flow
+
 import React from 'react';
-import { connect } from 'react-redux';
+import Page from '../components/page';
+import Header from '../components/header';
+import Navbar from '../components/navbar';
+import Footer from '../components/footer';
+import SocialMeta from '../components/social-meta';
+import { MediaQueryConsumer } from '../components/media-query';
 
-import Nav from '../components/public/nav';
-import Home from '../components/home';
-import Footer from '../components/public/footer';
+import Features from '../components/home/features';
+import Intro from '../components/home/intro';
+import CompanySlider from '../components/home/company-slider';
 
-const Public = () => (
-  <div className="public">
-    <Nav />
-    <Home />
+export default () => (
+  <Page title="CameraKit | Unified Camera Platform">
+    <SocialMeta
+      image="/static/il_footer.png"
+      title="CameraKit"
+      url="https://camerakit.io"
+      description="An open source camera platform that adds reliable photo and video capture to any application. Scalable, updated, and extensible camera functions instantly."
+    />
+    <MediaQueryConsumer>
+      {({ isMobile }) => (
+        <Header
+          height={0}
+          offset={0}
+          distance={32}
+          shadow
+          active={isMobile ? 32 : 320}
+        >
+          <Navbar />
+        </Header>
+      )}
+    </MediaQueryConsumer>
+    <Intro />
+    <CompanySlider />
+    <Features />
     <Footer />
-  </div>
+  </Page>
 );
-
-export default connect()(Public);
