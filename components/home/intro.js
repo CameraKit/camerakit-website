@@ -129,6 +129,9 @@ export default () => (
                 .campaign {
                   margin: 0 0 2rem;
                 }
+                .intro {
+                  margin: 50px;
+                }
               }
             `}
         </style>
