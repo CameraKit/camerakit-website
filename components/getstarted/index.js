@@ -64,7 +64,7 @@ export default withPure(() => (
             content: "";
           }
           .getstarted code .c-i1 {
-            margin-left: 1rem;
+            margin-left: 2rem;
           }
           .getstarted code .c-b {
             font-weight: 600;
