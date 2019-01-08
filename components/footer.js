@@ -103,7 +103,7 @@ export default withPure(() => (
           <Subscribe />
           <ul className="notices">
             <li>
-              {'© 2018 • CameraKit. All Rights Reserved by Alterac, Inc.'}
+              {'© 2019 • CameraKit. All Rights Reserved by Alterac, Inc.'}
             </li>
           </ul>
         </div>
