@@ -374,9 +374,9 @@ You can setup the <b>CameraView</b> dimensions however you want. When your dimen
 
 ### adjustViewBounds
 
-You can use a mix of a fixed dimension (a set value or <b>match_parent</b>) as well as <b>wrap_content</b>. When you do this make sure you set <b>android:adjustViewBounds="true"</b> on the <b>CameraView</b>.
+You can use a mix of a fixed dimension (a set value or <b>match\_parent</b>) as well as <b>wrap\_content</b>. When you do this make sure you set <b>android:adjustViewBounds="true"</b> on the <b>CameraView</b>.
 
-When you do this the dimension set to <b>wrap_content</b> will automatically align with the true aspect ratio of the preview surface. In this case the whole preview will be visible with no cropping.
+When you do this the dimension set to <b>wrap\_content</b> will automatically align with the true aspect ratio of the preview surface. In this case the whole preview will be visible with no cropping.
 
 ## Events
 
