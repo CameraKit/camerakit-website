@@ -1,4 +1,4 @@
-# CameraKit Documentation - v0.13.2
+# CameraKit Documentation - v0.13.4
 
 1. Setup
 2. Usage
@@ -13,7 +13,7 @@
 Add __CameraKit__ to the dependencies block in your <b>app</b> level <b>build.gradle</b>:
 
 ```groovy
-compile 'com.wonderkiln:camerakit:0.13.2'
+compile 'com.wonderkiln:camerakit:0.13.4'
 ```
 
 ## Usage
@@ -28,7 +28,7 @@ To use CameraKit, simply add a <b>CameraView</b> to your layout:
     android:adjustViewBounds="true" />
 ```
 
-Make sure you override <b>onResume</b> and <b>onPause</b> in your activity, and make calls respectively to <b>CameraView.start()</b> and <b>CameraView.stop()</b>.
+Override <b>onResume</b> and <b>onPause</b> in your activity, and make calls respectively to <b>CameraView.start()</b> and <b>CameraView.stop()</b>.
 
 ```java
 @Override
@@ -46,7 +46,7 @@ protected void onPause() {
 
 ### Capturing Images
 
-To capture an image just call <b>CameraView.captureImage()</b>. Make sure you setup a <b>CameraListener</b> to handle the image callback.
+To capture an image just call <b>CameraView.captureImage()</b>. Then setup a <b>CameraListener</b> to handle the image callback.
 
 ```java
 camera.setCameraListener(new CameraListener() {
@@ -64,7 +64,7 @@ camera.captureImage();
 
 ### Capturing Video
 
-To capture video just call <b>CameraView.startRecordingVideo()</b> to start, and <b>CameraView.stopRecordingVideo()</b> to finish. Make sure you setup a <b>CameraListener</b> to handle the video callback.
+To capture video just call <b>CameraView.startRecordingVideo()</b> to start, and <b>CameraView.stopRecordingVideo()</b> to finish. Setup a <b>CameraListener</b> to handle the video callback.
 
 ```java
 camera.setCameraListener(new CameraListener() {
@@ -374,13 +374,13 @@ You can setup the <b>CameraView</b> dimensions however you want. When your dimen
 
 ### adjustViewBounds
 
-You can use a mix of a fixed dimension (a set value or <b>match\_parent</b>) as well as <b>wrap\_content</b>. When you do this make sure you set <b>android:adjustViewBounds="true"</b> on the <b>CameraView</b>.
+You can use a mix of a fixed dimension (a set value or <b>match\_parent</b>) as well as <b>wrap\_content</b>. When you do this ensure that you set <b>android:adjustViewBounds="true"</b> on the <b>CameraView</b>.
 
 When you do this the dimension set to <b>wrap\_content</b> will automatically align with the true aspect ratio of the preview surface. In this case the whole preview will be visible with no cropping.
 
 ## Events
 
-Make sure you can react to different camera events by setting up a <b>CameraListener</b> instance.
+Be sure to set up a <b>CameraListener</b> instance to react to different camera events.
 
 ```java
 camera.setCameraListener(new CameraListener() {
