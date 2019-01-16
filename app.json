@@ -1,0 +1,27 @@
+{
+  "name": "camerakit-website",
+  "description": "",
+  "scripts": {
+  },
+  "env": {
+    "API_URL": {
+      "required": true
+    },
+    "LOGDNA_KEY": {
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "addons": [
+    "logdna"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
