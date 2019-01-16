@@ -1,12 +1,12 @@
 # CameraKit Documentation - v0.13.4
 
-1. Setup
-2. Usage
-3. Capturing Images
-4. Extra Attributes
-5. Permissions
-6. Sizing
-7. Events
+1. [Setup](#setup)
+2. [Usage](#usage)
+3. [Capturing Images](#capturingimages)
+4. [Extra Attributes](#extraattributes)
+5. [Permissions](#permissions)
+6. [Sizing](#sizing)
+7. [Events](#events)
 
 ## Setup
 
@@ -18,7 +18,7 @@ compile 'com.wonderkiln:camerakit:0.13.4'
 
 ## Usage
 
-To use CameraKit, simply add a <b>CameraView</b> to your layout:
+To use CameraKit, add a <b>CameraView</b> to your layout:
 
 ```xml
 <com.wonderkiln.camerakit.CameraView
@@ -46,8 +46,9 @@ protected void onPause() {
 
 ### Capturing Images
 
-To capture an image just call <b>CameraView.captureImage()</b>. Then setup a <b>CameraListener</b> to handle the image callback.
+To capture an image call <b>CameraView.captureImage()</b>. Then setup a <b>CameraListener</b> to handle the image callback.
 
+<b>Example</b>
 ```java
 camera.setCameraListener(new CameraListener() {
     @Override
@@ -64,8 +65,10 @@ camera.captureImage();
 
 ### Capturing Video
 
-To capture video just call <b>CameraView.startRecordingVideo()</b> to start, and <b>CameraView.stopRecordingVideo()</b> to finish. Setup a <b>CameraListener</b> to handle the video callback.
+To capture video call <b>CameraView.startRecordingVideo()</b> to start, and <b>CameraView.stopRecordingVideo()</b> to finish. Setup a <b>CameraListener</b> to handle the video callback.
 
+
+<b>Example</b>
 ```java
 camera.setCameraListener(new CameraListener() {
     @Override
@@ -84,20 +87,15 @@ camera.postDelayed(new Runnable() {
 }, 2500);
 ```
 
-#### Other Methods
-```java
-cameraView.stopVideo();
-```
+### Additional Video Methods
 
-```java
-Size cameraView.getPreviewSize();
-```
+| Function | Description | Example |
+| --- | --- | --- |
+| stopVideo| Stop recording video | cameraView.stopVideo() |
+| getPreviewSize | Get size of camera preview | Size cameraView.getPreviewSize(); |
+| getCaptureSize | Get size of capture | cameraView.getCaptureSize(); |
 
-```java
-Size cameraView.getCaptureSize();
-```
-
-## Extra Attributes
+## CamerView Attributes
 
 ```xml
 <com.flurgle.camerakit.CameraView xmlns:camerakit="http://schemas.android.com/apk/res-auto"
@@ -118,44 +116,30 @@ Size cameraView.getCaptureSize();
 
 |Attribute|Values|Default Value|
 |---------|------|-------------|
-|[<b>ckFacing</b>](#ckfacing)|[<b>back</b>](#back) [<b>front</b>](#front)|<b>back</b>|
-|[<b>ckFlash</b>](#ckflash)|[<b>off</b>](#off) [<b>on</b>](#on) [<b>auto</b>](#auto)|<b>off</b>|
-|[<b>ckFocus</b>](#ckfocus)|[<b>off</b>](#off-1) [<b>continuous</b>](#continuous) [<b>tap</b>](#tap)|<b>continuous</b>|
-|[<b>ckMethod</b>](#ckmethod)|[<b>standard</b>](#standard) [<b>still</b>](#still) [<b>speed</b>](#speed)|<b>standard</b>|
-|[<b>ckZoom</b>](#ckzoom)|[<b>off</b>](#off-2) [<b>pinch</b>](#pinch)|<b>off</b>|
-|[<b>ckPermissions</b>](#ckpermissions)|[<b>strict</b>](#strict) [<b>lazy</b>](#lazy) [<b>picture</b>](#picture<b>)|</b>strict`|
-|[<b>ckCropOutput</b>](#ckcropoutput)|[<b>true</b>](#true) [<b>false</b>](#false)|<b>false</b>|
-|[<b>ckJpegQuality</b>](#ckjpegquality)|[<b>0 <= n <= 100</b>](#ckjpegquality)|<b>100</b>|
-|[<b>ckVideoQuality</b>](#ckvideoquality)|[<b>max480p</b>](#max480p) [<b>max720p</b>](#max720p) [<b>max1080p</b>](#max1080p) [<b>max2160p</b>](#max2160p) [<b>highest</b>](#highest) [<b>lowest</b>](#lowest)|<b>max480p</b>|
+|[ckFacing](#ckfacing)|<b>back</b>, <b>front</b>|<b>back</b>|
+|[ckFlash](#ckflash)|<b>off</b>, <b>on</b>, <b>auto</b>|<b>off</b>|
+|[ckFocus](#ckfocus)|<b>off</b>, <b>continuous</b>, <b>tap</b>|<b>continuous</b>|
+|[ckMethod](#ckmethod)|<b>standard</b>, <b>still</b>, <b>speed</b>|<b>standard</b>|
+|[ckZoom](#ckzoom)|<b>off</b>, <b>pinch</b>|<b>off</b>|
+|[ckPermissions](#ckpermissions)|<b>strict</b>, <b>lazy</b>, <b>picture</b>|<b>strict</b>|
+|[ckCropOutput](#ckcropoutput)|<b>true</b>, <b>false</b>|<b>false</b>|
+|[ckJpegQuality](#ckjpegquality)|<b>0 <= n <= 100</b>|<b>100</b>|
+|[ckVideoQuality](#ckvideoquality)|<b>max480p</b>, <b>max720p</b>, <b>max1080p</b>, <br/> <b>max2160p</b>, <b>highest</b>, <b>lowest</b>, <b>qvga</b>|<b>max480p</b>|
 
 
 - - -
 
 ### ckFacing
-[<b>back</b>](#back) [<b>front</b>](#front)
-
-<b>back</b>
-
+<b>Option:</b> back, front
 ```java
 cameraView.setFacing(CameraKit.Constants.FACING_BACK);
-```
-
-<b>front</b>
-
-```java
 cameraView.setFacing(CameraKit.Constants.FACING_FRONT);
 ```
 
 <b>Other Methods</b>
 ```java
 int cameraView.getFacing()
-```
-
-```java
 boolean cameraView.isFacingFront()
-```
-
-```java
 boolean cameraView.isFacingBack()
 ```
 
@@ -163,28 +147,12 @@ boolean cameraView.isFacingBack()
 - - -
 
 ### ckFlash
-[<b>off</b>](#off) [<b>on</b>](#on) [<b>auto</b>](#auto) [<b>torch</b>](#torch)
-
-<b>off</b>
+<b>Values:</b> off, on, auto, torch
 
 ```java
 cameraView.setFlash(CameraKit.Constants.FLASH_OFF);
-```
-
-<b>on</b>
-
-```java
 cameraView.setFlash(CameraKit.Constants.FLASH_ON);
-```
-
-<b>auto</b>
-
-```java
 cameraView.setFlash(CameraKit.Constants.FLASH_AUTO);
-```
-
-<b>torch</b>
-```java
 cameraView.setFlash(CameraKit.Constants.FLASH_TORCH);
 ```
 
@@ -196,109 +164,73 @@ int getFlash()
 - - -
 
 ### ckFocus
-[<b>off</b>](#off-1) [<b>continuous</b>](#continuous) [<b>tap</b>](#tap)
+<b>Values:</b> off, continuous, tap
 
-<b>off</b>
 
 ```java
 cameraView.setFocus(CameraKit.Constants.FOCUS_OFF);
-```
-
-<b>continuous</b>
-
-```java
 cameraView.setFocus(CameraKit.Constants.FOCUS_CONTINUOUS);
-```
-
-<b>tap</b>
-
-```java
 cameraView.setFocus(CameraKit.Constants.FOCUS_TAP);
 ```
 
 - - -
 
 ### ckMethod
-[<b>standard</b>](#standard) [<b>still</b>](#still) [<b>speed</b>](#speed)
+<b>Values:</b> standard, still, speed
 
 <b>standard</b>
+
+When you use <b>METHOD_STANDARD</b> (<b>camerakit:ckMethod="standard"</b>), images will be captured using the normal camera API capture method using the shutter.
 
 ```java
 cameraView.setMethod(CameraKit.Constants.METHOD_STANDARD);
 ```
 
-When you use <b>METHOD_STANDARD</b> (<b>camerakit:ckMethod="standard"</b>), images will be captured using the normal camera API capture method using the shutter.
-
 <b>still</b>
+
+When you use <b>METHOD_STILL</b> (<b>camerakit:ckMethod="still"</b>), images will be captured by grabbing a single frame from the preview. This behavior is the same as SnapChat and Instagram. This method has a higher rate of motion blur but can be a better experience for users with slower cameras.
+
 
 ```java
 cameraView.setMethod(CameraKit.Constants.METHOD_STILL);
 ```
 
-When you use <b>METHOD_STILL</b> (<b>camerakit:ckMethod="still"</b>), images will be captured by grabbing a single frame from the preview. This behavior is the same as SnapChat and Instagram. This method has a higher rate of motion blur but can be a better experience for users with slower cameras.
-
-<b>speed</b>
-
 - - -
 
 ### ckZoom
-[<b>off</b>](#off-2) [<b>pinch</b>](#pinch)
-
-<b>off</b>
+<b>Values:</b> off, pinch
 
 ```java
 cameraView.setZoom(CameraKit.Constants.ZOOM_OFF);
-```
-
-<b>pinch</b>
-
-```java
 cameraView.setZoom(CameraKit.Constants.ZOOM_PINCH);
 ```
 
 - - -
 
 ### ckPermissions
-[<b>strict</b>](#strict) [<b>lazy</b>](#lazy) [<b>picture</b>](#picture`)
+<b>Values:</b> strict, lazy, picture
 
-<b>strict</b>
 
 ```java
 cameraView.setPermissions(CameraKit.Constants.PERMISSIONS_STRICT);
-```
-
-<b>lazy</b>
-
-```java
 cameraView.setPermissions(CameraKit.Constants.PERMISSIONS_LAZY);
-```
-
-<b>picture</b>
-
-```java
 cameraView.setPermissions(CameraKit.Constants.PERMISSIONS_PICTURE);
 ```
 
 - - -
 
 ### ckCropOutput
-[<b>true</b>](#true) [<b>false</b>](#false)
-
-<b>true</b>
+<b>Values:</b> true, false
 
 ```java
 cameraView.setCropOutput(true);
-```
-
-<b>false</b>
-
-```java
 cameraView.setCropOutput(false);
 ```
 
 - - -
 
 ### ckJpegQuality
+<b>Values:</b> <b>int</b> bitRate
 
 ```java
 cameraView.setJpegQuality(100);
@@ -306,59 +238,24 @@ cameraView.setJpegQuality(100);
 
 - - -
 ### ckVideoQuality
-[<b>max480p</b>](#max480p) [<b>max720p</b>](#max720p) [<b>max1080p</b>](#max1080p) [<b>max2160p</b>](#max2160p) [<b>lowest</b>](#lowest) [<b>highest</b>](#highest) [<b>qvga</b>](#qvga)
-
-<b>max480p</b>
+<b>Values:</b> max480p, max720p, max1080p, max2160p, lowest, highest, qvga
 
 ```java
 cameraView.setVideoQuality(CameraKit.Constants.VIDEO_QUALITY_480P);
-```
-
-<b>max720p</b>
-
-```java
 cameraView.setVideoQuality(CameraKit.Constants.VIDEO_QUALITY_720P);
-```
-
-<b>max1080p</b>
-
-```java
 cameraView.setVideoQuality(CameraKit.Constants.VIDEO_QUALITY_1080P);
-```
-
-<b>max2160p</b>
-
-```java
 cameraView.setVideoQuality(CameraKit.Constants.VIDEO_QUALITY_2160P);
-```
-
-<b>lowest</b>
-
-```java
 cameraView.setVideoQuality(CameraKit.Constants.VIDEO_QUALITY_LOWEST);
-```
-
-<b>highest</b>
-
-```java
 cameraView.setVideoQuality(CameraKit.Constants.VIDEO_QUALITY_HIGHEST);
-```
-
-<b>qvga</b>
-
-```java
 cameraView.setVideoQuality(CameraKit.Constants.VIDEO_QUALITY_QVGA);
 ```
 
 ### ckVideoBitRate
-[<b>int bitRate</b>](#bitRate)
-
-<b>bitRate</b>
+<b>Values</b>: <b>int</b> bitRate
 
 ```java
 cameraView.setVideoBitrate(CameraKit.Constants.VIDEO_QUALITY_480P);
 ```
-
 
 - - -
 
