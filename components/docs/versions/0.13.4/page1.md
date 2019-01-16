@@ -95,7 +95,7 @@ camera.postDelayed(new Runnable() {
 | getPreviewSize | Get size of camera preview | Size cameraView.getPreviewSize(); |
 | getCaptureSize | Get size of capture | cameraView.getCaptureSize(); |
 
-## CamerView Attributes
+## CameraView Attributes
 
 ```xml
 <com.flurgle.camerakit.CameraView xmlns:camerakit="http://schemas.android.com/apk/res-auto"
@@ -125,16 +125,21 @@ camera.postDelayed(new Runnable() {
 |[ckCropOutput](#ckcropoutput)|<b>true</b>, <b>false</b>|<b>false</b>|
 |[ckJpegQuality](#ckjpegquality)|<b>0 <= n <= 100</b>|<b>100</b>|
 |[ckVideoQuality](#ckvideoquality)|<b>max480p</b>, <b>max720p</b>, <b>max1080p</b>, <br/> <b>max2160p</b>, <b>highest</b>, <b>lowest</b>, <b>qvga</b>|<b>max480p</b>|
-
+|[ckVideoBitRate](#ckvideobitrate)|<b>0 <= n <= MAX\_INT</b>|<i>unset</i>
 
 - - -
 
 ### ckFacing
-<b>Option:</b> back, front
-```java
-cameraView.setFacing(CameraKit.Constants.FACING_BACK);
-cameraView.setFacing(CameraKit.Constants.FACING_FRONT);
-```
+
+| Format | Method | 
+| :--- | :--- |
+| XML | app:ckFacing="back" |
+| Java | cameraView.setFacing(CameraKit.Constants.FACING\_BACK); | 
+
+
+<b>Possible values:</b> 
+* back, FACING\_BACK
+* front, FACING\_FRONT
 
 <b>Other Methods</b>
 ```java
@@ -149,12 +154,16 @@ boolean cameraView.isFacingBack()
 ### ckFlash
 <b>Values:</b> off, on, auto, torch
 
-```java
-cameraView.setFlash(CameraKit.Constants.FLASH_OFF);
-cameraView.setFlash(CameraKit.Constants.FLASH_ON);
-cameraView.setFlash(CameraKit.Constants.FLASH_AUTO);
-cameraView.setFlash(CameraKit.Constants.FLASH_TORCH);
-```
+| Format | Method | 
+| :--- | :--- |
+| XML | app:ckFlash="off" |
+| Java | cameraView.setFlash(CameraKit.Constants.FLASH\_OFF); | 
+
+<b>Possible values:</b> 
+* off, FLASH\_OFF
+* on, FLASH\_ON
+* auto, FLASH\_AUTO
+* torch, FLASH\_TORCH
 
 <b>Other Methods</b>
 ```java
@@ -164,73 +173,91 @@ int getFlash()
 - - -
 
 ### ckFocus
-<b>Values:</b> off, continuous, tap
 
+| Format | Method | 
+| :--- | :--- |
+| XML | app:ckFocus="continuous" |
+| Java | cameraView.setFocus(CameraKit.Constants.FOCUS\_CONTINUOUS); | 
 
-```java
-cameraView.setFocus(CameraKit.Constants.FOCUS_OFF);
-cameraView.setFocus(CameraKit.Constants.FOCUS_CONTINUOUS);
-cameraView.setFocus(CameraKit.Constants.FOCUS_TAP);
-```
+<b>Possible values:</b> 
+* off, FOCUS\_OFF
+* continuous, FOCUS\_CONTINUOUS
+* tap, FOCUS\_TAP
 
 - - -
 
 ### ckMethod
-<b>Values:</b> standard, still, speed
 
-<b>standard</b>
+| Format | Method | 
+| :--- | :--- |
+| XML | app:ckMethod="standard" |
+| Java | cameraView.setMethod(CameraKit.Constants.METHOD\_STANDARD); | 
 
-When you use <b>METHOD_STANDARD</b> (<b>camerakit:ckMethod="standard"</b>), images will be captured using the normal camera API capture method using the shutter.
-
-```java
-cameraView.setMethod(CameraKit.Constants.METHOD_STANDARD);
-```
-
-<b>still</b>
-
-When you use <b>METHOD_STILL</b> (<b>camerakit:ckMethod="still"</b>), images will be captured by grabbing a single frame from the preview. This behavior is the same as SnapChat and Instagram. This method has a higher rate of motion blur but can be a better experience for users with slower cameras.
+<b>Possible values:</b> 
+* standard, METHOD\_STANDARD
+* still, METHOD\_STILL
+* speed, METHOD\_SPEED
 
 
-```java
-cameraView.setMethod(CameraKit.Constants.METHOD_STILL);
-```
+<b>Additional Notes:</b>
+
+When you use <b>METHOD\_STANDARD</b> (<b>camerakit:ckMethod="standard"</b>), images will be captured using the normal camera API capture method using the shutter.
+
+
+When you use <b>METHOD\_STILL</b> (<b>camerakit:ckMethod="still"</b>), images will be captured by grabbing a single frame from the preview. This behavior is the same as SnapChat and Instagram. This method has a higher rate of motion blur but can be a better experience for users with slower cameras.
+
 
 - - -
 
 ### ckZoom
-<b>Values:</b> off, pinch
 
-```java
-cameraView.setZoom(CameraKit.Constants.ZOOM_OFF);
-cameraView.setZoom(CameraKit.Constants.ZOOM_PINCH);
-```
+| Format | Method | 
+| :--- | :--- |
+| XML | app:ckZoom="off" |
+| Java | cameraView.setZoom(CameraKit.Constants.ZOOM\_OFF); | 
+
+<b>Possible values:</b> 
+* off, ZOOM_OFF
+* pinch, ZOOM\_PINCH
 
 - - -
 
 ### ckPermissions
-<b>Values:</b> strict, lazy, picture
 
+| Format | Method | 
+| :--- | :--- |
+| XML | app:ckPermissions="strict" |
+| Java | cameraView.setPermissions(CameraKit.Constants.PERMISSIONS\_STRICT); | 
 
-```java
-cameraView.setPermissions(CameraKit.Constants.PERMISSIONS_STRICT);
-cameraView.setPermissions(CameraKit.Constants.PERMISSIONS_LAZY);
-cameraView.setPermissions(CameraKit.Constants.PERMISSIONS_PICTURE);
-```
+<b>Possible values:</b> 
+* strict, PERMISSIONS\_STRICT
+* lazy, PERMISSIONS\_LAZY
+* picture, PERMISSIONS\_PICTURE
 
 - - -
 
 ### ckCropOutput
-<b>Values:</b> true, false
 
-```java
-cameraView.setCropOutput(true);
-cameraView.setCropOutput(false);
-```
+| Format | Method | 
+| :--- | :--- |
+| XML | app:ckCropOutput="false" |
+| Java | cameraView.setCropOutput(false); | 
+
+<b>Possible values:</b> 
+* true
+* false
 
 - - -
 
 ### ckJpegQuality
-<b>Values:</b> <b>int</b> bitRate
+
+| Format | Method | 
+| :--- | :--- |
+| XML | app:ckJpegQuality="100" |
+| Java | cameraView.setJpegQuality(100); | 
+
+<b>Possible values:</b> 
+* <b>int</b>: [0, 100]
 
 ```java
 cameraView.setJpegQuality(100);
@@ -238,24 +265,35 @@ cameraView.setJpegQuality(100);
 
 - - -
 ### ckVideoQuality
+
+| Format | Method | 
+| :--- | :--- |
+| XML | app:ckVideoQuality="max480p" |
+| Java | cameraView.setVideoQuality(CameraKit.Constants.VIDEO\_QUALITY\_480P); | 
+
+<b>Possible values:</b> 
+* max480p, VIDEO\_QUALITY\_480P
+* max720p, VIDEO\_QUALITY\_720P
+* max1080p, VIDEO\_QUALITY\_1080P
+* max2160p, VIDEO\_QUALITY\_2160P
+* lowest, VIDEO\_QUALITY\_LOWEST
+* highest, VIDEO\_QUALITY\_HIGHEST
+* qvga, VIDEO\_QUALITY\_QVGA
+
 <b>Values:</b> max480p, max720p, max1080p, max2160p, lowest, highest, qvga
 
-```java
-cameraView.setVideoQuality(CameraKit.Constants.VIDEO_QUALITY_480P);
-cameraView.setVideoQuality(CameraKit.Constants.VIDEO_QUALITY_720P);
-cameraView.setVideoQuality(CameraKit.Constants.VIDEO_QUALITY_1080P);
-cameraView.setVideoQuality(CameraKit.Constants.VIDEO_QUALITY_2160P);
-cameraView.setVideoQuality(CameraKit.Constants.VIDEO_QUALITY_LOWEST);
-cameraView.setVideoQuality(CameraKit.Constants.VIDEO_QUALITY_HIGHEST);
-cameraView.setVideoQuality(CameraKit.Constants.VIDEO_QUALITY_QVGA);
-```
 
 ### ckVideoBitRate
-<b>Values</b>: <b>int</b> bitRate
 
-```java
-cameraView.setVideoBitrate(CameraKit.Constants.VIDEO_QUALITY_480P);
-```
+| Format | Method | 
+| :--- | :--- |
+| XML | app:ckVideoBitRate="100" |
+| Java | cameraView.setVideoBitrate(100); | 
+
+<b>Possible values:</b> 
+* <b>Values</b>: <b>int</b> [0, MAX\_INT]
+
+Video bit rate is the video recording bit rate in bits per second
 
 - - -
 
