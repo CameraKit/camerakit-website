@@ -20,6 +20,16 @@ class Subscribe extends React.Component {
             {status === 'error' || status === 'success'
               ? s => (
                 <div style={s}>
+                  <style jsx>
+                    {`
+                      .messageText {
+                        text-align: center;
+                        min-width: 30rem;
+                        min-height: 3rem;
+                        color: #6b60e9;
+                      }
+                    `}
+                  </style>
                   <div className="message">
                     <h3 className="messageText">
                       {status === 'error'
@@ -118,12 +128,6 @@ class Subscribe extends React.Component {
                         opacity: 1;
                         visibility: visible; 
                       }
-                      
-                      .messageText {
-                        min-width: 30rem;
-                        min-height: 3rem;
-                        color: #6b60e9;
-                      }
 
                       label {
                         flex: 1 1 70%;
@@ -143,9 +147,6 @@ class Subscribe extends React.Component {
                           box-shadow: 0 5px 20px rgba(0,0,0,0.2);
                           border-radius: 0.25rem;
                           overflow: hidden;
-                        }
-                        .messageText{
-                            text-align: center;
                         }
                       }
                     `}
