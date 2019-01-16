@@ -91,7 +91,7 @@ export default withPure(() => (
               .notices {
                 margin-top: 24vh;
               }
-              
+
               .nav {
                 display: flex;
                 justify-content: space-between;
