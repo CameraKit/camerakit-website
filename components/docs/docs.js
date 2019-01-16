@@ -69,6 +69,76 @@ class Docs extends React.Component {
 
     const select = (
       <div style={{ width: '100%' }}>
+      <style jsx global>{`
+        .documentation__content h1 {
+          font-size: 2.5em;
+        }
+        .documentation__content h2 {
+          padding-top: 30px;
+          font-size: 2em;
+        }
+        .documentation__h3 {
+          padding-top: 10px;
+          font-size: 1.5em;
+        }
+        .documentation__content hr {
+          margin-top: 50px;
+          margin-top: 40px;
+        }
+        .documentation__docs_table {
+          padding-bottom: 10px;
+          border-collapse: collapse;
+        }
+        .documentation__docs_table thead {
+          padding-bottom: 10px;
+          font-size: 1.25em;
+        }
+        .documentation__docs_table th {
+          padding: 0px 5px 0px 5px;
+          font-weight: bold;
+          padding-top: 15px;
+          padding-right: 10px;
+          padding-bottom: 0px;
+          padding-left: 10px;
+        }
+        .documentation__docs_table th:first-child {
+          padding-left: 0px; 
+        }
+        .documentation__docs_table td {
+          border: 0.25px solid #77829b;
+          padding-top: 5px;
+          padding-right: 10px;
+          padding-bottom: 5px;
+          padding-left: 10px; 
+        }
+        .documentation__docs_table tr:nth-child(even) {
+          background-color: rgba(242,242,242,0.5)
+        }
+        .documentation__select__mobile {
+          width: 100%;
+          display: none;
+        }
+        @media screen and (max-width: 640px) {
+          .documentation {
+            flex-direction: column;
+          }
+          .documentation__toc{
+            position: unset;
+            height: unset;
+            width: 100%;
+            display: none;
+          }
+          .documentation__content {
+            margin: 0px;
+            width: 100%;
+            padding-left: 10px;
+            padding-top: 0px;
+          }
+          .documentation__select__mobile {
+            display: flex;
+          }
+        }
+      `}</style>
         <style jsx>{`
             .documentation__toc__select {
               margin: 30px;
@@ -182,55 +252,6 @@ class Docs extends React.Component {
           }
           .documentation__h3 {
             padding-top: 20px;
-          }
-          
-          // For some reason this doesn't work here
-          // Must be declared globally to work with innerHTML
-          .documentation__docs_table {
-            padding-bottom: 10px;
-          }
-          .documentation__docs_table th {
-            font-weight: bold;
-            padding-top: 15px;
-            padding-right: 10px;
-            padding-bottom: 0px;
-            padding-left: 10px;
-          }
-          .documentation__docs_table th:first-child {
-            padding-left: 0px; 
-          }
-          .documentation__docs_table td {
-            padding-top: 5px;
-            padding-right: 10px;
-            padding-bottom: 5px;
-            padding-left: 10px; 
-          }
-          .documentation__docs_table tr:nth-child(even) {
-            background-color: rgba(242,242,242,0.5)
-          }
-          .documentation__select__mobile {
-            width: 100%;
-            display: none;
-          }
-          @media screen and (max-width: 640px) {
-            .documentation {
-              flex-direction: column;
-            }
-            .documentation__toc{
-              position: unset;
-              height: unset;
-              width: 100%;
-              display: none;
-            }
-            .documentation__content {
-              margin: 0px;
-              width: 100%;
-              padding-left: 10px;
-              padding-top: 0px;
-            }
-            .documentation__select__mobile {
-              display: flex;
-            }
           }
         `}</style>
         <div className="documentation__toc">
