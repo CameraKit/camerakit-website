@@ -41,7 +41,7 @@ export default withPure(() => (
             }
 
             .notices {
-              margin-top: 16vh;
+              margin-top: 24vh;
             }
 
             .links {
@@ -88,6 +88,10 @@ export default withPure(() => (
                 padding: 5rem 0;
               }
 
+              .notices {
+                margin-top: 24vh;
+              }
+              
               .nav {
                 display: flex;
                 justify-content: space-between;

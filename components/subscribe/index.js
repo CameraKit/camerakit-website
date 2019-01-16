@@ -135,6 +135,18 @@ class Subscribe extends React.Component {
                         .submit {
                           padding: 0.75rem 0;
                         }
+                        .inputWrapper {
+                          flex-wrap: wrap;
+                          justify-content: center;
+                          display: flex;
+                          background-color: #fff;
+                          box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+                          border-radius: 0.25rem;
+                          overflow: hidden;
+                        }
+                        .messageText{
+                            text-align: center;
+                        }
                       }
                     `}
                   </style>

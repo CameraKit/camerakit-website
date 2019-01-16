@@ -63,6 +63,7 @@ class MobileNavbar extends React.Component {
               border-radius: 1.3rem;
               border: .1rem solid #CFD8DC;
               transition: background .2s linear;
+              width: 16%;
             }
             .button:hover {
               background: #ECEFF1;
@@ -94,6 +95,11 @@ class MobileNavbar extends React.Component {
               font-size: 1.6rem;
               padding: .4rem 2rem;
             }
+            @media (max-width: 48em) {
+              .button-text {
+                display: none;
+              }
+            }
           `}
         </style>
         <div className="content">
@@ -110,7 +116,7 @@ class MobileNavbar extends React.Component {
             }))}
           >
             <MenuIcon />
-            <span>Menu</span>
+            <span className="button-text">Menu</span>
           </a>
         </div>
         <div className="menu">
