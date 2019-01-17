@@ -1,12 +1,12 @@
 # CameraKit Documentation - v1.0.0-beta3.10
 
-1. Setup
-2. Basic Usage
-3. Capturing Images
-4. Attributes
-5. Permissions
-6. Event Listeners
-7. Additional Notes
+1. [Setup](#setup)
+2. [Basic Usage](#basicusage)
+3. [Capturing Images](#capturingimages)
+4. [Attributes](#attributes)
+5. [Permissions](#permissions)
+6. [Event Listeners](#eventlisteners)
+7. [Additional Notes](#additionalnotesandcommonissues)
 
 ## Setup
 Add CameraKit and Kotlin to the dependencies section of your <b>build.gradle</b>.
@@ -237,11 +237,11 @@ private View.OnClickListener photoOnClickListener = new View.OnClickListener() {
 
 ## Permissions
 
-### permissions
+### setPermissions
 
 | Format | Method | 
 | :--- | :--- |
-| XML | app:permisisons="camera" |
+| XML | app:permissions="camera" |
 | Java | cameraKitView.setPermissions() | 
 
 <b>Possible values:</b> 
@@ -345,7 +345,7 @@ cameraKitView.setErrorListener(new CameraKitView.ErrorListener() {
 
 ## Additional Notes and Common Issues
 ### onConfigurationChanged
-In <b>beta3.10</b> setting <b>onConfigurationChanged</b> to watch for screen size changes in <b>AndroidManifest.xml</b> will produce unexpected output when rotating the deivce on Android version 7.0 or higher. 
+In <b>beta3.10</b> setting <b>onConfigurationChanged</b> to watch for screen size changes in <b>AndroidManifest.xml</b> will produce unexpected output when rotating the device on Android version 7.0 or higher. 
 
 If you encounter issues with rotation, first ensure the following line is NOT in your <b>AndroidManifest.xml</b>.
 

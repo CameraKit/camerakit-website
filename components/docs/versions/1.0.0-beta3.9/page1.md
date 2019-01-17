@@ -1,11 +1,11 @@
 # CameraKit Documentation - v1.0.0-beta3.9
 
-1. Setup
-2. Basic Usage
-3. Capturing Images
-4. Attributes
-5. Permissions
-6. Event Listeners
+1. [Setup](#setup)
+2. [Basic Usage](#basicusage)
+3. [Capturing Images](#capturingimages)
+4. [Attributes](#attributes)
+5. [Permissions](#permissions)
+6. [Event Listeners](#eventlisteners)
 
 ## Setup
 Add CameraKit and Kotlin to the dependencies section of your <b>build.gradle</b>.
@@ -236,11 +236,11 @@ private View.OnClickListener photoOnClickListener = new View.OnClickListener() {
 
 ## Permissions
 
-### permissions
+### setPermissions
 
 | Format | Method | 
 | :--- | :--- |
-| XML | app:permisisons="camera" |
+| XML | app:permissions="camera" |
 | Java | cameraKitView.setPermissions() | 
 
 <b>Possible values:</b> 

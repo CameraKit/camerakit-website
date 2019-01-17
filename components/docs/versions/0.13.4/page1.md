@@ -3,9 +3,9 @@
 1. [Setup](#setup)
 2. [Usage](#usage)
 3. [Capturing Images](#capturingimages)
-4. [Extra Attributes](#extraattributes)
-5. [Permissions](#permissions)
-6. [Sizing](#sizing)
+4. [CameraView Attributes](#cameraviewattributes)
+5. [Permissions](#automaticpermissionsbehavior)
+6. [Sizing](#dynamicsizingbehavior)
 7. [Events](#events)
 
 ## Setup
