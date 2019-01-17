@@ -63,7 +63,6 @@ class MobileNavbar extends React.Component {
               border-radius: 1.3rem;
               border: .1rem solid #CFD8DC;
               transition: background .2s linear;
-              width: 16%;
             }
             .button:hover {
               background: #ECEFF1;
@@ -98,6 +97,10 @@ class MobileNavbar extends React.Component {
             @media (max-width: 48em) {
               .button-text {
                 display: none;
+              }
+              .button {
+                padding: 0 0.8rem;
+                width: 40px;
               }
             }
           `}
