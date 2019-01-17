@@ -125,30 +125,6 @@ class Docs extends React.Component {
         .documentation__docs_table tr:nth-child(even) {
           background-color: rgba(242,242,242,0.5)
         }
-        .documentation__select__mobile {
-          width: 100%;
-          display: none;
-        }
-        @media screen and (max-width: 640px) {
-          .documentation {
-            flex-direction: column;
-          }
-          .documentation__toc{
-            position: unset;
-            height: unset;
-            width: 100%;
-            display: none;
-          }
-          .documentation__content {
-            margin: 0px;
-            width: 100%;
-            padding-left: 10px;
-            padding-top: 0px;
-          }
-          .documentation__select__mobile {
-            display: flex;
-          }
-        }
       `}</style>
         <style jsx>{`
             .documentation__toc__select {
@@ -263,6 +239,30 @@ class Docs extends React.Component {
           }
           .documentation__h3 {
             padding-top: 20px;
+          }
+          .documentation__select__mobile {
+            width: 100%;
+            display: none;
+          }
+          @media screen and (max-width: 640px) {
+            .documentation {
+              flex-direction: column;
+            }
+            .documentation__toc{
+              position: unset;
+              height: unset;
+              width: 100%;
+              display: none;
+            }
+            .documentation__content {
+              margin: 0px;
+              width: 100%;
+              padding-left: 10px;
+              padding-top: 0px;
+            }
+            .documentation__select__mobile {
+              display: flex;
+            }
           }
         `}</style>
         <div className="documentation__toc">
