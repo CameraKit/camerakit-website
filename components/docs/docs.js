@@ -14,6 +14,14 @@ const bindings = Object.keys(classMap)
     replace: `<${key} class="${classMap[key]}" $1>`,
   }));
 
+
+bindings.push({
+  type: 'output',
+  regex: new RegExp('<(h[2-3])([^>]*)(id="[^"]+")([^>]*)>([^<]+)</h[2-3]>', 'g'),
+  replace: '<a $3 data-tag="$1" data-name="$5" class="documentation__anchor"></a>\n<$1 $2 $4>$5</$1>',
+});
+
+
 class Docs extends React.Component {
   state = {};
 
@@ -28,7 +36,7 @@ class Docs extends React.Component {
       });
       const html = converter.makeHtml(props.docs);
 
-      const regex = /<(h[2-4]) [^>]+>(.+)<\/h[2-4]>/gi;
+      const regex = /id="([^"]*)" data-tag="([^"]*)" data-name="([^"]*)/gi;
       const tableOfContents = [];
 
       const getStyle = (type) => {
@@ -42,11 +50,8 @@ class Docs extends React.Component {
       let match = regex.exec(html);
 
       while (match) {
-        const idRegex = /<.*id="(.+)".*>/gi;
-        const id = idRegex.exec(match[0])[1];
-
         tableOfContents.push({
-          style: getStyle(match[1]), text: match[2], id,
+          style: getStyle(match[2]), text: match[3], id: match[1],
         });
 
         match = regex.exec(html);
@@ -70,6 +75,12 @@ class Docs extends React.Component {
     const select = (
       <div style={{ width: '100%' }}>
       <style jsx global>{`
+        .documentation__anchor{
+          display: block;
+          position: relative;
+          top: -100px;
+          visibility: hidden;
+        }
         .documentation__content h1 {
           font-size: 2.5em;
         }
