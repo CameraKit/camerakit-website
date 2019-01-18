@@ -1,12 +1,12 @@
 # CameraKit Documentation - v0.13.2
 
-1. Setup
-2. Usage
-3. Capturing Images
-4. Extra Attributes
-5. Permissions
-6. Sizing
-7. Events
+1. [Setup](#setup)
+2. [Usage](#usage)
+3. [Capturing Images](#capturingimages)
+4. [CameraView Attributes](#cameraviewattributes)
+5. [Permissions](#automaticpermissionsbehavior)
+6. [Sizing](#dynamicsizingbehavior)
+7. [Events](#events)
 
 ## Setup
 
@@ -97,7 +97,7 @@ Size cameraView.getPreviewSize();
 Size cameraView.getCaptureSize();
 ```
 
-## Extra Attributes
+## CameraView Attributes
 
 ```xml
 <com.flurgle.camerakit.CameraView xmlns:camerakit="http://schemas.android.com/apk/res-auto"
