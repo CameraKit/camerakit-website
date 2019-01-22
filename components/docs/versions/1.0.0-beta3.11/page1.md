@@ -1,5 +1,6 @@
-# CameraKit Documentation - v1.0.0-beta3.10
+# CameraKit Documentation - v1.0.0-beta3.11
 
+1. [What's New](#whatsnew)
 1. [Setup](#setup)
 2. [Basic Usage](#basicusage)
 3. [Capturing Images](#capturingimages)
@@ -8,11 +9,26 @@
 6. [Event Listeners](#eventlisteners)
 7. [Additional Notes](#additionalnotesandcommonissues)
 
+## What's New
+In CameraKit v1.0.0-beta3.11 we've added two new methods to determine device flash support.
+
+### hasFlash()
+Returns true if device is capable of flash.
+```
+boolean flashSupport = cameraKitView.hasFlash();
+```
+
+### getSupportedFlashTypes()
+Returns the supported flash types.
+```
+CameraFlash[] cameraFlashes = cameraKitView.getSupportedFlashTypes();
+```
+
 ## Setup
 Add CameraKit and Kotlin to the dependencies section of your <b>build.gradle</b>.
 ```groovy
 dependencies {
-    implementation 'com.camerakit:camerakit:1.0.0-beta3.10'
+    implementation 'com.camerakit:camerakit:1.0.0-beta3.11'
     implementation 'com.camerakit:jpegkit:0.1.0'
     implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.0'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.0.0'
@@ -30,7 +46,7 @@ CameraKit relies on a <b>CameraKitView</b> in the XML layout.
     android:adjustViewBounds="true"/>
 ```
 
-Initialize the <b>CameraKitView</b> in the Java activity. <b>v1.0.0-beta3.10</b> requires five methods to be overloaded; four handling state, and one handling permissions.
+Initialize the <b>CameraKitView</b> in the Java activity. <b>v1.0.0-beta3.11</b> requires five methods to be overloaded; four handling state, and one handling permissions.
 
 ```java
 public class MainActivity extends AppCompatActivity {
@@ -143,7 +159,22 @@ private View.OnClickListener photoOnClickListener = new View.OnClickListener() {
 <b>Possible values:</b> 
 * off, FLASH_OFF
 * on, FLASH_ON
+
+#### Other Flash Methods:
+
+* <b>hasFlash()</b>
+
+Returns: <b>boolean</b> true if device has flash, false if not.
+
+
+* <b>getSuppportedFlashTypes()</b>
+
+Returns: <b>CameraFlashes[ ]</b> array of supported flash types.
+
 - - - 
+
+
+
 
 ### setFocus 
 
@@ -228,10 +259,9 @@ private View.OnClickListener photoOnClickListener = new View.OnClickListener() {
 
 ### setAdjustViewBounds
 
-<b>setAdjustViewBounds(Boolean adjustViewBounds)</b>
+</b>setAdjustViewBounds(Boolean adjustViewBounds)<b>
 
-<b>Possible parameters:</b>
-* Boolean
+Parameter: <b>boolean</b>
 - - - 
 
 
@@ -256,8 +286,8 @@ private View.OnClickListener photoOnClickListener = new View.OnClickListener() {
 
 <b>cameraKitView.requestPermissions(Activity)</b>
 
-<b>Possible parameters:</b>
-* Activity
+Parameter: <b>Activity</b>
+
 
 ### onRequestPermissionsResult
 
@@ -345,7 +375,7 @@ cameraKitView.setErrorListener(new CameraKitView.ErrorListener() {
 
 ## Additional Notes and Common Issues
 ### onConfigurationChanged
-In <b>beta3.10</b> setting <b>onConfigurationChanged</b> to watch for screen size changes in <b>AndroidManifest.xml</b> will produce unexpected output when rotating the device on Android version 7.0 or higher. 
+In beta3.11 setting <b>onConfigurationChanged</b> to watch for screen size changes in <b>AndroidManifest.xml</b> will produce unexpected output when rotating the device on Android version 7.0 or higher. 
 
 If you encounter issues with rotation, first ensure the following line is NOT in your <b>AndroidManifest.xml</b>.
 

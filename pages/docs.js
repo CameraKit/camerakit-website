@@ -9,7 +9,7 @@ export default class DocsPage extends React.Component {
   static async getInitialProps({ query }) {
     let docs = '';
 
-    const version = query.v || '1.0.0-beta3.10';
+    const version = query.v || '1.0.0-beta3.11';
 
     if (process.browser) {
       window.location = '/docs';
