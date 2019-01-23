@@ -107,7 +107,7 @@ export default withPure(() => (
             </p>
             <code>
               <div><span>{'dependencies {'}</span></div>
-              <div className="c-i1"><span className="c-b">{"implementation"}</span> <span className="c-r">{"'com.camerakit:camerakit:1.0.0-beta3.10'"}</span></div>
+              <div className="c-i1"><span className="c-b">{"implementation"}</span> <span className="c-r">{"'com.camerakit:camerakit:1.0.0-beta3.11'"}</span></div>
               <div className="c-i1"><span className="c-b">{"implementation"}</span> <span className="c-r">{"'com.camerakit:jpegkit:0.1.0'"}</span></div>
               <div className="c-i1"><span className="c-b">{"implementation"}</span> <span className="c-r">{"'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.0'"}</span></div>
               <div className="c-i1"><span className="c-b">{"implementation"}</span> <span className="c-r">{"'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.0.0'"}</span></div>
