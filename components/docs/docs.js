@@ -66,6 +66,7 @@ class Docs extends React.Component {
     const { version } = this.props;
 
     const options = {
+      '1.0.0-beta3.11': 'v1.0.0-beta3.11',
       '1.0.0-beta3.10': 'v1.0.0-beta3.10',
       '1.0.0-beta3.9': 'v1.0.0-beta3.9',
       '0.13.4': 'v0.13.4',
@@ -95,6 +96,13 @@ class Docs extends React.Component {
         .documentation__content hr {
           margin-top: 50px;
           margin-top: 40px;
+        }
+        .documentation__content h4 {
+          font-size:1.25em;
+          margin-bottom: 0px;
+        }
+        .documentation__content p {
+          font-weight: normal;
         }
         .documentation__docs_table {
           padding-bottom: 10px;
