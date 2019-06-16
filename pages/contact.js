@@ -5,7 +5,6 @@ import SocialMeta from '../components/social-meta';
 import { MediaQueryConsumer } from '../components/media-query';
 import Header from '../components/header';
 import Navbar from '../components/navbar';
-import ContactForm from '../components/contact/contact-form';
 import Footer from '../components/footer';
 
 export default () => (
@@ -29,7 +28,6 @@ export default () => (
         </Header>
       )}
     </MediaQueryConsumer>
-    <ContactForm />
     <Footer />
   </Page>
 );
