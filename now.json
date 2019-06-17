@@ -3,9 +3,6 @@
     "name": "camerakit-website",
     "alias": "camerakit.io",
     "builds": [
-        {
-            "src": "package.json",
-            "use": "@now/next"
-        }
+        { "src": "package.json", "use": "@now/static-build" }
     ]
 }
