@@ -1,15 +1,15 @@
 {
   "name": "camerakit-website",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "description": "Primary website for CameraKit",
   "main": "index.js",
   "scripts": {
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
     "dev": "node server.js",
-    "heroku-postbuild": "next build"
+    "now-build": "next build && next export -o dist"
   },
-  "author": "Alterac, Inc.",
+  "author": "WonderKiln, Inc.",
   "license": "MIT",
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",

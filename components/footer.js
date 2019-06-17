@@ -107,7 +107,9 @@ export default withPure(() => (
           <Subscribe />
           <ul className="notices">
             <li>
-              {'© 2019 • CameraKit. All Rights Reserved by Alterac, Inc.'}
+              {'© 2019 • CameraKit. All Rights Reserved by WonderKiln, Inc.'}
+              <br></br>
+              <a href="https://www.wonderkiln.com/">Need help with your next project? Reach out via WonderKiln.com</a>
             </li>
           </ul>
         </div>
