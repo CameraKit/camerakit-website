@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
     "dev": "node server.js",
-    "heroku-postbuild": "next build"
+    "now-build": "next build && next export -o dist"
   },
   "author": "WonderKiln, Inc.",
   "license": "MIT",
