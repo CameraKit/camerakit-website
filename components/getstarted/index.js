@@ -125,7 +125,7 @@ export default withPure(() => (
               </h2>
             </div>
             <p>
-              {'There are two components when creating a CameraKitView. First, the XML Layout file. Below is an example for CameraKitView with several properties set. To see all settable options, check out our <a href="/docs">Docs</a>.'}
+              {'There are two components when creating a CameraKitView. First, the XML Layout file. Below is an example for CameraKitView with several properties set. To see all settable options, check out our '} <a href="/docs">Docs</a>.
             </p>
             <code>
               <div><span>{'<com.camerakit.CameraKitView'}</span></div>
